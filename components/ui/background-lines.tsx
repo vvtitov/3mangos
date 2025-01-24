@@ -81,6 +81,11 @@ const SVG = ({
     "#FFC300",
     "#FFC300",
     "#FFC300",
+    "#000050",
+    "#000050",
+    "#FFC300",
+    "#FFC300",
+    "#FFC300",
   ];
   return (
     <motion.svg
