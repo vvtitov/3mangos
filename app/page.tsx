@@ -21,7 +21,6 @@ export default function Home() {
           className="absolute top-20"
           style={{
             userSelect: "none",
-            WebkitUserDrag: "none",
             WebkitTouchCallout: "none",
             pointerEvents: "none",
           }}
