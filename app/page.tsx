@@ -1,17 +1,19 @@
 import { BackgroundLines } from "@/components/ui/background-lines";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <div className="items-center justify-items-center h-full w-full select-none">
       <BackgroundLines className="flex items-center justify-center h-full w-full min-h-auto bg-[#9cd3aa] min-h-screen">
-        <div className="absolute top-10 left-50 text-center">
-          <a
-            href="mailto:contacto@3mangos.site"
+        <div className="absolute top-[85vh] text-center">
+          <Button
+            variant={"link"}
+            // href="mailto:contacto@3mangos.site"
             className="text-gray-800 hover:text-gray-500 text-lg"
           >
             contacto@3mangos.site
-          </a>
+          </Button>
         </div>
         <Image
           width={400}
