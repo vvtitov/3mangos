@@ -69,7 +69,7 @@ const SVG = ({
 
   const colors = [
     "#FFC300",
-    "#000050",
+    "#000000",
     "#FFC300",
     "#FFC300",
     "#FFFFFF",
@@ -77,15 +77,15 @@ const SVG = ({
     "#FFC300",
     "#FFC300",
     "#FFC300",
-    "#000050",
+    "#000000",
     "#FFFFFF",
     "#FFC300",
     "#FFC300",
     "#FFC300",
     "#FFC300",
-    "#000050",
+    "#000000",
     "#FFFFFF",
-    "#000050",
+    "#000000",
     "#FFC300",
     "#FFC300",
     "#FFC300",
@@ -105,7 +105,7 @@ const SVG = ({
         <motion.path
           d={path}
           stroke={colors[idx]}
-          strokeWidth="2.3"
+          strokeWidth="10"
           strokeLinecap="round"
           variants={pathVariants}
           initial="initial"
@@ -127,7 +127,7 @@ const SVG = ({
         <motion.path
           d={path}
           stroke={colors[idx]}
-          strokeWidth="2.3"
+          strokeWidth="6"
           strokeLinecap="round"
           variants={pathVariants}
           initial="initial"
