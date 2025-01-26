@@ -1,6 +1,5 @@
 import { BackgroundLines } from "@/components/ui/background-lines";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Home() {
@@ -44,7 +43,7 @@ export default function Home() {
             WebkitTouchCallout: "none",
           }}
         />
-        <h1 className="md:translate-y-10 duration-500 bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-xl md:text-3xl font-sans z-20 font-bold mt-[-60vh] rotate-[-3deg]">
+        <h1 className="md:translate-y-10 duration-500 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-600 dark:from-neutral-600 dark:to-white text-xl md:text-3xl font-sans z-20 font-bold mt-[-60vh] rotate-[-3deg]">
           NOS ESTAMOS RENOVANDO
         </h1>
       </BackgroundLines>
