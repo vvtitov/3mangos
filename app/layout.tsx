@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "3MANGOS",
-  description: "We build digital solutions with passion.",
+  description: "Agencia de diseño y desarrollo de software",
 };
 
 export default function RootLayout({

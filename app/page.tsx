@@ -35,7 +35,7 @@ export default function Home() {
         <Image
           width={250}
           height={250}
-          src="/3m-logo-black.png"
+          src="/3m-nobg.png"
           alt="3mango logo"
           className="md:translate-y-3 md:transform absolute top-22 hover:transform hover:scale-110 transition-transform duration-700 hover:rotate-3"
           style={{
