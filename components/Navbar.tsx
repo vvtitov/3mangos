@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <div
       id="menu"
-      className="fixed bottom-10 left-0 right-0 flex z-9999 justify-center w-full"
+      className="fixed bottom-10 left-0 right-0 flex justify-center w-full"
     >
       <FloatingDock
         items={[
