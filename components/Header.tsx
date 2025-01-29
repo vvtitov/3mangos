@@ -8,7 +8,7 @@ import { Button } from "./ui/button";
 export default function Header() {
   return (
     <div
-      // id="header"
+      id="header"
       className="grid grid-cols-2 max-w-8xl mx-auto select-none items-center p-5 dark:border-gray-200 bg-transparent"
     >
       <div id="logo" className="flex justify-start z-10 items-center">
@@ -33,13 +33,13 @@ export default function Header() {
         </Link>
       </div>
 
-      <div id="leftHeader" className="flex justify-end items-center gap-5">
+      <div id="rightHeader" className="flex justify-end items-center gap-5">
         <div className="navmenu hidden lg:flex">
           <NavMenu />
         </div>
         <div id="burgerMenu" className="lg:hidden">
           <Button
-            className="flex items-center px-3 py-2 rounded text-gray-500 dark:text-white/80"
+            className="flex items-center px-3 py-2 rounded text-gray-500 dark:text-white/80 w-10 h-10"
             variant="default"
           >
             <svg
