@@ -111,16 +111,16 @@ export const Header = () => {
         EVERYWHERE 🥭
         {/* not just a digital agency */}
       </h1>
-      <p className="max-w-2xl text-base md:text-2xl mt-10 dark:text-neutral-200 lg:hidden">
+      <section className="max-w-2xl text-base md:text-2xl mt-10 dark:text-neutral-200 lg:hidden">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
         amazing products at lightspeed ⚡.
-      </p>
-      <p className="max-w-2xl text-base md:text-2xl mt-10 dark:text-neutral-200 hidden lg:block">
+      </section>
+      <section className="max-w-2xl text-base md:text-2xl mt-10 dark:text-neutral-200 hidden lg:block">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
         amazing products at <Cover>lightspeed ⚡</Cover>.
-      </p>
+      </section>
       <div className="flex pt-96 justify-center animate-bounce">
         <h1 className="text-sm">scroll down!</h1>
       </div>

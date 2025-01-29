@@ -1,3 +1,5 @@
+"use client";
+
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -10,32 +12,34 @@ import { navigationMenuTriggerStyle } from "./ui/navigation-menu";
 
 export default function NavMenu() {
   return (
-    <div id="navmenu">
-      <NavigationMenu>
-        <NavigationMenuList className="flex">
-          <NavigationMenuItem>
-            <Button variant="link" size="lg">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                HOME
-              </NavigationMenuLink>
-            </Button>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Button variant="link" size="lg">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                ABOUT
-              </NavigationMenuLink>
-            </Button>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Button variant="link" size="lg">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                CONTACT
-              </NavigationMenuLink>
-            </Button>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-    </div>
+    <>
+      <div id="navmenu">
+        <NavigationMenu>
+          <NavigationMenuList className="flex">
+            <NavigationMenuItem>
+              <Button variant="link" size="lg">
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  HOME
+                </NavigationMenuLink>
+              </Button>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Button variant="link" size="lg">
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  ABOUT
+                </NavigationMenuLink>
+              </Button>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Button variant="link" size="lg">
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  CONTACT
+                </NavigationMenuLink>
+              </Button>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+    </>
   );
 }
