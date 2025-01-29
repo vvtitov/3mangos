@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { Cover } from "./cover";
 
 export const HeroParallax = ({
   products,
@@ -104,27 +105,28 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-10 md:py-20 px-10 w-full  left-0 top-0 justify-center items-center">
-      {/* <Image
-        width={250}
-        height={250}
+      <Image
+        width={600}
+        height={600}
         src="/mango.png"
         alt="3mango logo"
-        className="absolute top-[-15vh] right-[20vw] hover:transform hover:scale-110 transition-transform duration-700 hover:rotate-3 -z-99999 rotate-[-20deg] scale-50 opacity-30"
+        className="absolute top-[-12vh] right-[-5vw] scale-200 opacity-10 hidden lg:flex"
         style={{
           userSelect: "none",
           WebkitTouchCallout: "none",
         }}
-      /> */}
+      />
       <h1 className="text-4xl md:text-7xl font-bold dark:text-white">
-        <strong className="text-orange-300 rounded-full ">
+        <strong className="text-orange-400/80 rounded-full ">
           3MANGOS <br />
         </strong>
         development studio
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-10 dark:text-neutral-200">
+      <p className="max-w-2xl text-base md:text-xl mt-10 dark:text-neutral-200 inline">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
-        amazing products.
+        amazing products at{" "}
+        <Cover className="bg-transparent hover:rotate-2">lightspeed 🥭</Cover>.
       </p>
     </div>
   );
