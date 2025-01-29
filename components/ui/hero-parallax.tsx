@@ -58,7 +58,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh] pt-20 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -68,7 +68,6 @@ export const HeroParallax = ({
           translateY,
           opacity,
         }}
-        className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((product) => (
@@ -112,11 +111,19 @@ export const Header = () => {
         EVERYWHERE 🥭
         {/* not just a digital agency */}
       </h1>
-      <p className="max-w-2xl text-base md:text-2xl mt-10 dark:text-neutral-200">
+      <p className="max-w-2xl text-base md:text-2xl mt-10 dark:text-neutral-200 lg:hidden">
+        We build beautiful products with the latest technologies and frameworks.
+        We are a team of passionate developers and designers that love to build
+        amazing products at lightspeed ⚡.
+      </p>
+      <p className="max-w-2xl text-base md:text-2xl mt-10 dark:text-neutral-200 hidden lg:block">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
         amazing products at <Cover>lightspeed ⚡</Cover>.
       </p>
+      <div className="flex pt-96 justify-center animate-bounce">
+        <h1 className="text-sm">scroll down!</h1>
+      </div>
     </div>
   );
 };
