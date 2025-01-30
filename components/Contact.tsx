@@ -11,7 +11,7 @@ export default function Contact() {
     <>
       <div
         id="contact"
-        className="relative flex my-40 mx-auto w-full h-full justify-center bg-fixed lg:bg-repeat-x bg-center content-around bg-orange-300 bg-repeat-space py-10"
+        className="relative flex my-20 mx-auto w-full h-full justify-center bg-fixed lg:bg-repeat-x bg-center content-around bg-orange-300 bg-repeat-space py-10"
         style={{ backgroundImage: "url('/mango.png')" }}
       >
         <CustomShapeTop />
