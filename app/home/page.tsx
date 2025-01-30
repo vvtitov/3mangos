@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import { FloatingNav } from "@/components/ui/floating-navbar";
+import AboutUs from "@/components/AboutUs";
 
 export default function Home() {
   return (
@@ -13,15 +14,16 @@ export default function Home() {
       >
         <Header />
         <Hero />
-        <FloatingNav
-          navItems={[
-            { name: "HOME", link: "/" },
-            { name: "ABOUT", link: "/" },
-            { name: "CONTACT", link: "/" },
-          ]}
-        />
+        <AboutUs />
         <Contact />
         <Footer />
+        <FloatingNav
+          navItems={[
+            { name: "HOME", link: "/home" },
+            { name: "ABOUT", link: "#aboutUs" },
+            { name: "CONTACT", link: "#contact" },
+          ]}
+        />
       </section>
     </>
   );
