@@ -104,24 +104,25 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto w-full pt-20 left-0 top-0 justify-center items-center select-none">
-      <h1 className="text-4xl md:text-7xl font-bold dark:text-white">
+      <h1 className="text-4xl md:text-8xl font-bold dark:text-white">
         <strong className="text-orange-400/80 rounded-full ">
           3MANGOS, <br />
         </strong>
-        EVERYWHERE 🥭
-        {/* not just a digital agency */}
       </h1>
-      <section className="max-w-2xl text-base md:text-2xl mt-10 dark:text-neutral-200 lg:hidden">
+      <h2 className="text-4xl md:text-8xl font-bold dark:text-white/80">
+        EVERYWHERE
+      </h2>
+      <section className="max-w-2xl text-lg md:text-2xl mt-10 dark:text-neutral-200 lg:hidden">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
         amazing products at lightspeed ⚡.
       </section>
-      <section className="max-w-2xl text-base md:text-2xl mt-10 dark:text-neutral-200 hidden lg:block">
+      <section className="max-w-2xl text-base md:text-4xl mt-10 dark:text-neutral-200 hidden lg:block">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
         amazing products at <Cover>lightspeed ⚡</Cover>.
       </section>
-      <div className="flex pt-96 justify-center animate-bounce">
+      <div className="flex pt-80 justify-center animate-bounce">
         <h1 className="text-sm">scroll down!</h1>
       </div>
     </div>
