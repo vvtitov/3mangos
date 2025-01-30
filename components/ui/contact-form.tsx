@@ -61,11 +61,12 @@ export default function ContactFormPreview() {
     <div className="flex min-h-[60vh] h-full w-full items-center justify-center px-2">
       <Card className="mx-auto max-w-md">
         <CardHeader>
-          <CardTitle className="text-2xl text-white/80">
-            Wanna say something?
+          <CardTitle className="text-4xl text-white/80">
+            Share your vision
           </CardTitle>
-          <CardDescription className="text-white/60">
-            Please fill out the form below and we will get back to you shortly.
+          <CardDescription className="text-white/60 text-xl">
+            Please fill out the form below with a resume of your idea and we
+            will get back to you.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -119,13 +120,14 @@ export default function ContactFormPreview() {
                   control={form.control}
                   name="message"
                   render={({ field }) => (
-                    <FormItem className="grid gap-2 text-white/70">
+                    <FormItem className="grid gap-2 text-white/70 max-h-[200px]">
                       <FormLabel htmlFor="message">Message</FormLabel>
                       <FormControl>
                         <Textarea
                           id="message"
                           placeholder="Your message..."
                           autoComplete="off"
+                          className="max-h-[150px]"
                           {...field}
                         />
                       </FormControl>
@@ -140,7 +142,7 @@ export default function ContactFormPreview() {
                     as="text"
                     className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
                   >
-                    Send Message
+                    Send message!
                   </HoverBorderGradient>
                 </Button>
               </div>

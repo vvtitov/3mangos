@@ -16,9 +16,6 @@ export default function Footer() {
       <div className="py-5 md:py-1">
         <div className="grid md:flex gap-20 justify-around">
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold tracking-tighter text-center">
-              Three Mangos
-            </h2>
             <p className="text-sm text-center">Follow us!</p>
             <div className="flex justify-center">
               <Button variant="link" size="icon" asChild>
@@ -37,6 +34,9 @@ export default function Footer() {
                 </Link>
               </Button>
             </div>
+            <h2 className="text-2xl font-bold tracking-tighter text-center">
+              Three Mangos
+            </h2>
           </div>
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-center">Contact</h3>
