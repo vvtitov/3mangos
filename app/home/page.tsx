@@ -21,6 +21,7 @@ export default function Home() {
           navItems={[
             { name: "HOME", link: "/home" },
             { name: "ABOUT", link: "#about" },
+            { name: "SERVICES", link: "#services" },
             { name: "CONTACT", link: "#contact" },
           ]}
         />
