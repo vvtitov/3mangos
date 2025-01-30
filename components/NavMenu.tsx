@@ -15,7 +15,7 @@ export default function NavMenu() {
     <>
       <div id="navmenu">
         <NavigationMenu>
-          <NavigationMenuList className="flex">
+          <NavigationMenuList className="flex z-50">
             <NavigationMenuItem>
               <Button variant="link" size="lg">
                 <NavigationMenuLink
@@ -33,6 +33,16 @@ export default function NavMenu() {
                   className={navigationMenuTriggerStyle()}
                 >
                   ABOUT
+                </NavigationMenuLink>
+              </Button>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Button variant="link" size="lg">
+                <NavigationMenuLink
+                  href="#contact"
+                  className={navigationMenuTriggerStyle()}
+                >
+                  SERVICES
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>
