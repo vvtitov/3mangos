@@ -3,10 +3,10 @@ import { MaskContainer } from "./ui/svg-mask-effect";
 
 export function MaskEffect() {
   return (
-    <div className="h-full mt-20 md:h-[50rem] md:-mt-40 w-full flex items-center justify-center overflow-hidden bg-cover bg-center">
+    <div className="h-full mt-20 md:h-[50rem] md:-mt-80 w-full flex items-center justify-center overflow-hidden bg-cover bg-center">
       <MaskContainer
         revealText={
-          <p className="max-w-4xl mx-auto text-orange-300 dark:text-white text-center text-4xl font-bold">
+          <p className="max-w-4xl mx-auto text-[#333333] dark:text-white text-center text-4xl font-bold">
             ABOUT
           </p>
         }

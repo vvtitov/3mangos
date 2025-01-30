@@ -29,7 +29,7 @@ export default function NavMenu() {
             <NavigationMenuItem>
               <Button variant="link" size="lg">
                 <NavigationMenuLink
-                  href="#aboutUs"
+                  href="#about"
                   className={navigationMenuTriggerStyle()}
                 >
                   ABOUT

@@ -68,7 +68,7 @@ export const MaskContainer = ({
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className="max-w-7xl mx-auto text-center text-white dark:text-[#333333] text-4xl font-bold relative z-20"
+          className="max-w-7xl mx-auto text-center text-[#333333] dark:text-[#333333] text-4xl font-bold relative z-20 px-5"
         >
           {children}
         </div>
