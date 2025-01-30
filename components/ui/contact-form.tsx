@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { HoverBorderGradient } from "./hover-border-gradient";
 
 // Schema for contact form validation
 const formSchema = z.object({
@@ -57,11 +58,13 @@ export default function ContactFormPreview() {
   }
 
   return (
-    <div className="flex min-h-[60vh] h-full w-full items-center justify-center px-4">
+    <div className="flex min-h-[60vh] h-full w-full items-center justify-center px-2">
       <Card className="mx-auto max-w-md">
         <CardHeader>
-          <CardTitle className="text-2xl">Contact Us</CardTitle>
-          <CardDescription>
+          <CardTitle className="text-2xl text-white/80">
+            Wanna say something?
+          </CardTitle>
+          <CardDescription className="text-white/60">
             Please fill out the form below and we will get back to you shortly.
           </CardDescription>
         </CardHeader>
@@ -74,7 +77,7 @@ export default function ContactFormPreview() {
                   control={form.control}
                   name="name"
                   render={({ field }) => (
-                    <FormItem className="grid gap-2">
+                    <FormItem className="grid gap-2 text-white/70">
                       <FormLabel htmlFor="name">Name</FormLabel>
                       <FormControl>
                         <Input
@@ -95,7 +98,7 @@ export default function ContactFormPreview() {
                   control={form.control}
                   name="email"
                   render={({ field }) => (
-                    <FormItem className="grid gap-2">
+                    <FormItem className="grid gap-2 text-white/70">
                       <FormLabel htmlFor="email">Email</FormLabel>
                       <FormControl>
                         <Input
@@ -116,7 +119,7 @@ export default function ContactFormPreview() {
                   control={form.control}
                   name="message"
                   render={({ field }) => (
-                    <FormItem className="grid gap-2">
+                    <FormItem className="grid gap-2 text-white/70">
                       <FormLabel htmlFor="message">Message</FormLabel>
                       <FormControl>
                         <Textarea
@@ -132,7 +135,13 @@ export default function ContactFormPreview() {
                 />
 
                 <Button type="submit" className="w-full">
-                  Send Message
+                  <HoverBorderGradient
+                    containerClassName="rounded-md"
+                    as="text"
+                    className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+                  >
+                    Send Message
+                  </HoverBorderGradient>
                 </Button>
               </div>
             </form>
