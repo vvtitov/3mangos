@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer className="dark:bg-[#333333]">
       <div className="py-5 md:py-1">
-        <div className="grid md:flex gap-20 justify-around">
+        <div className="grid md:flex gap-20 justify-around mx-20">
           <div className="space-y-4">
             <p className="text-sm text-center">Follow us!</p>
             <div className="flex justify-center">

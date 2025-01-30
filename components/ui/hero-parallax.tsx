@@ -69,7 +69,7 @@ export const HeroParallax = ({
           opacity,
         }}
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-2 rotate-3">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -78,7 +78,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
+        <motion.div className="flex flex-row  mb-2 space-x-20 -rotate-2">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -87,7 +87,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 rotate-3">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -105,7 +105,7 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto w-full pt-20 left-0 top-0 justify-center items-center select-none">
       <h1 className="text-4xl md:text-8xl font-bold dark:text-white">
-        <strong className="text-orange-400/80 rounded-full ">
+        <strong className="text-orange-300 rounded-full ">
           3MANGOS, <br />
         </strong>
       </h1>
@@ -163,10 +163,7 @@ export const ProductCard = ({
           alt={product.title}
         />
       </Link>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-        {product.title}
-      </h2>
+      <div className="absolute inset-0 h-full w-full  pointer-events-none"></div>
     </motion.div>
   );
 };

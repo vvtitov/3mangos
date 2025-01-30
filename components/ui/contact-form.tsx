@@ -62,7 +62,7 @@ export default function ContactFormPreview() {
       <Card className="mx-auto max-w-md">
         <CardHeader>
           <CardTitle className="text-4xl text-white/80">
-            Share your vision
+            Want a fresh mango?
           </CardTitle>
           <CardDescription className="text-white/60 text-xl">
             Please fill out the form below with a resume of your idea and we
@@ -136,13 +136,13 @@ export default function ContactFormPreview() {
                   )}
                 />
 
-                <Button type="submit" className="w-full">
+                <Button type="submit" variant="default" className="w-full">
                   <HoverBorderGradient
-                    containerClassName="rounded-md"
+                    containerClassName="rounded-3xl"
                     as="text"
-                    className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+                    className="dark:bg-[#333333]/70 bg-[#333333]/70 text-white/70 dark:text-white/70 flex items-center space-x-2"
                   >
-                    Send message!
+                    SUBMIT
                   </HoverBorderGradient>
                 </Button>
               </div>
