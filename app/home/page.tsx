@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import AboutUs from "@/components/AboutUs";
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       >
         <Header />
         <Hero />
-        <AboutUs />
+        <About />
         <Contact />
         <Footer />
         <FloatingNav

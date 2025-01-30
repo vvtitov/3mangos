@@ -6,101 +6,85 @@ import { HeroParallax } from "./ui/hero-parallax";
 export default function Hero() {
   return (
     <>
-      <div id="hero" className="select-none w-full">
+      <div id="hero" className="select-none w-full cursor-none">
         <HeroParallax
           products={[
             {
               title: "Moonbeam",
-              link: "https://gomoonbeam.com",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
             {
               title: "Cursor",
-              link: "https://cursor.so",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
             {
               title: "Rogue",
-              link: "https://userogue.com",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
 
             {
               title: "Editorially",
-              link: "https://editorially.org",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
             {
               title: "Editrix AI",
-              link: "https://editrix.ai",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
             {
               title: "Pixel Perfect",
-              link: "https://app.pixelperfect.quest",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
 
             {
               title: "Algochurn",
-              link: "https://algochurn.com",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
             {
               title: "Aceternity UI",
-              link: "https://ui.aceternity.com",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
             {
               title: "Tailwind Master Kit",
-              link: "https://tailwindmasterkit.com",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
             {
               title: "SmartBridge",
-              link: "https://smartbridgetech.com",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
             {
               title: "Renderwork Studio",
-              link: "https://renderwork.studio",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
-
             {
               title: "Creme Digital",
-              link: "https://cremedigital.com",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
             {
               title: "Golden Bells Academy",
-              link: "https://goldenbellsacademy.com",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
             {
               title: "Invoker Labs",
-              link: "https://invoker.lol",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
             {
               title: "E Free Invoice",
-              link: "https://efreeinvoice.com",
-              thumbnail:
-                "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+              link: "#contact",
+              thumbnail: "/mango-2000x1440.png",
             },
           ]}
         />
