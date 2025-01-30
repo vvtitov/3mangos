@@ -17,25 +17,28 @@ export const MaskContainer = ({
   className?: string;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [mousePosition, setMousePosition] = useState<any>({ x: null, y: null });
+  const [mousePosition, setMousePosition] = useState<{
+    x: number | null;
+    y: number | null;
+  }>({ x: null, y: null });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const containerRef = useRef<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const updateMousePosition = (e: any) => {
     const rect = containerRef.current.getBoundingClientRect();
     setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
   };
 
   useEffect(() => {
-    containerRef.current.addEventListener("mousemove", updateMousePosition);
+    const container = containerRef.current;
+    container.addEventListener("mousemove", updateMousePosition);
     return () => {
-      if (containerRef.current) {
-        containerRef.current.removeEventListener(
-          "mousemove",
-          updateMousePosition
-        );
+      if (container) {
+        container.removeEventListener("mousemove", updateMousePosition);
       }
     };
   }, []);
-  let maskSize = isHovered ? revealSize : size;
+  const maskSize = isHovered ? revealSize : size;
 
   return (
     <motion.div
@@ -48,8 +51,8 @@ export const MaskContainer = ({
       <motion.div
         className="w-full h-full flex items-center justify-center text-6xl absolute bg-black bg-grid-white/[0.2] [mask-image:url(/mask.svg)] [mask-size:40px] [mask-repeat:no-repeat]"
         animate={{
-          maskPosition: `${mousePosition.x - maskSize / 2}px ${
-            mousePosition.y - maskSize / 2
+          maskPosition: `${(mousePosition.x ?? 0) - maskSize / 2}px ${
+            (mousePosition.y ?? 0) - maskSize / 2
           }px`,
           maskSize: `${maskSize}px`,
         }}

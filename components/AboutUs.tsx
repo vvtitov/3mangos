@@ -1,12 +1,12 @@
 import React from "react";
-import { SVGMaskEffect } from "./MaskText";
+import { MaskEffect } from "./MaskText";
 
 export default function AboutUs() {
   return (
     <>
       <div id="aboutUs" className="justify-center text-center md:my-60 w-full">
         <div>
-          <SVGMaskEffect />
+          <MaskEffect />
         </div>
       </div>
     </>
