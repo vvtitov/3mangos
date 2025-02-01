@@ -13,44 +13,44 @@ import { navigationMenuTriggerStyle } from "./ui/navigation-menu";
 export default function NavMenu() {
   return (
     <>
-      <div id="navmenu">
+      <div id="navmenu" className="w-full">
         <NavigationMenu>
-          <NavigationMenuList className="flex z-50">
+          <NavigationMenuList className="flex justify-end">
             <NavigationMenuItem>
-              <Button variant="link" size="lg">
+              <Button variant="default" size="sm">
                 <NavigationMenuLink
                   href="/home"
-                  className={navigationMenuTriggerStyle()}
+                  className={`${navigationMenuTriggerStyle()} text-[#333333] dark:text-white/70 dark:hover:text-orange-300 hover:text-orange-300`}
                 >
                   HOME
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button variant="link" size="lg">
+              <Button variant="default" size="sm">
                 <NavigationMenuLink
                   href="#about"
-                  className={navigationMenuTriggerStyle()}
+                  className={`${navigationMenuTriggerStyle()} text-[#333333] dark:text-white/70 dark:hover:text-orange-300 hover:text-orange-300`}
                 >
                   ABOUT
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button variant="link" size="lg">
+              <Button variant="default" size="sm">
                 <NavigationMenuLink
-                  href="#contact"
-                  className={navigationMenuTriggerStyle()}
+                  href="#services"
+                  className={`${navigationMenuTriggerStyle()} text-[#333333] dark:text-white/70 dark:hover:text-orange-300 hover:text-orange-300`}
                 >
                   SERVICES
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button variant="link" size="lg">
+              <Button variant="default" size="sm">
                 <NavigationMenuLink
                   href="#contact"
-                  className={navigationMenuTriggerStyle()}
+                  className={`${navigationMenuTriggerStyle()} text-[#333333] dark:text-white/70 dark:hover:text-orange-300 hover:text-orange-300`}
                 >
                   CONTACT
                 </NavigationMenuLink>

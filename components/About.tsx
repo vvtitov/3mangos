@@ -1,5 +1,5 @@
 import React from "react";
-import { MaskEffect } from "./MaskText";
+import { AboutMaskText } from "./AboutMaskText";
 
 export default function AboutUs() {
   return (
@@ -9,7 +9,7 @@ export default function AboutUs() {
         className="relative justify-center text-center md:my-60 lg:my-80 w-full"
       >
         <div>
-          <MaskEffect />
+          <AboutMaskText />
         </div>
       </div>
     </>

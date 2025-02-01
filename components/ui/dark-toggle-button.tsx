@@ -3,54 +3,25 @@
 import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { Switch } from "@/components/ui/switch";
 
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
-export function ModeToggle() {
-  const { setTheme } = useTheme();
+export function ModeSwitch() {
+  const { theme, setTheme } = useTheme();
+  const isDark = theme === "dark";
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="default"
-          size="icon"
-          className="hover:rotate-12 hover:scale-125 duration-1000"
-        >
-          <Sun className="h-[1.2rem] w-[1.2rem] hover:rotate-2 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent
-        align="center"
-        className="bg-white dark:bg-[#333333] border border-gray-800 dark:border-gray-200"
-      >
-        <DropdownMenuItem
-          className="dark:hover:bg-gray-400/40"
-          onClick={() => setTheme("light")}
-        >
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          className="dark:hover:bg-gray-400/40"
-          onClick={() => setTheme("dark")}
-        >
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          className="dark:hover:bg-gray-400/40"
-          onClick={() => setTheme("system")}
-        >
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="flex space-x-2 items-center w-[80px]">
+      <Sun
+        className={`h-3 w-3 ${isDark ? "text-gray-500" : "text-yellow-500"}`}
+      />
+      <Switch
+        checked={isDark}
+        onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+        className="bg-orange-300 dark:bg-orange-300 flex items-center"
+      ></Switch>
+      <Moon
+        className={`h-3 w-3 ${isDark ? "text-yellow-500" : "text-gray-500"}`}
+      />
+    </div>
   );
 }

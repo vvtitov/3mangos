@@ -1,7 +1,7 @@
 "use client";
 import { MaskContainer } from "./ui/svg-mask-effect";
 
-export function MaskEffect() {
+export function AboutMaskText() {
   return (
     <div className="h-full -mt-[30vh] md:-mt-[70vh] md:-mb-[30vh] lg:h-[80rem] lg:-mt-[80vh] w-full flex items-center justify-center overflow-hidden bg-cover bg-center cursor-none">
       <MaskContainer

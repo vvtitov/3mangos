@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ModeToggle } from "./ui/dark-toggle-button";
+import { ModeSwitch } from "./ui/dark-toggle-button";
 import NavMenu from "./NavMenu";
 import BurguerMenu from "./BurguerMenu";
 import Logo from "./Logo";
@@ -9,33 +9,33 @@ import Logo from "./Logo";
 export default function Header() {
   return (
     <>
-      <div
+      <header
         id="header"
-        className="grid grid-cols-2 lg:grid max-w-8xl mx-auto select-none items-center p-5 dark:border-gray-200 bg-transparent border-b border-[#333333]/50"
+        className="relative w-full h-full grid grid-cols-2 lg:grid max-w-8xl mx-auto select-none items-center px-10 py-3 dark:border-gray-200 bg-transparent border-b border-[#333333]/50"
       >
         <div
           id="leftHeader"
-          className="flex justify-center lg:justify-start z-10 items-center"
+          className="flex justify-center lg:justify-start items-center"
         >
-          <h1 className="px-5 text-xl hidden lg:flex">THREEMANGOS</h1>
+          <h1 className="mr-8 text-xl hidden lg:flex">#THREEMANGOS</h1>
           <Logo />
         </div>
 
         <div
           id="rightHeader"
-          className="flex justify-center gap-1 items-center"
+          className="flex w-full gap-2 items-center justify-end"
         >
-          <div id="navMenu" className="hidden lg:block w-full">
+          <div id="navMenu" className="hidden lg:block fill">
             <NavMenu />
           </div>
-          <div className="justify-end w-10">
+          <div className="w-[100px] mr-10">
             <BurguerMenu />
           </div>
-          <div className="lg:block ml-[17vw] lg:mx-auto w-20">
-            <ModeToggle />
+          <div className="relative">
+            <ModeSwitch />
           </div>
         </div>
-      </div>
+      </header>
     </>
   );
 }

@@ -3,7 +3,7 @@
 import React from "react";
 import Carrousel from "./ui/carousel";
 
-export default function MainCarousel() {
+export default function ServicesCarousel() {
   return (
     <>
       <div className="flex overflow-hidden w-full h-full mt-[12vh] justify-center z-0 p-10">
@@ -12,32 +12,32 @@ export default function MainCarousel() {
             {
               title: "We are 3MANGOS",
               button: "Click me",
-              src: "/mango.png",
+              src: "/mango-2000x1440.png",
             },
             {
               title: "We are 3MANGOS",
               button: "Click me",
-              src: "/mango.png",
+              src: "/mango-2000x1440.png",
             },
             {
               title: "We are 3MANGOS",
               button: "Click me",
-              src: "/mango.png",
+              src: "/mango-2000x1440.png",
             },
             {
               title: "We are 3MANGOS",
               button: "Click me",
-              src: "/mango.png",
+              src: "/mango-2000x1440.png",
             },
             {
               title: "We are 3MANGOS",
               button: "Click me",
-              src: "/mango.png",
+              src: "/mango-2000x1440.png",
             },
             {
               title: "We are 3MANGOS",
               button: "Click me",
-              src: "/mango.png",
+              src: "/mango-2000x1440.png",
             },
           ]}
         />
