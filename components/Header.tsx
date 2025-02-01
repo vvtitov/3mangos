@@ -23,15 +23,15 @@ export default function Header() {
 
         <div
           id="rightHeader"
-          className="flex w-full gap-2 items-center justify-end"
+          className="flex w-full gap-2 items-center justify-end min-w-[300px]"
         >
-          <div id="navMenu" className="hidden lg:block fill">
+          <div id="navMenu" className="hidden lg:block mr-10">
             <NavMenu />
           </div>
-          <div className="w-[100px] mr-10">
+          <div className="flex w-[200px] relative items-center justify-center">
             <BurguerMenu />
           </div>
-          <div className="relative">
+          <div className="relative hidden lg:flex">
             <ModeSwitch />
           </div>
         </div>

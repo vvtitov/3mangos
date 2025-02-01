@@ -112,7 +112,7 @@ export const Header = () => {
           THREE MANGOS <br />
         </strong>
       </h1>
-      <section className="max-w-2xl text-lg/8 md:text-xl mt-2 dark:text-neutral-200">
+      <section className="max-w-2xl text-xl md:text-xl mt-2 dark:text-neutral-200">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
         amazing products at lightspeed.
