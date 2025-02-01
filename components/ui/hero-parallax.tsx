@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Cover } from "./cover";
+// import { Cover } from "./cover";
 
 export const HeroParallax = ({
   products,
@@ -52,7 +52,7 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-900, 300]),
+    useTransform(scrollYProgress, [0, 0.2], [-900, 100]),
     springConfig
   );
   return (
@@ -69,7 +69,7 @@ export const HeroParallax = ({
           opacity,
         }}
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-2 rotate-3">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 mb-2 rotate-3">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -78,7 +78,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-2 space-x-20 -rotate-2">
+        <motion.div className="flex flex-row  mb-2 space-x-10 -rotate-2">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -103,25 +103,35 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto w-full pt-20 left-0 top-0 justify-center items-center select-none">
-      <h1 className="text-4xl md:text-8xl font-bold dark:text-white">
+    <div className="max-w-5xl relative mx-auto w-full justify-center items-center select-none mt-20">
+      <h2 className="text-2xl md:text-3xl font-bold dark:text-white/80 pt-10">
+        WE ARE
+      </h2>
+      <h1 className="text-4xl md:text-6xl font-bold dark:text-white pb-4">
         <strong className="text-orange-300 rounded-full ">
-          3MANGOS, <br />
+          THREE MANGOS <br />
         </strong>
       </h1>
-      <h2 className="text-4xl md:text-8xl font-bold dark:text-white/80">
-        EVERYWHERE
-      </h2>
-      <section className="max-w-2xl text-lg md:text-2xl mt-10 dark:text-neutral-200 lg:hidden">
+      <section className="max-w-2xl text-lg/8 md:text-xl mt-2 dark:text-neutral-200">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
-        amazing products at lightspeed ⚡.
+        amazing products at lightspeed.
       </section>
-      <section className="max-w-2xl text-base md:text-4xl mt-10 dark:text-neutral-200 hidden lg:block">
-        We build beautiful products with the latest technologies and frameworks.
+      {/* <section className="max-w-xl md:text-2xl/10 mt-2 dark:text-neutral-200 hidden lg:block">
+        We build beautiful products with the latest technologies and frameworks.{" "}
+        <br />
         We are a team of passionate developers and designers that love to build
-        amazing products at <Cover>lightspeed ⚡</Cover>.
-      </section>
+        amazing and innovating products at <Cover>lightspeed ⚡</Cover>.
+      </section> */}
+      <div className="lg:absolute hidden lg:flex right-0 top-0 -z-10">
+        <Image
+          src="/mango.png"
+          alt="Floating Mango"
+          width={350}
+          height={350}
+          className="pointer-events-none"
+        />
+      </div>
       <div className="flex pt-80 justify-center animate-bounce">
         <h1 className="text-sm">scroll down!</h1>
       </div>

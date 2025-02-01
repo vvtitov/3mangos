@@ -15,6 +15,7 @@
     "@radix-ui/react-navigation-menu": "^1.2.4",
     "@radix-ui/react-separator": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-switch": "^1.1.2",
     "@tabler/icons-react": "^3.29.0",
     "@tsparticles/engine": "^3.8.0",
     "@tsparticles/react": "^3.0.0",
