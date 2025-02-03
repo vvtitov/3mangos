@@ -60,7 +60,7 @@ export const MaskContainer = ({
           duration: 0,
         }}
       >
-        <div className="absolute inset-0 bg-orange-300 h-full w-full z-0" />
+        <div className="absolute inset-0 bg-white h-full w-full z-0" />
         <div
           onMouseEnter={() => {
             setIsHovered(true);
@@ -68,7 +68,7 @@ export const MaskContainer = ({
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className="max-w-7xl mx-auto text-center text-[#333333] dark:text-[#333333] text-4xl font-bold relative z-20 px-5"
+          className="max-w-7xl mx-auto text-center text-[#333333] dark:text-orange-300 text-4xl font-bold relative z-20 px-5"
         >
           {children}
         </div>

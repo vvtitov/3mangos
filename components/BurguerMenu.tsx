@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -36,9 +35,9 @@ export default function BurgerMenu() {
             { name: "CONTACT", link: "#contact" },
           ].map((item) => (
             <Link href="#" key={item.name}>
-              <p href={item.link} className="text-2xl">
+              <text href={item.link} className="text-2xl text-right">
                 {item.name}
-              </p>
+              </text>
             </Link>
           ))}
         </div>
