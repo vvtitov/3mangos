@@ -17,7 +17,7 @@ export default function Header() {
           id="leftHeader"
           className="flex justify-center lg:justify-start items-center"
         >
-          <h1 className="mr-8 text-xl hidden lg:flex">#THREEMANGOS</h1>
+          {/* <h1 className="mr-8 text-xl hidden lg:flex">#THREEMANGOS</h1> */}
           <Logo />
         </div>
 

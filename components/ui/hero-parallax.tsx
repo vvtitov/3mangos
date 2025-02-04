@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatedTooltipPreview } from "../TooltipHero";
 // import { Cover } from "./cover";
 
 export const HeroParallax = ({
@@ -103,37 +104,37 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-5xl relative mx-auto w-full justify-center items-center select-none mt-20">
-      <h2 className="text-2xl md:text-3xl font-bold dark:text-white/80 pt-10">
-        WE ARE
-      </h2>
-      <h1 className="text-4xl md:text-6xl font-bold dark:text-white pb-4">
-        <strong className="text-orange-300 rounded-full ">
-          THREE MANGOS <br />
-        </strong>
-      </h1>
-      <section className="max-w-2xl text-xl md:text-xl mt-2 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products at lightspeed.
-      </section>
+    <div className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between">
+      <div className="flex flex-col gap-4 max-w-xl min-w-md mx-3">
+        <div>
+          <AnimatedTooltipPreview />
+        </div>
+        <h1 className="text-4xl font-bold dark:text-white pt-4">
+          <strong className="text-orange-300 rounded-full ">
+            UNLEASH YOUR MANGOS WITH OUR FRESH SOLUTIONS
+          </strong>
+        </h1>
+        <section className="text-[#333333] text-2xl md:text-xl dark:text-neutral-200 max-w-lg">
+          We are passionate developers and designers that are
+          <strong> focused on build amazing products </strong> at lightspeed
+          with the latest technologies and frameworks. <br />
+        </section>
+      </div>
       {/* <section className="max-w-xl md:text-2xl/10 mt-2 dark:text-neutral-200 hidden lg:block">
         We build beautiful products with the latest technologies and frameworks.{" "}
         <br />
         We are a team of passionate developers and designers that love to build
         amazing and innovating products at <Cover>lightspeed ⚡</Cover>.
       </section> */}
-      <div className="lg:absolute hidden lg:flex right-0 top-0 -z-10">
+      <div className="flex min-w-[400px]">
         <Image
-          src="/mango.png"
+          src="/mango-hero.png"
           alt="Floating Mango"
-          width={350}
-          height={350}
-          className="pointer-events-none"
+          width={400}
+          height={400}
+          className="pointer-events-none
+        animate-float rotate-3"
         />
-      </div>
-      <div className="flex pt-80 justify-center animate-bounce">
-        <h1 className="text-sm">scroll down!</h1>
       </div>
     </div>
   );
