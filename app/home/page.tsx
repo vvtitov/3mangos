@@ -4,7 +4,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { FloatingNav } from "@/components/ui/floating-navbar";
+// import { FloatingNav } from "@/components/ui/floating-navbar";
 
 export default function Home() {
   return (
@@ -19,14 +19,14 @@ export default function Home() {
         <Services />
         <Contact />
         <Footer />
-        <FloatingNav
+        {/* <FloatingNav
           navItems={[
             { name: "HOME", link: "/home" },
             { name: "ABOUT", link: "#about" },
             { name: "SERVICES", link: "#services" },
             { name: "CONTACT", link: "#contact" },
           ]}
-        />
+        /> */}
       </section>
     </>
   );
