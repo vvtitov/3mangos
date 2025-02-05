@@ -59,10 +59,11 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] overflow-hidden p-8 antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] md:mb-60 lg:mb-[5vh]"
+      className="h-[200vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:2600px] [transform-style:preserve-3d] md:mb-60 lg:mb-[5vh] z-[1]"
     >
       <Header />
       <motion.div
+        className="z-[-2]"
         style={{
           rotateX,
           rotateZ,
@@ -104,8 +105,8 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between">
-      <div className="flex flex-col gap-4 max-w-xl min-w-md mx-3">
+    <div className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-20">
+      <div className="flex flex-col gap-4 max-w-xl min-w-sm px-10">
         <div>
           <AnimatedTooltipPreview />
         </div>
@@ -128,10 +129,10 @@ export const Header = () => {
       </section> */}
       <div className="flex min-w-[400px]">
         <Image
-          src="/mango-hero.png"
+          src="/mango-hero3.png"
           alt="Floating Mango"
-          width={400}
-          height={400}
+          width={500}
+          height={500}
           className="pointer-events-none
         animate-float rotate-3"
         />
@@ -168,8 +169,8 @@ export const ProductCard = ({
       >
         <Image
           src={product.thumbnail}
-          height="600"
-          width="600"
+          height="500"
+          width="500"
           className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />

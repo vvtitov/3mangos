@@ -6,7 +6,10 @@ import { HeroParallax } from "./ui/hero-parallax";
 export default function Hero() {
   return (
     <>
-      <div id="hero" className="select-none w-full">
+      <div
+        id="hero"
+        className="select-none w-full bg-slate-50 dark:bg-[#333333] pt-[120px]"
+      >
         <HeroParallax
           products={[
             {
