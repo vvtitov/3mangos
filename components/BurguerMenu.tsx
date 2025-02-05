@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { ModeSwitch } from "./ui/dark-toggle-button";
 
 export default function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,14 +23,14 @@ export default function BurgerMenu() {
   }, [isOpen]);
 
   return (
-    <div id="burgerMenu" className=" lg:hidden items-end">
+    <div id="burgerMenu" className="flex lg:hidden items-end">
       {/* Mobile Menu Button */}
       <button
-        className="dark:text-white text-[#333333] focus:outline-none w-12 transition-transform transform hover:scale-110"
+        className="dark:text-foreground text-foreground focus:outline-none "
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
-        {isOpen ? <X size={34} /> : <Menu size={34} />}
+        <Menu size={34} />
       </button>
       {/* Mobile Menu */}
       <motion.div
@@ -38,17 +39,11 @@ export default function BurgerMenu() {
           isOpen ? { height: "100vh", opacity: 1 } : { height: 0, opacity: 0 }
         }
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed flex justify-center top-0 right-0 w-full max-w-full max-h-full bg-[#333333] z-[12] px-10"
+        className="fixed flex justify-center top-0 right-0 w-full max-w-full max-h-full bg-background dark:bg-background z-[12] px-10"
       >
-        <div className="relative text-right pt-40">
-          <div className="flex bg-white/20 w-full text-center">
-            <button
-              className="dark:text-white text-[#333333] focus:outline-none w-12 transition-transform transform hover:scale-110 pt-20"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X size={34} /> : <Menu size={34} />}
-            </button>
+        <div className="relative text-center my-auto">
+          <div className="pb-20">
+            <ModeSwitch />
           </div>
           {[
             { name: "HOME", link: "/" },
@@ -58,13 +53,22 @@ export default function BurgerMenu() {
           ].map((item) => (
             <Link href={item.link} key={item.name}>
               <p
-                className="text-2xl text-white transition-colors hover:text-gray-400"
+                className="text-2xl text-foreground transition-colors py-2 px-4 rounded-2xl mb-3 hover:rotate-2 hover:text-primary"
                 onClick={handleClose}
               >
                 {item.name}
               </p>
             </Link>
           ))}
+          <div className="relative w-full text-center justify-center pt-20">
+            <button
+              className="text-foreground focus:outline-none hover:scale-110 align-middle hover:text-foreground"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              <X size={34} />
+            </button>
+          </div>
         </div>
       </motion.div>
     </div>

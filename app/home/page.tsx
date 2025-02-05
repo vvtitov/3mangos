@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <section
         id="mainContainer"
-        className="bg-white dark:bg-[#333333] min-w-[400px] w-full h-full"
+        className="bg-background dark:bg-background min-w-[400px] w-full h-full"
       >
         <Header />
         <Hero />

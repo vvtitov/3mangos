@@ -29,25 +29,25 @@ export default function Header() {
       id="header"
       className={`fixed top-0 w-full ${
         isScrolled
-          ? "h-[90px] bg-slate-50 dark:bg-[#333333]"
-          : "h-[120px] bg-slate-50/50 dark:bg-[#333333]/50"
+          ? "h-[90px] bg-primary-foreground dark:bg-primary-foreground"
+          : "h-[120px] bg-trasnparent dark:bg-trasparent"
       } grid grid-cols-2 lg:grid max-w-8xl px-10 select-none items-center dark:border-gray-200 border-b border-[#333333]/50 transition-all duration-300 z-[10]`}
     >
       <div
         id="leftHeader"
-        className="flex justify-center lg:justify-start items-center"
+        className="block justify-center lg:justify-start items-center"
       >
         <Logo />
       </div>
 
       <div
         id="rightHeader"
-        className="flex w-full gap-2 items-center justify-end min-w-[300px]"
+        className="flex w-full gap-2 items-center justify-end min-w-[200px]"
       >
-        <div id="navMenu" className="hidden lg:block mr-10">
+        <div id="navMenu" className="hidden lg:block mr-5">
           <NavMenu />
         </div>
-        <div className="flex w-[200px] relative items-center justify-center">
+        <div className="flex items-center justify-end">
           <BurguerMenu />
         </div>
         <div className="relative hidden lg:flex">

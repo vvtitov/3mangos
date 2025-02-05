@@ -20,7 +20,7 @@ export default function NavMenu() {
               <Button variant="default" size="sm">
                 <NavigationMenuLink
                   href="/home"
-                  className={`${navigationMenuTriggerStyle()} text-[#333333] dark:text-white/70 dark:hover:text-orange-300 hover:text-orange-300`}
+                  className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
                   HOME
                 </NavigationMenuLink>
@@ -30,7 +30,7 @@ export default function NavMenu() {
               <Button variant="default" size="sm">
                 <NavigationMenuLink
                   href="#about"
-                  className={`${navigationMenuTriggerStyle()} text-[#333333] dark:text-white/70 dark:hover:text-orange-300 hover:text-orange-300`}
+                  className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
                   ABOUT
                 </NavigationMenuLink>
@@ -40,7 +40,7 @@ export default function NavMenu() {
               <Button variant="default" size="sm">
                 <NavigationMenuLink
                   href="#services"
-                  className={`${navigationMenuTriggerStyle()} text-[#333333] dark:text-white/70 dark:hover:text-orange-300 hover:text-orange-300`}
+                  className={`${navigationMenuTriggerStyle()} text-foreground dark:text-white/70`}
                 >
                   SERVICES
                 </NavigationMenuLink>
@@ -50,7 +50,7 @@ export default function NavMenu() {
               <Button variant="default" size="sm">
                 <NavigationMenuLink
                   href="#contact"
-                  className={`${navigationMenuTriggerStyle()} text-[#333333] dark:text-white/70 dark:hover:text-orange-300 hover:text-orange-300`}
+                  className={`${navigationMenuTriggerStyle()} text-foreground dark:text-white/70`}
                 >
                   CONTACT
                 </NavigationMenuLink>

@@ -16,7 +16,7 @@ export default function Contact() {
       >
         <CustomShapeTop />
 
-        <div className="relative z-[10] my-40 mx-6 rotate-2">
+        <div className="relative z-[3] my-40 mx-6 rotate-2">
           <CardContainer>
             <ContactFormPreview />
           </CardContainer>

@@ -8,7 +8,7 @@ export default function Hero() {
     <>
       <div
         id="hero"
-        className="select-none w-full bg-slate-50 dark:bg-[#333333] pt-[120px]"
+        className="select-none w-full bg-[var(--background)] dark:bg-[var(--background)] pt-[120px]"
       >
         <HeroParallax
           products={[
