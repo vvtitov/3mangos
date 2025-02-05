@@ -106,16 +106,16 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-20">
-      <div className="flex flex-col gap-4 max-w-xl min-w-sm px-10">
-        <div>
+      <div className="flex flex-col gap-4 max-w-xl min-w-sm px-5">
+        {/* <div>
           <AnimatedTooltipPreview />
-        </div>
-        <h1 className="text-4xl font-bold dark:text-white pt-4">
-          <strong className="text-orange-300 rounded-full ">
+        </div> */}
+        <h1 className="text-5xl font-bold dark:text-white">
+          <strong className="text-primary">
             UNLEASH YOUR MANGOS WITH OUR FRESH SOLUTIONS
           </strong>
         </h1>
-        <section className="text-[#333333] text-2xl md:text-xl dark:text-neutral-200 max-w-lg">
+        <section className="text-[#333333] text-2xl md:text-2xl dark:text-neutral-200 max-w-lg">
           We are passionate developers and designers that are
           <strong> focused on build amazing products </strong> at lightspeed
           with the latest technologies and frameworks. <br />

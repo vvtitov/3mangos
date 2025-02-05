@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <div className="items-center justify-items-center h-full w-full select-none">
-        <BackgroundLines className="flex items-center justify-center h-full w-full min-h-auto bg-[#9cd3aa] min-h-screen">
+        <BackgroundLines className="flex items-center justify-center h-full w-full min-h-auto bg-secondary min-h-screen">
           <div className=" absolute top-[75vh] text-center">
             {/* <h2 className="text-sm md:text-md font-sans z-20 font-bold text-gray-800">
             get in touch

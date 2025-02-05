@@ -10,17 +10,17 @@ export function ModeSwitch() {
   const isDark = theme === "dark";
 
   return (
-    <div className="flex space-x-2 items-center w-[80px]">
+    <div className="flex space-x-2 items-center justify-center w-full text-primary">
       <Sun
-        className={`h-3 w-3 ${isDark ? "text-gray-500" : "text-yellow-500"}`}
+        className={`h-3 w-3 ${isDark ? "text-foreground" : "text-primary"}`}
       />
       <Switch
         checked={isDark}
         onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
-        className="bg-orange-300 dark:bg-orange-300 flex items-center"
+        className="flex items-center"
       ></Switch>
       <Moon
-        className={`h-3 w-3 ${isDark ? "text-yellow-500" : "text-gray-500"}`}
+        className={`h-3 w-3 ${isDark ? "text-primary" : "text-foreground"}`}
       />
     </div>
   );
