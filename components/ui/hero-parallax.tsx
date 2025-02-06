@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatedTooltipPreview } from "../TooltipHero";
+// import { AnimatedTooltipPreview } from "../TooltipHero";
 // import { Cover } from "./cover";
 
 export const HeroParallax = ({
@@ -105,17 +105,17 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-20">
-      <div className="flex flex-col gap-4 max-w-xl min-w-sm px-5">
+    <div className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-[200px]">
+      <div className="flex flex-col gap-4 max-w-xl min-w-sm px-10">
         {/* <div>
           <AnimatedTooltipPreview />
         </div> */}
-        <h1 className="text-5xl font-bold dark:text-white">
-          <strong className="text-primary">
+        <h1 className="text-5xl font-bold">
+          <strong className="text-primary dark:text-primary">
             UNLEASH YOUR MANGOS WITH OUR FRESH SOLUTIONS
           </strong>
         </h1>
-        <section className="text-[#333333] text-2xl md:text-2xl dark:text-neutral-200 max-w-lg">
+        <section className="text-foreground text-xl md:text-2xl dark:text-foreground max-w-lg">
           We are passionate developers and designers that are
           <strong> focused on build amazing products </strong> at lightspeed
           with the latest technologies and frameworks. <br />
@@ -127,7 +127,7 @@ export const Header = () => {
         We are a team of passionate developers and designers that love to build
         amazing and innovating products at <Cover>lightspeed ⚡</Cover>.
       </section> */}
-      <div className="flex min-w-[400px]">
+      <div className="flex min-w-[400px] pt-10 md:pt-0">
         <Image
           src="/mango-hero3.png"
           alt="Floating Mango"
@@ -165,7 +165,7 @@ export const ProductCard = ({
     >
       <Link
         href={product.link}
-        className="block group-hover/product:shadow-2xl "
+        className="block group-hover/product:shadow-2xl"
       >
         <Image
           src={product.thumbnail}
@@ -175,7 +175,7 @@ export const ProductCard = ({
           alt={product.title}
         />
       </Link>
-      <div className="absolute inset-0 h-full w-full  pointer-events-none"></div>
+      <div className="absolute inset-0 h-full w-full">🥭</div>
     </motion.div>
   );
 };

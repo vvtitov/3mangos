@@ -23,7 +23,7 @@ export default function BurgerMenu() {
   }, [isOpen]);
 
   return (
-    <div id="burgerMenu" className="flex lg:hidden items-end">
+    <div id="burgerMenu" className="lg:hidden items-end">
       {/* Mobile Menu Button */}
       <button
         className="dark:text-foreground text-foreground focus:outline-none "
@@ -39,9 +39,9 @@ export default function BurgerMenu() {
           isOpen ? { height: "100vh", opacity: 1 } : { height: 0, opacity: 0 }
         }
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed flex justify-center top-0 right-0 w-full max-w-full max-h-full bg-background dark:bg-background z-[12] px-10"
+        className="fixed flex justify-center top-0 right-0 w-full max-w-full max-h-full bg-background dark:bg-background z-[2] px-10"
       >
-        <div className="relative text-center my-auto">
+        <div className="relative text-center my-auto z-[-3]">
           <div className="pb-20">
             <ModeSwitch />
           </div>
@@ -53,7 +53,7 @@ export default function BurgerMenu() {
           ].map((item) => (
             <Link href={item.link} key={item.name}>
               <p
-                className="text-2xl text-foreground transition-colors py-2 px-4 rounded-2xl mb-3 hover:rotate-2 hover:text-primary"
+                className="text-2xl text-foreground transition-colors py-2 px-4 mb-3 hover:rotate-2 hover:text-primary"
                 onClick={handleClose}
               >
                 {item.name}
