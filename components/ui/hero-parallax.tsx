@@ -58,7 +58,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[280vh] lg:h-[205vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1600px] [transform-style:preserve-3d] z-[1]"
+      className="h-full overflow-hidden antialiased relative flex flex-col self-auto [perspective:1600px] [transform-style:preserve-3d] z-[1]"
     >
       <Header />
       <motion.div
@@ -70,7 +70,7 @@ export const HeroParallax = ({
           opacity,
         }}
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 mb-2 rotate-3">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-15 mb-5 rotate-3">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -79,7 +79,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row mb-2 space-x-10 -rotate-2">
+        <motion.div className="flex flex-row mb-5 space-x-15 -rotate-2">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -88,7 +88,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 rotate-3">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-15 rotate-3">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -106,11 +106,11 @@ export const Header = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-[200px]"
+      className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-[180px]"
     >
       <div className="flex flex-col gap-4 max-w-xl px-10">
-        <p className="text-5xl font-bold">
-          UNLEASH <br />
+        <p className="text-4xl md:text-5xl font-bold text-balance">
+          FULLY UNLEASH <br />
           <strong className="text-primary dark:text-primary">
             YOUR IDEAS{" "}
           </strong>
@@ -120,32 +120,31 @@ export const Header = () => {
             FRESH SOLUTIONS
           </strong>
         </p>
-        <p className="text-foreground text-xl md:text-2xl dark:text-foreground max-w-lg">
+        <p className="text-foreground text-xl md:text-2xl dark:text-foreground max-w-sm text-balance">
           We are passionate developers and designers that are
-          <strong> focused on build amazing products </strong> at lightspeed
-          with the latest technologies and frameworks. <br />
+          <strong> focused on build amazing products </strong> at{" "}
+          <i>lightspeed</i> with the latest technologies and frameworks. <br />
         </p>
-        <div className="flex justify-center pt-2">
+        <div className="flex justify-start pt-2">
           <Button
             variant={"outline"}
             size={"lg"}
-            className="py-6 px-10 text-xl rounded-full bg-gradient-to-r from-primary to-primary/80 text-secondary-foreground"
+            className="py-6 px-8 text-xl rounded-full bg-gradient-to-r from-primary to-primary/80 text-secondary-foreground"
             onClick={() => {
               window.location.href = "mailto:contacto@3mangos.site";
             }}
           >
-            Get in touch 📫
+            Get in touch
           </Button>
         </div>
       </div>
-      <div className="flex min-w-[400px] pt-10 md:pt-0">
+      <div className="flex min-w-min">
         <Image
           src="/mango-hero3.png"
           alt="Floating Mango"
-          width={500}
-          height={500}
-          className="pointer-events-none
-        animate-float rotate-3"
+          width={400}
+          height={400}
+          className="rotate-[5deg] lg:rotate-[-15deg] hover:rotate-[-10deg] duration-1000 scale-75 md:scale-100"
         />
       </div>
     </section>

@@ -6,11 +6,11 @@ export function AboutMaskText() {
     <div className="h-full w-full flex items-center justify-center overflow-hidden bg-cover bg-center">
       <MaskContainer
         revealText={
-          <p className="max-w-4xl mx-auto text-foreground text-center text-5xl lg:text-9xl font-bold">
+          <p className="max-w-4xl mx-auto text-foreground text-center text-5xl lg:text-7xl font-bold">
             ABOUT
           </p>
         }
-        className="h-[55rem]"
+        className="h-[45rem]"
       >
         One day, three mangos rolled off a fruit stand and landed right in front
         of a struggling developer. Frustrated with his broken code, he sighed,

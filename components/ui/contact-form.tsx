@@ -58,12 +58,12 @@ export default function ContactFormPreview() {
 
   return (
     <div className="flex min-h-[60vh] h-full w-full items-center justify-center px-2">
-      <Card className="mx-auto max-w-md">
+      <Card className="mx-auto max-w-md border-none">
         <CardHeader>
-          <CardTitle className="text-4xl text-primary">
+          <CardTitle className="text-2xl text-primary">
             Want a fresh mango?
           </CardTitle>
-          <CardDescription className="text-xl text-foreground">
+          <CardDescription className="text-xl text-foreground/80">
             Please fill out the form below with a resume of your idea and we
             will get back to you.
           </CardDescription>
@@ -71,7 +71,7 @@ export default function ContactFormPreview() {
         <CardContent>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-              <div className="grid gap-4">
+              <div className="grid gap-5">
                 {/* Name Field */}
                 <FormField
                   control={form.control}
@@ -85,6 +85,7 @@ export default function ContactFormPreview() {
                           placeholder="John Doe"
                           type="text"
                           autoComplete="name"
+                          className="border-secondary-foreground"
                           {...field}
                         />
                       </FormControl>
@@ -106,6 +107,7 @@ export default function ContactFormPreview() {
                           placeholder="johndoe@mail.com"
                           type="email"
                           autoComplete="email"
+                          className="border-secondary-foreground"
                           {...field}
                         />
                       </FormControl>
@@ -126,7 +128,7 @@ export default function ContactFormPreview() {
                           id="message"
                           placeholder="Your message..."
                           autoComplete="off"
-                          className="max-h-[150px]"
+                          className="max-h-[150px] border-secondary-foreground"
                           {...field}
                         />
                       </FormControl>
@@ -140,7 +142,7 @@ export default function ContactFormPreview() {
                   variant="outline"
                   className="w-[10rem] bg-primary text-foreground rounded-full m-auto"
                 >
-                  SUBMIT
+                  SEND
                 </Button>
               </div>
             </form>
