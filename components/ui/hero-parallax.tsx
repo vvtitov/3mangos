@@ -104,31 +104,37 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div
+    <section
       id="hero"
       className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-[200px]"
     >
-      <div className="flex flex-col gap-4 max-w-xl min-w-sm px-10">
-        <h1 className="text-5xl font-bold">
+      <div className="flex flex-col gap-4 max-w-xl px-10">
+        <p className="text-5xl font-bold">
+          UNLEASH <br />
           <strong className="text-primary dark:text-primary">
-            UNLEASH YOUR MANGOS WITH OUR FRESH SOLUTIONS
+            YOUR IDEAS{" "}
           </strong>
-        </h1>
-        <section className="text-foreground text-xl md:text-2xl dark:text-foreground max-w-lg">
+          <br />
+          WITH OUR <br />
+          <strong className="text-primary dark:text-primary">
+            FRESH SOLUTIONS
+          </strong>
+        </p>
+        <p className="text-foreground text-xl md:text-2xl dark:text-foreground max-w-lg">
           We are passionate developers and designers that are
           <strong> focused on build amazing products </strong> at lightspeed
           with the latest technologies and frameworks. <br />
-        </section>
-        <div className="flex gap-4">
+        </p>
+        <div className="flex justify-center pt-2">
           <Button
             variant={"outline"}
             size={"lg"}
-            className="py-6 px-10 text-xl rounded-full"
+            className="py-6 px-10 text-xl rounded-full bg-gradient-to-r from-primary to-primary/80 text-secondary-foreground"
             onClick={() => {
               window.location.href = "mailto:contacto@3mangos.site";
             }}
           >
-            Get in touch
+            Get in touch 📫
           </Button>
         </div>
       </div>
@@ -142,7 +148,7 @@ export const Header = () => {
         animate-float rotate-3"
         />
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -180,7 +186,9 @@ export const ProductCard = ({
           alt={product.title}
         />
       </Link>
-      <div className="absolute inset-0 h-full w-full">🥭</div>
+      <div className="absolute inset-0 h-full w-full rotate-12">
+        🥭🥭🥭_________________
+      </div>
     </motion.div>
   );
 };

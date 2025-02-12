@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Tabs } from "./ui/tabs";
 
-export function TabsDemo() {
+export function TabsServices() {
   const tabs = [
     {
       title: "Development",
