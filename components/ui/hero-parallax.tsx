@@ -9,8 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatedTooltipPreview } from "../TooltipHero";
-// import { Cover } from "./cover";
+import { Button } from "./button";
 
 export const HeroParallax = ({
   products,
@@ -53,13 +52,13 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-900, 100]),
+    useTransform(scrollYProgress, [0, 0.2], [-900, 0]),
     springConfig
   );
   return (
     <div
       ref={ref}
-      className="h-[200vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:2600px] [transform-style:preserve-3d] md:mb-60 lg:mb-[5vh] z-[1]"
+      className="h-[280vh] lg:h-[205vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1600px] [transform-style:preserve-3d] z-[1]"
     >
       <Header />
       <motion.div
@@ -80,7 +79,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-2 space-x-10 -rotate-2">
+        <motion.div className="flex flex-row mb-2 space-x-10 -rotate-2">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -105,29 +104,41 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-20">
-      <div className="flex flex-col gap-4 max-w-xl min-w-sm px-5">
-        {/* <div>
-          <AnimatedTooltipPreview />
-        </div> */}
-        <h1 className="text-5xl font-bold dark:text-white">
-          <strong className="text-primary">
-            UNLEASH YOUR MANGOS WITH OUR FRESH SOLUTIONS
+    <section
+      id="hero"
+      className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-[200px]"
+    >
+      <div className="flex flex-col gap-4 max-w-xl px-10">
+        <p className="text-5xl font-bold">
+          UNLEASH <br />
+          <strong className="text-primary dark:text-primary">
+            YOUR IDEAS{" "}
           </strong>
-        </h1>
-        <section className="text-[#333333] text-2xl md:text-2xl dark:text-neutral-200 max-w-lg">
+          <br />
+          WITH OUR <br />
+          <strong className="text-primary dark:text-primary">
+            FRESH SOLUTIONS
+          </strong>
+        </p>
+        <p className="text-foreground text-xl md:text-2xl dark:text-foreground max-w-lg">
           We are passionate developers and designers that are
           <strong> focused on build amazing products </strong> at lightspeed
           with the latest technologies and frameworks. <br />
-        </section>
+        </p>
+        <div className="flex justify-center pt-2">
+          <Button
+            variant={"outline"}
+            size={"lg"}
+            className="py-6 px-10 text-xl rounded-full bg-gradient-to-r from-primary to-primary/80 text-secondary-foreground"
+            onClick={() => {
+              window.location.href = "mailto:contacto@3mangos.site";
+            }}
+          >
+            Get in touch 📫
+          </Button>
+        </div>
       </div>
-      {/* <section className="max-w-xl md:text-2xl/10 mt-2 dark:text-neutral-200 hidden lg:block">
-        We build beautiful products with the latest technologies and frameworks.{" "}
-        <br />
-        We are a team of passionate developers and designers that love to build
-        amazing and innovating products at <Cover>lightspeed ⚡</Cover>.
-      </section> */}
-      <div className="flex min-w-[400px]">
+      <div className="flex min-w-[400px] pt-10 md:pt-0">
         <Image
           src="/mango-hero3.png"
           alt="Floating Mango"
@@ -137,7 +148,7 @@ export const Header = () => {
         animate-float rotate-3"
         />
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -165,7 +176,7 @@ export const ProductCard = ({
     >
       <Link
         href={product.link}
-        className="block group-hover/product:shadow-2xl "
+        className="block group-hover/product:shadow-2xl"
       >
         <Image
           src={product.thumbnail}
@@ -175,7 +186,9 @@ export const ProductCard = ({
           alt={product.title}
         />
       </Link>
-      <div className="absolute inset-0 h-full w-full  pointer-events-none"></div>
+      <div className="absolute inset-0 h-full w-full rotate-12">
+        🥭🥭🥭_________________
+      </div>
     </motion.div>
   );
 };

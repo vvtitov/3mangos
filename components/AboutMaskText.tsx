@@ -3,14 +3,14 @@ import { MaskContainer } from "./ui/svg-mask-effect";
 
 export function AboutMaskText() {
   return (
-    <div className="h-full -mt-[30vh] md:-mt-[70vh] md:-mb-[30vh] lg:h-[80rem] lg:-mt-[80vh] w-full flex items-center justify-center overflow-hidden bg-cover bg-center cursor-none">
+    <div className="h-full w-full flex items-center justify-center overflow-hidden bg-cover bg-center">
       <MaskContainer
         revealText={
-          <p className="max-w-4xl mx-auto text-[#333333]/50 dark:text-white text-center text-8xl font-bold">
+          <p className="max-w-4xl mx-auto text-foreground text-center text-5xl lg:text-9xl font-bold">
             ABOUT
           </p>
         }
-        className="h-[100rem]"
+        className="h-[55rem]"
       >
         One day, three mangos rolled off a fruit stand and landed right in front
         of a struggling developer. Frustrated with his broken code, he sighed,

@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <header
       id="header"
-      className={`fixed top-0 w-full ${
+      className={`fixed top-0 w-screen ${
         isScrolled
           ? "h-[90px] bg-primary-foreground dark:bg-primary-foreground"
           : "h-[120px] bg-trasnparent dark:bg-trasparent"
@@ -42,7 +42,7 @@ export default function Header() {
 
       <div
         id="rightHeader"
-        className="flex w-full gap-2 items-center justify-end min-w-[200px]"
+        className="flex w-full gap-2 items-center justify-end"
       >
         <div id="navMenu" className="hidden lg:block mr-5">
           <NavMenu />

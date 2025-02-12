@@ -6,21 +6,21 @@ import Carrousel from "./ui/carousel";
 export default function ServicesCarousel() {
   return (
     <>
-      <div className="flex overflow-hidden w-full h-full mt-[12vh] justify-center z-0 p-10">
+      <div className="flex overflow-hidden justify-center mt-[2vh]">
         <Carrousel
           slides={[
             {
-              title: "We are 3MANGOS",
+              title: "Websites",
               button: "Click me",
               src: "/mango-2000x1440.png",
             },
             {
-              title: "We are 3MANGOS",
+              title: "Web Apps",
               button: "Click me",
               src: "/mango-2000x1440.png",
             },
             {
-              title: "We are 3MANGOS",
+              title: "Desktop Apps",
               button: "Click me",
               src: "/mango-2000x1440.png",
             },

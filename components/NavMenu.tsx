@@ -17,7 +17,7 @@ export default function NavMenu() {
         <NavigationMenu>
           <NavigationMenuList className="flex justify-end">
             <NavigationMenuItem>
-              <Button variant="default" size="sm">
+              <Button variant="link" size="lg">
                 <NavigationMenuLink
                   href="/home"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
@@ -27,7 +27,7 @@ export default function NavMenu() {
               </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button variant="default" size="sm">
+              <Button variant="link" size="lg">
                 <NavigationMenuLink
                   href="#about"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
@@ -37,7 +37,7 @@ export default function NavMenu() {
               </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button variant="default" size="sm">
+              <Button variant="link" size="lg">
                 <NavigationMenuLink
                   href="#services"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-white/70`}
@@ -47,7 +47,7 @@ export default function NavMenu() {
               </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button variant="default" size="sm">
+              <Button variant="link" size="lg">
                 <NavigationMenuLink
                   href="#contact"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-white/70`}
