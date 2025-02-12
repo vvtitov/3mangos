@@ -10,7 +10,7 @@ export function AboutMaskText() {
             ABOUT
           </p>
         }
-        className="h-[65rem]"
+        className="h-[55rem]"
       >
         One day, three mangos rolled off a fruit stand and landed right in front
         of a struggling developer. Frustrated with his broken code, he sighed,

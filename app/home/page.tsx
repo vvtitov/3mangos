@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <section
+      <main
         id="mainContainer"
         className="bg-background dark:bg-background min-w-[400px] w-full h-full"
       >
@@ -18,7 +18,7 @@ export default function Home() {
         <Services />
         <Contact />
         <Footer />
-      </section>
+      </main>
     </>
   );
 }

@@ -6,86 +6,83 @@ import { HeroParallax } from "./ui/hero-parallax";
 export default function Hero() {
   return (
     <>
-      <div
-        id="hero"
-        className="select-none w-full bg-[var(--background)] dark:bg-[var(--background)]"
-      >
+      <div id="hero" className="select-none w-full bg-background">
         <HeroParallax
           products={[
             {
-              title: "Moonbeam",
+              title: "1",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },
             {
-              title: "Cursor",
+              title: "2",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },
             {
-              title: "Rogue",
-              link: "#",
-              thumbnail: "/mango-2000x1440.png",
-            },
-
-            {
-              title: "Editorially",
-              link: "#",
-              thumbnail: "/mango-2000x1440.png",
-            },
-            {
-              title: "Editrix AI",
-              link: "#",
-              thumbnail: "/mango-2000x1440.png",
-            },
-            {
-              title: "Pixel Perfect",
+              title: "3",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },
 
             {
-              title: "Algochurn",
+              title: "4",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },
             {
-              title: "Aceternity UI",
+              title: "5",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },
             {
-              title: "Tailwind Master Kit",
+              title: "6",
+              link: "#",
+              thumbnail: "/mango-2000x1440.png",
+            },
+
+            {
+              title: "7",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },
             {
-              title: "SmartBridge",
+              title: "8",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },
             {
-              title: "Renderwork Studio",
+              title: "9",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },
             {
-              title: "Creme Digital",
+              title: "10",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },
             {
-              title: "Golden Bells Academy",
+              title: "11",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },
             {
-              title: "Invoker Labs",
+              title: "12",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },
             {
-              title: "E Free Invoice",
+              title: "13",
+              link: "#",
+              thumbnail: "/mango-2000x1440.png",
+            },
+            {
+              title: "14",
+              link: "#",
+              thumbnail: "/mango-2000x1440.png",
+            },
+            {
+              title: "15",
               link: "#",
               thumbnail: "/mango-2000x1440.png",
             },

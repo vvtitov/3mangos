@@ -9,8 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-// import { AnimatedTooltipPreview } from "../TooltipHero";
-// import { Cover } from "./cover";
+import { Button } from "./button";
 
 export const HeroParallax = ({
   products,
@@ -53,13 +52,13 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-900, 100]),
+    useTransform(scrollYProgress, [0, 0.2], [-900, 0]),
     springConfig
   );
   return (
     <div
       ref={ref}
-      className="h-[200vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:2600px] [transform-style:preserve-3d] md:mb-60 lg:mb-[5vh] z-[1]"
+      className="h-[280vh] lg:h-[205vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1600px] [transform-style:preserve-3d] z-[1]"
     >
       <Header />
       <motion.div
@@ -80,7 +79,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-2 space-x-10 -rotate-2">
+        <motion.div className="flex flex-row mb-2 space-x-10 -rotate-2">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -105,11 +104,11 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-[200px]">
+    <div
+      id="hero"
+      className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-[200px]"
+    >
       <div className="flex flex-col gap-4 max-w-xl min-w-sm px-10">
-        {/* <div>
-          <AnimatedTooltipPreview />
-        </div> */}
         <h1 className="text-5xl font-bold">
           <strong className="text-primary dark:text-primary">
             UNLEASH YOUR MANGOS WITH OUR FRESH SOLUTIONS
@@ -120,13 +119,19 @@ export const Header = () => {
           <strong> focused on build amazing products </strong> at lightspeed
           with the latest technologies and frameworks. <br />
         </section>
+        <div className="flex gap-4">
+          <Button
+            variant={"outline"}
+            size={"lg"}
+            className="py-6 px-10 text-xl rounded-full"
+            onClick={() => {
+              window.location.href = "mailto:contacto@3mangos.site";
+            }}
+          >
+            Get in touch
+          </Button>
+        </div>
       </div>
-      {/* <section className="max-w-xl md:text-2xl/10 mt-2 dark:text-neutral-200 hidden lg:block">
-        We build beautiful products with the latest technologies and frameworks.{" "}
-        <br />
-        We are a team of passionate developers and designers that love to build
-        amazing and innovating products at <Cover>lightspeed ⚡</Cover>.
-      </section> */}
       <div className="flex min-w-[400px] pt-10 md:pt-0">
         <Image
           src="/mango-hero3.png"

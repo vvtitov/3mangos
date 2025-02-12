@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import ContactFormPreview from "./ui/contact-form";
 import CustomShapeTop from "./ui/custom-shape-top";
 import CustomShapeBottom from "./ui/custom-shape-bottom";
@@ -11,12 +10,12 @@ export default function Contact() {
     <>
       <div
         id="contact"
-        className="relative flex my-20 mx-auto w-full h-full justify-center bg-fixed lg:bg-repeat-x bg-center content-around bg-orange-300 bg-repeat-space py-10"
+        className="relative flex my-10 mx-auto w-full h-full justify-center bg-fixed lg:bg-repeat-x bg-center content-around bg-secondary dark:bg-secondary bg-repeat-space py-5"
         style={{ backgroundImage: "url('/mango.png')" }}
       >
         <CustomShapeTop />
 
-        <div className="relative z-[3] my-40 mx-6 rotate-2">
+        <div className="relative z-[3] my-40 mx-6">
           <CardContainer>
             <ContactFormPreview />
           </CardContainer>

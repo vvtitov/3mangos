@@ -23,7 +23,7 @@ export default function BurgerMenu() {
   }, [isOpen]);
 
   return (
-    <div id="burgerMenu" className="lg:hidden items-end">
+    <div id="burgerMenu" className="lg:hidden items-end pr-2">
       {/* Mobile Menu Button */}
       <button
         className="dark:text-foreground text-foreground focus:outline-none "

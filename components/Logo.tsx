@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Logo() {
   return (
     <>
-      <div id="logo" className="flex w-[100px] justify-start z-10 items-center">
+      <div id="logo" className="flex w-[60px] justify-start z-10 items-center">
         <Link href="/home" passHref>
           <Image
             src="/3m-logo-black.png"
