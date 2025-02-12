@@ -1,22 +1,24 @@
 import { TabsServices } from "./AnimatedTab";
-import Image from "next/image";
+import { FlipWords } from "./ui/flip-words";
 export default function Services() {
+  const words = ["do", "create", "love"];
+
   return (
-    <div id="services" className="w-full pt-[6rem] pb-40">
-      <div className="flex flex-col p-5">
-        <h1 className="text-5xl text-primary mx-auto">OUR SERVICES</h1>
+    <section id="services" className="flex flex-col w-full pb-40 gap-10">
+      <div className="flex flex-row pt-[130px] justify-center items-center mx-auto">
+        <h1 className="text-4xl text-secondary-foreground mx-auto -rotate-3">
+          what we
+          <FlipWords
+            words={words}
+            className="text-primary dark:text-primary text-4xl mx-auto font-bold"
+          />
+          <br />
+        </h1>
       </div>
-      <Image
-        src="/arrow.svg"
-        alt="Arrow"
-        width={600}
-        height={600}
-        className="mx-auto"
-      />
 
       <div className="flex flex-col items-center justify-center p-5">
         <TabsServices />
       </div>
-    </div>
+    </section>
   );
 }

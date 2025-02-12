@@ -16,30 +16,32 @@ export default function Footer() {
       <div className="py-5 md:py-1">
         <div className="grid md:flex gap-20 justify-around mx-20">
           <div className="space-y-4">
-            <p className="text-sm text-center">Follow us!</p>
-            <div className="flex justify-center">
+            <p className="text-lg text-center">Follow us!</p>
+            <div className="flex justify-center gap-2">
               <Button variant="link" size="icon" asChild>
                 <Link href="#">
-                  <Facebook className="h-5 w-5" />
+                  <Facebook className="h-5 w-5 hover:rotate-12" />
                 </Link>
               </Button>
               <Button variant="link" size="icon" asChild>
                 <Link href="#">
-                  <Instagram className="h-5 w-5" />
+                  <Instagram className="h-5 w-5 hover:rotate-12" />
                 </Link>
               </Button>
               <Button variant="link" size="icon" asChild>
                 <Link href="#">
-                  <Linkedin className="h-5 w-5" />
+                  <Linkedin className="h-5 w-5 hover:rotate-12" />
                 </Link>
               </Button>
             </div>
             <h2 className="text-2xl font-bold tracking-tighter text-center">
-              Three Mangos
+              THREE MANGOS
             </h2>
           </div>
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-center">Contact</h3>
+            <h3 className="text-lg font-semibold text-center lg:text-left">
+              CONTACT US
+            </h3>
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-muted-foreground" />
@@ -65,7 +67,7 @@ export default function Footer() {
         <Separator className="mt-20 mb-5 bg-[#333333] dark:bg-white/80" />
         <div className="flex justify-center items-center md:mb-5">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Three Mangos. All rights reserved.
+            &copy; {new Date().getFullYear()} THREE MANGOS S.A
           </p>
         </div>
       </div>

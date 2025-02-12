@@ -6,7 +6,7 @@ import { HeroParallax } from "./ui/hero-parallax";
 export default function Hero() {
   return (
     <>
-      <div id="hero" className="select-none w-full bg-background">
+      <section id="hero" className="select-none w-full bg-background">
         <HeroParallax
           products={[
             {
@@ -88,7 +88,7 @@ export default function Hero() {
             },
           ]}
         />
-      </div>
+      </section>
     </>
   );
 }

@@ -4,13 +4,13 @@ import { AnimatedTooltipPreview } from "./AnimatedTooltipAbout";
 
 export default function AboutUs() {
   return (
-    <section id="about" className="w-full h-full mb-10">
+    <section id="about" className="w-full mb-10 pt-[100px] lg:pt-0">
       <div className="relative flex flex-col text-center">
-        <div className="justify-center hidden lg:flex lg:p-10">
+        <div className="justify-center hidden lg:flex lg:px-10">
           <AboutMaskText />
         </div>
         <div className="flex flex-col lg:hidden p-5 bg-primary-foreground dark:bg-primary-foreground gap-10">
-          <h1 className="text-5xl text-primary">ABOUT US</h1>
+          <h1 className="text-4xl text-primary">ABOUT</h1>
           <p className="text-xl max-w-2xl mx-auto px-8 text-left pb-20 text-balance">
             One day, three mangos rolled off a fruit stand and landed right in
             front of a struggling developer. Frustrated with his broken code, he
@@ -23,7 +23,7 @@ export default function AboutUs() {
             knows the truth… except for the three very, very wise mangos.
           </p>
         </div>
-        <div className="flex justify-center items-center w-full">
+        <div className="flex justify-center items-center w-full lg:">
           <AnimatedTooltipPreview />
         </div>
       </div>
