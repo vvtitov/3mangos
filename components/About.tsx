@@ -10,7 +10,7 @@ export default function AboutUs() {
           <AboutMaskText />
         </div>
         <div className="flex flex-col lg:hidden p-5 bg-primary-foreground dark:bg-primary-foreground gap-10">
-          <h1 className="text-6xl text-primary">ABOUT</h1>
+          <h1 className="text-4xl text-primary">WHO WE ARE</h1>
           <p className="text-xl max-w-2xl mx-auto px-8 text-left pb-20 text-balance">
             One day, three mangos rolled off a fruit stand and landed right in
             front of a struggling developer. Frustrated with his broken code, he

@@ -60,12 +60,12 @@ export default function ContactFormPreview() {
     <div className="flex min-h-[60vh] h-full w-full items-center justify-center px-2">
       <Card className="mx-auto max-w-md border-none">
         <CardHeader>
-          <CardTitle className="text-2xl text-primary">
+          <CardTitle className="text-3xl text-primary">
             Want a fresh mango?
           </CardTitle>
           <CardDescription className="text-xl text-foreground/80">
             Please fill out the form below with a resume of your idea and we
-            will get back to you.
+            will get back to you as soon as possible.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -140,9 +140,9 @@ export default function ContactFormPreview() {
                 <Button
                   type="submit"
                   variant="outline"
-                  className="w-[10rem] bg-primary-foreground text-primary hover:text-primary-foreground rounded-full m-auto"
+                  className="w-[10rem] bg-primary-foreground/60 text-primary hover:text-primary-foreground rounded-full m-auto"
                 >
-                  SEND
+                  SUBMIT
                 </Button>
               </div>
             </form>

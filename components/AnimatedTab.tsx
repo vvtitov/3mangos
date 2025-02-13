@@ -10,17 +10,17 @@ export function TabsServices() {
       value: "design",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
-          <p>Development tab</p>
+          <p>Design tab</p>
           <DummyContent />
         </div>
       ),
     },
     {
-      title: "Build",
-      value: "build",
+      title: "Development",
+      value: "development",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
-          <p>Design tab</p>
+          <p>Development tab</p>
           <DummyContent />
         </div>
       ),
@@ -38,7 +38,7 @@ export function TabsServices() {
   ];
 
   return (
-    <div className="h-[25rem] md:h-[30rem] [perspective:1000px] relative b flex flex-col max-w-5xl w-full items-start justify-start px-10">
+    <div className="h-[25rem] md:h-[30rem] [perspective:1000px] relative b flex flex-col max-w-5xl w-full items-start justify-start px-5 text-lg md:text-2xl">
       <Tabs tabs={tabs} />
     </div>
   );
