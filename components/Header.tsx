@@ -29,9 +29,9 @@ export default function Header() {
       id="header"
       className={`fixed top-0 w-screen ${
         isScrolled
-          ? "h-[90px] bg-primary-foreground dark:bg-primary-foreground"
+          ? "h-[90px] bg-primary-foreground dark:bg-primary-foreground border-b border-gray-500"
           : "h-[120px] bg-trasnparent dark:bg-trasparent"
-      } grid grid-cols-2 lg:grid max-w-8xl px-10 select-none items-center dark:border-gray-200 border-b border-[#333333]/50 transition-all duration-300 z-[10]`}
+      } grid grid-cols-2 lg:grid max-w-8xl px-10 select-none items-center dark:border-gray-200 transition-all duration-300 z-[10]`}
     >
       <div
         id="leftHeader"

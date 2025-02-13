@@ -23,7 +23,7 @@ export default function Home() {
           height={600}
           className="mx-auto -mb-20 pointer-events-none"
           style={{
-            filter: "drop-shadow(1px 15px 3px hsl(var(--primary)))",
+            filter: "drop-shadow(1px 10px 2px hsl(var(--primary)))",
           }}
         />
         <Services />

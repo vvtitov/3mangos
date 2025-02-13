@@ -106,45 +106,37 @@ export const Header = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col md:flex-row max-w-4xl relative mx-auto w-full items-center select-none justify-between pt-[180px]"
+      className="flex flex-col md:flex-row max-w-5xl relative mx-auto w-full items-center select-none justify-between pt-[180px]"
     >
-      <div className="flex flex-col gap-4 max-w-xl px-10">
-        <p className="text-4xl md:text-5xl font-bold text-balance">
-          FULLY UNLEASH <br />
-          <strong className="text-primary dark:text-primary">
-            YOUR IDEAS{" "}
-          </strong>
-          <br />
-          WITH OUR <br />
-          <strong className="text-primary dark:text-primary">
-            FRESH SOLUTIONS
-          </strong>
+      <div className="flex flex-col gap-4 max-w-2xl px-32">
+        <p className="text-5xl md:text-7xl lg:text-8xl font-bold text-balance">
+          <strong className="text-primary">MANGOS EVERYWHERE</strong>
         </p>
-        <p className="text-foreground text-xl md:text-2xl dark:text-foreground max-w-sm text-balance">
+        <p className="text-foreground text-xl md:text-2xl dark:text-foreground text-balance max-w-md">
           We are passionate developers and designers that are
           <strong> focused on build amazing products </strong> at{" "}
           <i>lightspeed</i> with the latest technologies and frameworks. <br />
         </p>
-        <div className="flex justify-start pt-2">
+        <div className="flex justify-start pt-4">
           <Button
             variant={"outline"}
             size={"lg"}
-            className="py-6 px-8 text-xl rounded-full bg-gradient-to-r from-primary to-primary/80 text-secondary-foreground"
+            className="py-8 px-8 text-xl rounded-full bg-gradient-to-r from-primary via-primary/120 to-primary/80 text-primary-foreground items-center justify-center w-1/2  hover:scale-105 transition-all duration-500"
             onClick={() => {
               window.location.href = "mailto:contacto@3mangos.site";
             }}
           >
-            Get in touch
+            Let&apos;s talk →
           </Button>
         </div>
       </div>
-      <div className="flex min-w-min">
+      <div className="w-[400px] shrink-0 md:translate-x-[-200px]">
         <Image
           src="/mango-hero3.png"
           alt="Floating Mango"
           width={400}
           height={400}
-          className="rotate-[5deg] lg:rotate-[-15deg] hover:rotate-[-10deg] duration-1000 scale-75 md:scale-100"
+          className="rotate-[5deg] lg:rotate-[-20deg] hover:rotate-[-10deg] duration-1000 scale-75 md:scale-100 md:pt-60"
         />
       </div>
     </section>
