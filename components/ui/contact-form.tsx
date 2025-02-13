@@ -140,7 +140,7 @@ export default function ContactFormPreview() {
                 <Button
                   type="submit"
                   variant="outline"
-                  className="w-[10rem] bg-primary text-foreground rounded-full m-auto"
+                  className="w-[10rem] bg-primary-foreground text-primary hover:text-primary-foreground rounded-full m-auto"
                 >
                   SEND
                 </Button>

@@ -6,8 +6,8 @@ import { Tabs } from "./ui/tabs";
 export function TabsServices() {
   const tabs = [
     {
-      title: "Development",
-      value: "development",
+      title: "Design",
+      value: "design",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
           <p>Development tab</p>
@@ -16,8 +16,8 @@ export function TabsServices() {
       ),
     },
     {
-      title: "Design",
-      value: "design",
+      title: "Build",
+      value: "build",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
           <p>Design tab</p>
@@ -38,7 +38,7 @@ export function TabsServices() {
   ];
 
   return (
-    <div className="h-[30rem] md:h-[45rem] [perspective:1000px] relative b flex flex-col max-w-5xl w-full items-start justify-start px-10">
+    <div className="h-[25rem] md:h-[30rem] [perspective:1000px] relative b flex flex-col max-w-5xl w-full items-start justify-start px-10">
       <Tabs tabs={tabs} />
     </div>
   );

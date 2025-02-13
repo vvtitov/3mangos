@@ -1,10 +1,14 @@
 import { TabsServices } from "./AnimatedTab";
+import AcordionServices from "./ui/AcordionServices";
 import { FlipWords } from "./ui/flip-words";
 export default function Services() {
   const words = ["do", "create", "love"];
 
   return (
-    <section id="services" className="flex flex-col w-full pb-40 gap-10">
+    <section
+      id="services"
+      className="flex flex-col w-full pb-20 gap-10 mx-auto"
+    >
       <div className="flex flex-row pt-[130px] justify-center items-center mx-auto">
         <h1 className="text-4xl text-secondary-foreground mx-auto -rotate-3">
           what we
@@ -18,6 +22,11 @@ export default function Services() {
 
       <div className="flex flex-col items-center justify-center p-5">
         <TabsServices />
+      </div>
+
+      <div className="flex flex-col items-center p-5 max-w-3xl w-full h-[400px] mx-auto pt-20 px-10">
+        <h1></h1>
+        <AcordionServices />
       </div>
     </section>
   );
