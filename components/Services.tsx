@@ -1,8 +1,8 @@
 import { TabsServices } from "./AnimatedTab";
-import AcordionServices from "./ui/AcordionServices";
+import AcordionServices from "./AcordionServices";
 import { FlipWords } from "./ui/flip-words";
 export default function Services() {
-  const words = ["do", "create", "love"];
+  const words = ["DO", "CREATE", "LOVE"];
 
   return (
     <section
@@ -11,7 +11,7 @@ export default function Services() {
     >
       <div className="flex flex-row pt-[130px] justify-center items-center mx-auto">
         <h1 className="text-4xl text-secondary-foreground mx-auto -rotate-3">
-          what we
+          WHAT WE
           <FlipWords
             words={words}
             className="text-primary dark:text-primary text-4xl mx-auto font-bold"
@@ -24,8 +24,7 @@ export default function Services() {
         <TabsServices />
       </div>
 
-      <div className="flex flex-col items-center p-5 max-w-3xl w-full h-[400px] mx-auto pt-20 px-10">
-        <h1></h1>
+      <div className="flex flex-col items-center p-5 max-w-5xl w-full mx-auto pt-40 px-10">
         <AcordionServices />
       </div>
     </section>

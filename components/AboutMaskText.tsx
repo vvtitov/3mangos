@@ -7,7 +7,7 @@ export function AboutMaskText() {
       <MaskContainer
         revealText={
           <p className="max-w-4xl mx-auto text-foreground text-center text-5xl lg:text-7xl font-bold">
-            ABOUT
+            WHO WE ARE
           </p>
         }
         className="h-[45rem]"
