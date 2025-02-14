@@ -19,9 +19,9 @@ export default function Home() {
         <Image
           src="/arrow.svg"
           alt="Arrow"
-          width={600}
-          height={600}
-          className="mx-auto pointer-events-none mb-[-5rem]"
+          width={400}
+          height={400}
+          className="mx-auto pointer-events-none mt-[-4rem]"
           style={{
             filter: "drop-shadow(1px 10px 2px hsl(var(--primary)))",
           }}
