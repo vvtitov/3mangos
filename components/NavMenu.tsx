@@ -40,7 +40,7 @@ export default function NavMenu() {
               <Button variant="link" size="lg">
                 <NavigationMenuLink
                   href="#services"
-                  className={`${navigationMenuTriggerStyle()} text-foreground dark:text-white/70`}
+                  className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
                   SERVICES
                 </NavigationMenuLink>
@@ -50,7 +50,7 @@ export default function NavMenu() {
               <Button variant="link" size="lg">
                 <NavigationMenuLink
                   href="#contact"
-                  className={`${navigationMenuTriggerStyle()} text-foreground dark:text-white/70`}
+                  className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
                   CONTACT
                 </NavigationMenuLink>

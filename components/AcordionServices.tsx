@@ -8,19 +8,19 @@ import {
 export default function AcordionServices() {
   return (
     <div className="w-full h-full">
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion type="single" collapsible className="w-full text-balance">
         <AccordionItem value="item-1">
           <AccordionTrigger>You make websites, right?</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-md md:text-lg">
             Yes, but not only, we are full stack developers with a passion for
-            creating beautiful and functional software. From enterprise
-            applications to specialized tools, we can help bring your ideas to
-            life with clean, efficient, and scalable code.
+            creating beautiful and functional software. <br />
+            From enterprise applications to specialized tools, we can help bring
+            your ideas to life with clean, efficient, and scalable code.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
           <AccordionTrigger>What about mobile apps?</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-md md:text-lg">
             Yes, we also develop mobile apps. <br />
             We specialize in building custom software solutions tailored to your
             specific needs.
@@ -28,22 +28,22 @@ export default function AcordionServices() {
         </AccordionItem>
         <AccordionItem value="item-3">
           <AccordionTrigger>I don&apos;t have a design</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-md md:text-lg">
             We can help you design your website or app. <br /> We have a team of
             designers who can help you create a beautiful and functional design.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">
           <AccordionTrigger>How long does it take?</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-md md:text-lg">
             It depends on the complexity and needs of the project. <br /> We
             will provide you with a timeline and a cost estimate before we
             start.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-5">
+        <AccordionItem value="item-5" className="border-none">
           <AccordionTrigger>Do you offer maintenance?</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-md md:text-lg">
             Yes, we offer maintenance for all our projects.
           </AccordionContent>
         </AccordionItem>
