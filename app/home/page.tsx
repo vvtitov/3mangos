@@ -21,7 +21,7 @@ export default function Home() {
           alt="Arrow"
           width={600}
           height={600}
-          className="mx-auto -mb-20 pointer-events-none"
+          className="mx-auto pointer-events-none mb-[-5rem]"
           style={{
             filter: "drop-shadow(1px 10px 2px hsl(var(--primary)))",
           }}

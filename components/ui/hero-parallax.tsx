@@ -106,28 +106,36 @@ export const Header = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col md:flex-row max-w-5xl relative mx-auto w-full items-center select-none justify-between pt-[180px]"
+      className="flex flex-col md:flex-row max-w-5xl relative mx-auto w-full items-center select-none justify-between pt-[10rem] md:pt-[5rem]"
     >
       <div className="flex flex-col gap-4 max-w-2xl px-32">
         <p className="text-5xl md:text-7xl lg:text-8xl font-bold text-balance">
           <strong className="text-primary">MANGOS EVERYWHERE</strong>
         </p>
-        <p className="text-foreground text-xl md:text-2xl dark:text-foreground text-balance max-w-md">
+        <p className="text-foreground text-xl md:text-2xl dark:text-foreground text-balance max-w-md pl-1">
           We are passionate developers and designers that are
           <strong> focused on build amazing products </strong> at{" "}
           <i>lightspeed</i> with the latest technologies and frameworks. <br />
         </p>
-        <div className="flex justify-start pt-4">
-          <Button
-            variant={"outline"}
-            size={"lg"}
-            className="py-8 px-8 text-xl rounded-full bg-gradient-to-r from-primary via-primary/120 to-primary/80 text-primary-foreground items-center justify-center w-1/2  hover:scale-105 transition-all duration-500"
-            onClick={() => {
-              window.location.href = "mailto:contacto@3mangos.site";
-            }}
+        <div className="flex justify-start pl-2 mt-4">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            Let&apos;s talk →
-          </Button>
+            <Button
+              variant={"outline"}
+              size={"lg"}
+              className="py-8 px-12 text-xl rounded-full bg-gradient-to-r from-primary via-primary/120 to-primary/80 text-primary-foreground items-center justify-center"
+              onClick={() => {
+                window.location.href = "mailto:contacto@3mangos.site";
+              }}
+            >
+              Let&apos;s talk →
+            </Button>
+          </motion.div>
         </div>
       </div>
       <div className="w-[400px] shrink-0 md:translate-x-[-200px]">
@@ -136,7 +144,7 @@ export const Header = () => {
           alt="Floating Mango"
           width={400}
           height={400}
-          className="rotate-[5deg] lg:rotate-[-20deg] hover:rotate-[-10deg] duration-1000 scale-75 md:scale-100 md:pt-60"
+          className="rotate-[5deg] lg:rotate-[-20deg] hover:rotate-[-10deg] duration-1000 scale-75 md:scale-100 md:pt-60 -translate-y-10 md:-translate-y-0"
         />
       </div>
     </section>

@@ -1,6 +1,7 @@
 import { TabsServices } from "./AnimatedTab";
 import AcordionServices from "./AcordionServices";
 import { FlipWords } from "./ui/flip-words";
+import LampDemo, { LampContainer } from "./ui/lamp";
 export default function Services() {
   const words = ["DO", "CREATE", "LOVE"];
 

@@ -89,8 +89,8 @@ body {
 }
 
 .custom-shape-divider-top-1738168863 .shape-fill {
-  fill: #ffffff;
-  @apply dark:fill-[#333333];
+  fill: hsl(210 40% 98%);
+  @apply dark:fill-background;
 }
 
 .custom-shape-divider-bottom-1738172143 {
@@ -111,8 +111,8 @@ body {
 }
 
 .custom-shape-divider-bottom-1738172143 .shape-fill {
-  fill: white;
-  @apply dark:fill-[#333333];
+  fill: hsl(210 40% 98%);
+  @apply dark:fill-background;
 }
 
 .no-visible-scrollbar {
