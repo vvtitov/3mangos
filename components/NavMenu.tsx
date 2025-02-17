@@ -17,42 +17,42 @@ export default function NavMenu() {
         <NavigationMenu>
           <NavigationMenuList className="flex justify-end">
             <NavigationMenuItem>
-              <Button variant="link" size="lg">
+              <Button variant="transparent" size="lg">
                 <NavigationMenuLink
                   href="/home"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
-                  HOME
+                  Home
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button variant="link" size="lg">
+              <Button variant="transparent" size="lg">
                 <NavigationMenuLink
                   href="#about"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
-                  ABOUT
+                  About
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button variant="link" size="lg">
+              <Button variant="transparent" size="lg">
                 <NavigationMenuLink
                   href="#services"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
-                  SERVICES
+                  Services
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button variant="link" size="lg">
+              <Button variant="transparent" size="lg">
                 <NavigationMenuLink
                   href="#contact"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
-                  CONTACT
+                  Contact
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>

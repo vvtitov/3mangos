@@ -10,9 +10,11 @@ export default function AboutUs() {
         <div className="justify-center hidden lg:flex lg:px-5">
           <AboutMaskText />
         </div>
-        <div className="flex flex-col lg:hidden px-5 bg-primary-foreground dark:bg-primary-foreground gap-10 mb-[-6rem] mt-[8rem]">
-          <h1 className="text-4xl text-primary font-bold italic">WHO WE ARE</h1>
-          <p className="text-xl max-w-2xl mx-auto px-8 text-left text-balanced font-medium">
+        <div className="flex flex-col lg:hidden bg-primary-foreground dark:bg-primary-foreground gap-10 mt-[8rem]">
+          <h1 className="text-4xl font-bold italic bg-clip-text text-transparent bg-gradient-to-l from-primary/80 to-secondary">
+            WHO WE ARE
+          </h1>
+          <p className="text-xl max-w-2xl mx-auto px-10 text-left text-balanced font-medium">
             One day, three mangos rolled off a fruit stand and landed right in
             front of a struggling developer. Frustrated with his broken code, he
             sighed, &apos;If only you three knew how to program…&quot; To his
@@ -25,9 +27,9 @@ export default function AboutUs() {
             mangos.
           </p>
         </div>
-        <LampContainer>
+        <div className="flex flex-col px-5 bg-primary-foreground dark:bg-primary-foreground gap-10 mt-[4rem] lg:mt-[10rem]">
           <AnimatedTooltipPreview />
-        </LampContainer>
+        </div>
       </div>
     </section>
   );

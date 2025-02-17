@@ -23,14 +23,14 @@ export default function BurgerMenu() {
   }, [isOpen]);
 
   return (
-    <div id="burgerMenu" className="lg:hidden items-end pr-2">
+    <div id="burgerMenu" className="w-full h-full lg:hidden items-end">
       {/* Mobile Menu Button */}
       <button
-        className="dark:text-foreground text-foreground focus:outline-none "
+        className="dark:text-foreground text-foreground items-center justify-center pt-2 hover:scale-105 duration-300"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
-        <Menu size={34} />
+        <Menu size={36} />
       </button>
       {/* Mobile Menu */}
       <motion.div
@@ -39,34 +39,35 @@ export default function BurgerMenu() {
           isOpen ? { height: "100vh", opacity: 1 } : { height: 0, opacity: 0 }
         }
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed flex justify-center top-0 right-0 w-full max-w-full max-h-full bg-background dark:bg-background z-[2] px-10"
+        className="fixed flex flex-col justify-center top-0 right-0 w-full max-w-full max-h-full bg-background dark:bg-background z-[2]"
+        style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
-        <div className="relative text-center my-auto z-[-3]">
-          <div className="pb-20">
+        <div className="relative flex flex-col text-right mx-auto z-[-3] gap-5">
+          <div className="mb-20">
             <ModeSwitch />
           </div>
           {[
-            { name: "HOME", link: "/" },
-            { name: "ABOUT", link: "#about" },
-            { name: "SERVICES", link: "#services" },
-            { name: "CONTACT", link: "#contact" },
+            { name: "Home", link: "/home" },
+            { name: "About", link: "#about" },
+            { name: "Services", link: "#services" },
+            { name: "Contact", link: "#contact" },
           ].map((item) => (
             <Link href={item.link} key={item.name}>
               <p
-                className="text-2xl text-foreground transition-colors py-2 px-4 mb-3 hover:rotate-2 hover:text-primary"
+                className="justify-center items-center text-2xl text-foreground transition-colors hover:text-primary duration-300"
                 onClick={handleClose}
               >
                 {item.name}
               </p>
             </Link>
           ))}
-          <div className="relative w-full text-center justify-center pt-20">
+          <div className="flex justify-center items-center">
             <button
-              className="text-foreground focus:outline-none hover:scale-110 align-middle hover:text-foreground"
+              className="text-foreground focus:outline-none hover:scale-105 align-middle border-2 border-foreground rounded-full p-2 mt-20 hover:text-foreground duration-300"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
-              <X size={34} />
+              <X size={36} />
             </button>
           </div>
         </div>

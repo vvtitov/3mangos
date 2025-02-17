@@ -9,9 +9,14 @@ export function TabsServices() {
       title: "Design",
       value: "design",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
-          <p>Design tab</p>
-          <DummyContent />
+        <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
+          <Image
+            src="/mango.png"
+            alt="dummy image"
+            width="600"
+            height="600"
+            className="object-cover object-right-center relative w-full rounded-xl mx-auto"
+          />
         </div>
       ),
     },
@@ -20,8 +25,13 @@ export function TabsServices() {
       value: "development",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
-          <p>Development tab</p>
-          <DummyContent />
+          <Image
+            src="/mango.png"
+            alt="dummy image"
+            width="600"
+            height="600"
+            className="object-cover object-right-center relative w-full rounded-xl mx-auto"
+          />
         </div>
       ),
     },
@@ -30,15 +40,20 @@ export function TabsServices() {
       value: "marketing",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
-          <p>Marketing tab</p>
-          <DummyContent />
+          <Image
+            src="/mango.png"
+            alt="dummy image"
+            width="600"
+            height="600"
+            className="object-cover object-right-center relative w-full rounded-xl mx-auto"
+          />
         </div>
       ),
     },
   ];
 
   return (
-    <div className="h-[25rem] md:h-[30rem] [perspective:1000px] relative b flex flex-col max-w-5xl w-full items-start justify-start px-5 text-lg md:text-2xl">
+    <div className="h-[25rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl w-full items-start justify-start px-5 text-xl md:text-2xl">
       <Tabs tabs={tabs} />
     </div>
   );

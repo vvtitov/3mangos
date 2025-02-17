@@ -23,9 +23,7 @@ export default function Services() {
       </div>
 
       <div className="flex flex-col items-center p-5 max-w-5xl w-full mx-auto pt-40 px-10">
-        <h1 className="text-2xl font-bold text-center mb-8">
-          Frequently Asked Questions
-        </h1>
+        <h1 className="text-4xl font-bold text-center mb-8">FAQ&apos;s</h1>
         <AcordionServices />
       </div>
     </section>
