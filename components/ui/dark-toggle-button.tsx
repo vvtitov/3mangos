@@ -10,9 +10,9 @@ export function ModeSwitch() {
   const isDark = theme === "dark";
 
   return (
-    <div className="flex space-x-2 items-center justify-center w-full text-primary">
+    <div className="w-full h-full flex space-x-2 items-center justify-center text-primary">
       <Sun
-        className={`h-3 w-3 ${isDark ? "text-foreground" : "text-primary"}`}
+        className={`h-4 w-4 ${isDark ? "text-foreground" : "text-primary"}`}
       />
       <Switch
         checked={isDark}
@@ -20,7 +20,7 @@ export function ModeSwitch() {
         className="flex items-center"
       ></Switch>
       <Moon
-        className={`h-3 w-3 ${isDark ? "text-primary" : "text-foreground"}`}
+        className={`h-4 w-4 ${isDark ? "text-primary" : "text-foreground"}`}
       />
     </div>
   );

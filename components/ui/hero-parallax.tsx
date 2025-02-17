@@ -109,7 +109,7 @@ export const Header = () => {
       className="flex flex-col md:flex-row max-w-5xl relative mx-auto w-full items-center select-none justify-between pt-[10rem] md:pt-[5rem]"
     >
       <div className="flex flex-col gap-4 max-w-2xl px-32">
-        <p className="text-5xl md:text-7xl lg:text-8xl font-bold text-balance">
+        <p className="text-4xl md:text-7xl lg:text-8xl font-bold text-balance">
           <strong className="text-primary">MANGOS EVERYWHERE</strong>
         </p>
         <p className="text-foreground text-xl md:text-2xl dark:text-foreground text-balance max-w-md pl-1">
@@ -133,7 +133,7 @@ export const Header = () => {
                 window.location.href = "mailto:contacto@3mangos.site";
               }}
             >
-              Let&apos;s talk →
+              <strong>Let&apos;s talk →</strong>
             </Button>
           </motion.div>
         </div>

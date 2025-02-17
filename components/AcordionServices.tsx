@@ -10,7 +10,7 @@ export default function AcordionServices() {
     <div className="w-full h-full">
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1">
-          <AccordionTrigger className="bg-clip-text bg-gradient-to-l from-primary to-secondary text-transparent font-bold ">
+          <AccordionTrigger className="bg-clip-text dark:bg-gradient-to-l bg-gradient-to-r from-primary to-secondary text-transparent font-bold md:text-2xl lg:text-3xl">
             You make websites, right?
           </AccordionTrigger>
           <AccordionContent className="text-md md:text-lg">
@@ -21,7 +21,7 @@ export default function AcordionServices() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
-          <AccordionTrigger className="bg-clip-text bg-gradient-to-l from-primary to-secondary text-transparent font-bold">
+          <AccordionTrigger className="bg-clip-text dark:bg-gradient-to-l bg-gradient-to-r from-primary to-secondary text-transparent font-bold md:text-2xl lg:text-3xl">
             What about mobile apps?
           </AccordionTrigger>
           <AccordionContent className="text-md md:text-lg">
@@ -31,7 +31,7 @@ export default function AcordionServices() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
-          <AccordionTrigger className="bg-clip-text bg-gradient-to-l from-primary to-secondary text-transparent font-bold">
+          <AccordionTrigger className="bg-clip-text dark:bg-gradient-to-l bg-gradient-to-r from-primary to-secondary text-transparent font-bold md:text-2xl lg:text-3xl">
             I don&apos;t have a design
           </AccordionTrigger>
           <AccordionContent className="text-md md:text-lg">
@@ -40,17 +40,16 @@ export default function AcordionServices() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">
-          <AccordionTrigger className="bg-clip-text bg-gradient-to-l from-primary to-secondary text-transparent font-bold">
+          <AccordionTrigger className="bg-clip-text dark:bg-gradient-to-l bg-gradient-to-r from-primary to-secondary text-transparent font-bold md:text-2xl lg:text-3xl">
             How long does it take?
           </AccordionTrigger>
           <AccordionContent className="text-md md:text-lg">
-            It depends on the complexity and needs of the project. <br /> We
-            will provide you with a timeline and a cost estimate before we
-            start.
+            It depends on the complexity and needs of the project. We will
+            provide you with a timeline and a cost estimate before we start.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-5" className="border-none">
-          <AccordionTrigger className="bg-clip-text bg-gradient-to-l from-primary to-secondary text-transparent font-bold">
+          <AccordionTrigger className="bg-clip-text dark:bg-gradient-to-l bg-gradient-to-r from-primary to-secondary text-transparent font-bold md:text-2xl lg:text-3xl">
             Do you offer maintenance?
           </AccordionTrigger>
           <AccordionContent className="text-md md:text-lg">

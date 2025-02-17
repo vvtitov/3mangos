@@ -8,9 +8,6 @@ export default function Home() {
       <div className="items-center justify-items-center h-full w-full select-none">
         <BackgroundLines className="flex items-center justify-center h-full w-full min-h-auto bg-secondary min-h-screen">
           <div className=" absolute top-[75vh] text-center">
-            {/* <h2 className="text-sm md:text-md font-sans z-20 font-bold text-gray-800">
-            get in touch
-          </h2> */}
             <Link href="mailto:contacto@3mangos.site">
               <div className="hover:text-gray-500 hover:cursor-pointer hover:scale-110 hover:ease-in-out duration-700">
                 <svg
