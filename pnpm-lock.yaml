@@ -39,13 +39,13 @@ importers:
         specifier: ^3.29.0
         version: 3.30.0(react@19.0.0)
       '@tsparticles/engine':
-        specifier: ^3.8.0
+        specifier: ^3.8.1
         version: 3.8.1
       '@tsparticles/react':
         specifier: ^3.0.0
         version: 3.0.0(@tsparticles/engine@3.8.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@tsparticles/slim':
-        specifier: ^3.8.0
+        specifier: ^3.8.1
         version: 3.8.1
       class-variance-authority:
         specifier: ^0.7.1
@@ -98,6 +98,9 @@ importers:
       sonner:
         specifier: ^1.7.3
         version: 1.7.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      sparkles:
+        specifier: ^2.1.0
+        version: 2.1.0
       tailwind-merge:
         specifier: ^2.6.0
         version: 2.6.0
@@ -2366,6 +2369,10 @@ packages:
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
+
+  sparkles@2.1.0:
+    resolution: {integrity: sha512-r7iW1bDw8R/cFifrD3JnQJX0K1jqT0kprL48BiBpLZLJPmAm34zsVBsK5lc7HirZYZqMW65dOXZgbAGt/I6frg==}
+    engines: {node: '>= 10.13.0'}
 
   stable-hash@0.0.4:
     resolution: {integrity: sha512-LjdcbuBeLcdETCrPn9i8AYAZ1eCtu4ECAWtP7UleOiZ9LzVxRzzUZEoZ8zB24nhkQnDWyET0I+3sWokSDS3E7g==}
@@ -5056,6 +5063,8 @@ snapshots:
       react-dom: 19.0.0(react@19.0.0)
 
   source-map-js@1.2.1: {}
+
+  sparkles@2.1.0: {}
 
   stable-hash@0.0.4: {}
 

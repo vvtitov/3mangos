@@ -2,6 +2,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "./i18n/LanguageContext";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "3MANGOS",
@@ -14,21 +15,15 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 };
 
-export default function RootLayout({
-  children,
-  params: { lang },
-}: {
-  children: React.ReactNode;
-  params: { lang: string };
-}) {
+type LayoutProps = {
+  children: ReactNode;
+  params: Promise<{ lang: string }>;
+};
+
+export default async function RootLayout({ children, params }: LayoutProps) {
+  const { lang } = await params;
   return (
     <html lang={lang} suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-      </head>
       <body>
         <LanguageProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

@@ -10,9 +10,12 @@ export function generateStaticParams() {
   return [{ lang: "en" }, { lang: "es" }];
 }
 
-export default async function Home({ params }: { params: { lang: string } }) {
-  const lang = await params.lang;
+type PageParams = {
+  params: Promise<{ lang: string }>;
+};
 
+export default async function Home({ params }: PageParams) {
+  const { lang } = await params;
   return (
     <main
       id="mainContainer"
