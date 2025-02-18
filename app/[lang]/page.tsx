@@ -5,18 +5,17 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 
 export function generateStaticParams() {
   return [{ lang: "en" }, { lang: "es" }];
 }
 
-interface PageProps {
-  params: { lang: string } & Params;
-  searchParams: { [key: string]: string | string[] | undefined };
-}
+type Props = {
+  params: { lang: string };
+  searchParams: Record<string, string | string[] | undefined>;
+};
 
-export default async function Home({ params: { lang } }: PageProps) {
+export default function Home({ params: { lang } }: Props) {
   return (
     <main
       id="mainContainer"
