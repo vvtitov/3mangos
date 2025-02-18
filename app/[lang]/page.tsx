@@ -10,12 +10,9 @@ export function generateStaticParams() {
   return [{ lang: "en" }, { lang: "es" }];
 }
 
-type Props = {
-  params: { lang: string };
-  searchParams: Record<string, string | string[] | undefined>;
-};
+export default async function Home({ params }: { params: { lang: string } }) {
+  const lang = await params.lang;
 
-export default function Home({ params: { lang } }: Props) {
   return (
     <main
       id="mainContainer"
