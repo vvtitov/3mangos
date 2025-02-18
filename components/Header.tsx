@@ -6,9 +6,13 @@ import NavMenu from "./NavMenu";
 import BurguerMenu from "./BurguerMenu";
 import Logo from "./Logo";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/app/i18n/LanguageContext";
+import { Button } from "./ui/button";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { locale, setLocale } = useLanguage();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -52,6 +56,14 @@ export default function Header() {
         </div>
         <div className="relative hidden lg:flex">
           <ModeSwitch />
+        </div>
+        <div className="flex items-center ml-5">
+          <Button
+            onClick={() => setLocale(locale === "en" ? "es" : "en")}
+            className="px-4 py-2 rounded-md bg-primary text-foreground hover:bg-primary transition-colors"
+          >
+            {locale === "en" ? "ES" : "EN"}
+          </Button>
         </div>
       </div>
     </header>

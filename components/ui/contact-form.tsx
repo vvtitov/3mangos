@@ -23,6 +23,8 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "@/app/i18n/LanguageContext";
+import { getDictionary } from "@/app/i18n/dictionaries";
 
 // Schema for contact form validation
 const formSchema = z.object({
@@ -36,6 +38,9 @@ const formSchema = z.object({
 });
 
 export default function ContactFormPreview() {
+  const { locale } = useLanguage();
+  const dictionary = getDictionary(locale);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -47,12 +52,23 @@ export default function ContactFormPreview() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      // Simulate a successful contact form submission
-      console.log(values);
-      toast.success("Your message has been sent successfully!");
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      toast.success("¡Tu mensaje ha sido enviado exitosamente!");
+      form.reset();
     } catch (error) {
-      console.error("Error submitting contact form", error);
-      toast.error("Failed to send your message. Please try again.");
+      console.error("Error al enviar el formulario", error);
+      toast.error("No se pudo enviar tu mensaje. Por favor intenta de nuevo.");
     }
   }
 
@@ -61,11 +77,10 @@ export default function ContactFormPreview() {
       <Card className="mx-auto max-w-md border-none">
         <CardHeader>
           <CardTitle className="text-3xl text-primary">
-            Want a fresh mango?
+            {dictionary.contact.title}
           </CardTitle>
           <CardDescription className="text-xl text-foreground/80">
-            Please fill out the form below with a resume of your idea and we
-            will get back to you as soon as possible.
+            {dictionary.contact.description}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -78,11 +93,13 @@ export default function ContactFormPreview() {
                   name="name"
                   render={({ field }) => (
                     <FormItem className="grid gap-2 text-foreground">
-                      <FormLabel htmlFor="name">Name</FormLabel>
+                      <FormLabel htmlFor="name">
+                        {dictionary.contact.form.name}
+                      </FormLabel>
                       <FormControl>
                         <Input
                           id="name"
-                          placeholder="John Doe"
+                          placeholder={dictionary.contact.form.placeholder.name}
                           type="text"
                           autoComplete="name"
                           className="border-secondary-foreground"
@@ -100,11 +117,15 @@ export default function ContactFormPreview() {
                   name="email"
                   render={({ field }) => (
                     <FormItem className="grid gap-2 text-foreground">
-                      <FormLabel htmlFor="email">Email</FormLabel>
+                      <FormLabel htmlFor="email">
+                        {dictionary.contact.form.email}
+                      </FormLabel>
                       <FormControl>
                         <Input
                           id="email"
-                          placeholder="johndoe@mail.com"
+                          placeholder={
+                            dictionary.contact.form.placeholder.email
+                          }
                           type="email"
                           autoComplete="email"
                           className="border-secondary-foreground"
@@ -122,11 +143,15 @@ export default function ContactFormPreview() {
                   name="message"
                   render={({ field }) => (
                     <FormItem className="grid gap-2 text-foreground max-h-[200px]">
-                      <FormLabel htmlFor="message">Message</FormLabel>
+                      <FormLabel htmlFor="message">
+                        {dictionary.contact.form.message}
+                      </FormLabel>
                       <FormControl>
                         <Textarea
                           id="message"
-                          placeholder="Your message..."
+                          placeholder={
+                            dictionary.contact.form.placeholder.message
+                          }
                           autoComplete="off"
                           className="max-h-[150px] border-secondary-foreground"
                           {...field}
@@ -142,7 +167,7 @@ export default function ContactFormPreview() {
                   variant="outline"
                   className="w-[10rem] bg-primary-foreground/60 text-primary hover:text-primary-foreground rounded-full m-auto"
                 >
-                  SUBMIT
+                  {dictionary.contact.form.send}
                 </Button>
               </div>
             </form>

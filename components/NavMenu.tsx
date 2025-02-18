@@ -9,8 +9,13 @@ import {
 import React from "react";
 import { Button } from "./ui/button";
 import { navigationMenuTriggerStyle } from "./ui/navigation-menu";
+import { useLanguage } from "@/app/i18n/LanguageContext";
+import { getDictionary } from "@/app/i18n/dictionaries";
 
 export default function NavMenu() {
+  const { locale } = useLanguage();
+  const dictionary = getDictionary(locale);
+
   return (
     <>
       <div id="navmenu" className="w-full">
@@ -19,10 +24,10 @@ export default function NavMenu() {
             <NavigationMenuItem>
               <Button variant="transparent" size="lg">
                 <NavigationMenuLink
-                  href="/home"
+                  href="#hero"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
-                  Home
+                  {dictionary.header.home}
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>
@@ -32,7 +37,7 @@ export default function NavMenu() {
                   href="#about"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
-                  About
+                  {dictionary.header.about}
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>
@@ -42,7 +47,7 @@ export default function NavMenu() {
                   href="#services"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
-                  Services
+                  {dictionary.header.services}
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>
@@ -52,7 +57,7 @@ export default function NavMenu() {
                   href="#contact"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
-                  Contact
+                  {dictionary.header.contact}
                 </NavigationMenuLink>
               </Button>
             </NavigationMenuItem>
