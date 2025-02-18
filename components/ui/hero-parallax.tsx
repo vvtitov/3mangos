@@ -10,6 +10,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./button";
+import { useLanguage } from "@/app/i18n/LanguageContext";
+import { getDictionary } from "@/app/i18n/dictionaries";
 
 export const HeroParallax = ({
   products,
@@ -103,19 +105,22 @@ export const HeroParallax = ({
 };
 
 export const Header = () => {
+  const { locale } = useLanguage();
+  const dictionary = getDictionary(locale);
+
   return (
     <section
       id="hero"
-      className="flex flex-col md:flex-row max-w-5xl relative mx-auto w-full items-center select-none justify-between pt-[10rem] md:pt-[5rem]"
+      className="flex flex-col md:flex-row max-w-5xl relative mx-auto w-full items-center select-none justify-between pt-[8rem] md:pt-[4rem]"
     >
-      <div className="flex flex-col gap-4 max-w-2xl px-32">
-        <p className="text-4xl md:text-7xl lg:text-8xl font-bold text-balance">
-          <strong className="text-primary">MANGOS EVERYWHERE</strong>
+      <div className="flex flex-col gap-4 max-w-4xl px-20 w-full mx-auto">
+        <p className="text-5xl md:text-7xl lg:text-8xl font-bold max-w-sm md:max-w-2xl lg:w-[38rem] min-w-[10rem]">
+          <strong className="text-primary w-full text-balance">
+            {dictionary.hero.title}
+          </strong>
         </p>
-        <p className="text-foreground text-xl md:text-2xl dark:text-foreground text-balance max-w-md pl-1">
-          We are passionate developers and designers that are
-          <strong> focused on build amazing products </strong> at{" "}
-          <i>lightspeed</i> with the latest technologies and frameworks. <br />
+        <p className="text-foreground text-2xl md:text-2xl dark:text-foreground text-balance max-w-md min-w-[16rem] pl-1">
+          {dictionary.hero.subtitle}
         </p>
         <div className="flex justify-start pl-2 mt-4">
           <motion.div
@@ -128,17 +133,17 @@ export const Header = () => {
             <Button
               variant={"outline"}
               size={"lg"}
-              className="py-8 px-12 text-xl rounded-full bg-gradient-to-r from-primary via-primary/120 to-primary/80 text-primary-foreground items-center justify-center"
+              className="py-8 px-12 text-xl rounded-full bg-gradient-to-bl from-primary via-primary/80 to-secondary text-foreground items-center justify-center font-medium"
               onClick={() => {
                 window.location.href = "mailto:contacto@3mangos.site";
               }}
             >
-              <strong>Let&apos;s talk →</strong>
+              {dictionary.hero.cta}
             </Button>
           </motion.div>
         </div>
       </div>
-      <div className="w-[400px] shrink-0 md:translate-x-[-200px]">
+      <div className="w-[400px] shrink-0 md:translate-x-[-15rem]">
         <Image
           src="/mango-hero3.png"
           alt="Floating Mango"

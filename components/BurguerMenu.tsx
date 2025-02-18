@@ -3,9 +3,13 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { ModeSwitch } from "./ui/dark-toggle-button";
+import { useLanguage } from "@/app/i18n/LanguageContext";
+import { getDictionary } from "@/app/i18n/dictionaries";
 
 export default function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const { locale } = useLanguage();
+  const dictionary = getDictionary(locale);
 
   const handleClose = () => {
     setIsOpen(false);
@@ -42,15 +46,15 @@ export default function BurgerMenu() {
         className="fixed flex flex-col justify-center top-0 right-0 w-full max-w-full max-h-full bg-background dark:bg-background z-[2]"
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
-        <div className="relative flex flex-col text-right mx-auto z-[-3] gap-5">
+        <div className="relative flex flex-col text-left mx-auto z-[-3] gap-5">
           <div className="mb-20">
             <ModeSwitch />
           </div>
           {[
-            { name: "Home", link: "/home" },
-            { name: "About", link: "#about" },
-            { name: "Services", link: "#services" },
-            { name: "Contact", link: "#contact" },
+            { name: dictionary.header.home, link: "#hero" },
+            { name: dictionary.header.about, link: "#about" },
+            { name: dictionary.header.services, link: "#services" },
+            { name: dictionary.header.contact, link: "#contact" },
           ].map((item) => (
             <Link href={item.link} key={item.name}>
               <p

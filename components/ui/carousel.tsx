@@ -2,6 +2,7 @@
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
 import Image from "next/image";
+import { Button } from "./button";
 
 interface SlideData {
   title: string;
@@ -83,7 +84,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-full bg-transparent rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
+          className="absolute top-0 left-0 w-full h-full bg-secondary rounded-[5%] overflow-hidden transition-all duration-150 ease-out"
           style={{
             transform:
               current === index
@@ -105,7 +106,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             decoding="sync"
           />
           {current === index && (
-            <div className="absolute inset-0 bg-background/20 transition-all duration-1000" />
+            <div className="absolute inset-0 bg-white/10 transition-all duration-1000" />
           )}
         </div>
 
@@ -135,15 +136,15 @@ const CarouselControl = ({
   handleClick,
 }: CarouselControlProps) => {
   return (
-    <button
-      className={`w-10 h-10 flex items-center mx-2 justify-center bg-primary border-5 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
+    <Button
+      className={`w-10 h-10 flex items-center mx-2 justify-center bg-background border-5 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
         type === "previous" ? "rotate-180" : ""
       }`}
       title={title}
       onClick={handleClick}
     >
-      <IconArrowNarrowRight className="text-primary-foreground dark:text-primary-foreground" />
-    </button>
+      <IconArrowNarrowRight className="text-foreground" />
+    </Button>
   );
 };
 
@@ -152,7 +153,10 @@ interface CarouselProps {
 }
 
 export default function Carousel({ slides }: CarouselProps) {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(1);
+  const [startX, setStartX] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragThreshold] = useState(50); // Umbral para activar el cambio de slide
 
   const handlePreviousClick = () => {
     const previous = current - 1;
@@ -170,6 +174,39 @@ export default function Carousel({ slides }: CarouselProps) {
     }
   };
 
+  const handleTouchStart = (e: React.TouchEvent | React.MouseEvent) => {
+    setIsDragging(true);
+    if ("touches" in e) {
+      setStartX(e.touches[0].clientX);
+    } else {
+      setStartX(e.clientX);
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent | React.MouseEvent) => {
+    if (!isDragging) return;
+
+    e.preventDefault(); // Prevenir el scroll mientras se arrastra
+
+    const currentX = "touches" in e ? e.touches[0].clientX : e.clientX;
+    const diff = startX - currentX;
+
+    if (Math.abs(diff) > dragThreshold) {
+      if (diff > 0) {
+        handleNextClick();
+      } else {
+        handlePreviousClick();
+      }
+      setIsDragging(false);
+      setStartX(0);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    setStartX(0);
+  };
+
   const id = useId();
 
   return (
@@ -178,10 +215,17 @@ export default function Carousel({ slides }: CarouselProps) {
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
+        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out cursor-grab active:cursor-grabbing touch-none"
         style={{
           transform: `translateX(-${current * (100 / slides.length)}%)`,
         }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onMouseDown={handleTouchStart}
+        onMouseMove={handleTouchMove}
+        onMouseUp={handleTouchEnd}
+        onMouseLeave={handleTouchEnd}
       >
         {slides.map((slide, index) => (
           <Slide
@@ -194,7 +238,7 @@ export default function Carousel({ slides }: CarouselProps) {
         ))}
       </ul>
 
-      <div className="absolute flex justify-center w-full top-[calc(100%-4rem)]">
+      <div className="absolute flex justify-center w-full top-[calc(100%-5rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"

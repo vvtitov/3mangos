@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 type Tab = {
   title: string;
   value: string;
-  content?: string | React.ReactNode | any;
+  content?: string | React.ReactNode | unknown;
 };
 
 export const Tabs = ({
@@ -62,7 +62,7 @@ export const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-primary rounded-md",
+                  "absolute inset-0 bg-gradient-to-tl from-primary to-primary/80 rounded-md",
                   activeTabClassName
                 )}
               />
@@ -116,7 +116,7 @@ export const FadeInDiv = ({
           }}
           className={cn("w-full h-full absolute top-0 left-0", className)}
         >
-          {tab.content}
+          {tab.content as React.ReactNode}
         </motion.div>
       ))}
     </div>

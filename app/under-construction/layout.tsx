@@ -1,5 +1,5 @@
-import { ThemeProvider } from "@/components/theme-provider";
-import type { Metadata } from "next";
+import { Metadata } from "next/types";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "3MANGOS",
@@ -13,11 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
