@@ -16,7 +16,7 @@ export default function NavMenu() {
   const { locale } = useLanguage();
   const dictionary = getDictionary(locale);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const section = document.querySelector(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
