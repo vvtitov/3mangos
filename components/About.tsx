@@ -17,7 +17,7 @@ export default function AboutUs() {
           <AboutMaskText />
         </div>
         <div className="flex flex-col lg:hidden bg-primary-foreground dark:bg-primary-foreground gap-10 mt-[3rem]">
-          <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-secondary">
+          <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/60 to-primary">
             <span
               dangerouslySetInnerHTML={{ __html: dictionary.about.title }}
             />

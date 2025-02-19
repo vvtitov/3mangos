@@ -65,9 +65,9 @@ export default function Header() {
         </div>
       </header>
       {!isScrolled && (
-        <div className="absolute mt-20 p-3 text-center text-sm w-full h-8 bg-primary/70 text-foreground flex items-center justify-center rounded-lg left-0 mx-auto">
+        <div className="absolute mt-20 p-3 text-center text-sm w-2/3 h-8 bg-primary/90 text-foreground flex justify-center items-center rounded-lg mx-auto top-0 left-0 right-0 shadow-lg dark:shadow-primary/50 shadow-primary/50 animate-pulse transition-all duration-2000">
           <span
-            className="w-full text-balance font-medium"
+            className="w-full text-balance font-medium text-foreground dark:text-primary-foreground"
             dangerouslySetInnerHTML={{
               __html: dictionary.header.offer,
             }}

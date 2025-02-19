@@ -50,7 +50,6 @@ export default function BurgerMenu() {
             <ModeSwitch />
           </div>
           {[
-            { name: dictionary.header.home, link: "#hero" },
             { name: dictionary.header.about, link: "#about" },
             { name: dictionary.header.services, link: "#services" },
             { name: dictionary.header.contact, link: "#contact" },
