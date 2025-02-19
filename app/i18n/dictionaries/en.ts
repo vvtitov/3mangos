@@ -5,7 +5,7 @@ export const en = {
         services: "Services",
         contact: "Contact",
         language: "Language",
-        offer: "Get a 25% discount on all our services till the end of the month"
+        offer: "<em>15% off until the end of the month!⚡</em>"
     },
     hero: {
         title: "MANGOS EVERYWHERE",

@@ -81,8 +81,16 @@ export default function Header() {
         </div>
       </header>
       {!isScrolled && (
-        <div className="absolute mt-20 w-full h-10 bg-primary/70 text-foreground flex items-center justify-center">
-          {dictionary.header.offer}
+        <div
+          className="absolute mt-20 w-full align-middle text-center text-sm
+       h-10 bg-primary/70 text-foreground flex items-center justify-center rounded-lg right-0 left-0 mx-auto pt-1"
+        >
+          <span
+            className="w-full text-balance font-medium"
+            dangerouslySetInnerHTML={{
+              __html: dictionary.header.offer,
+            }}
+          />
         </div>
       )}
     </>
