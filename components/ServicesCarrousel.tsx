@@ -10,34 +10,34 @@ export default function ServicesCarousel() {
         <Carrousel
           slides={[
             {
-              title: "",
-              button: "Click me",
-              src: "/mango-2000x1440.png",
+              title: "Extraordinary UX Design 1",
+              button: "View More",
+              src: "https://example.com/ux-design-1.jpg",
             },
             {
-              title: "",
-              button: "Click me",
-              src: "/mango-2000x1440.png",
+              title: "Extraordinary UX Design 2",
+              button: "View More",
+              src: "https://example.com/ux-design-2.jpg",
             },
             {
-              title: "",
-              button: "Click me",
-              src: "/mango-2000x1440.png",
+              title: "Extraordinary UX Design 3",
+              button: "View More",
+              src: "https://example.com/ux-design-3.jpg",
             },
             {
-              title: "",
-              button: "Click me",
-              src: "/mango-2000x1440.png",
+              title: "Extraordinary UX Design 4",
+              button: "View More",
+              src: "https://example.com/ux-design-4.jpg",
             },
             {
-              title: "",
-              button: "Click me",
-              src: "/mango-2000x1440.png",
+              title: "Extraordinary UX Design 5",
+              button: "View More",
+              src: "https://example.com/ux-design-5.jpg",
             },
             {
-              title: "",
-              button: "Click me",
-              src: "/mango-2000x1440.png",
+              title: "Extraordinary UX Design 6",
+              button: "View More",
+              src: "https://example.com/ux-design-6.jpg",
             },
           ]}
         />
