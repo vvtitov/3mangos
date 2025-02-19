@@ -43,7 +43,7 @@ export default function Header() {
     <>
       <header
         id="header"
-        className={`header fixed top-0 w-screen transition-transform duration-300 bg-background ${
+        className={`header fixed top-0 right-0 left-0 w-screen transition-transform duration-300 bg-background ${
           isScrolled
             ? "-translate-y-full" // Hide header
             : "translate-y-0 border-b border-gray-500 fade-out-100" // Show header
