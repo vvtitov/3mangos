@@ -21,7 +21,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const setLocale = (newLocale: "en" | "es") => {
     setLocaleState(newLocale);
     const newPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
-    router.push(newPathname);
+    router.push(newPathname, undefined, { shallow: true });
   };
 
   return (

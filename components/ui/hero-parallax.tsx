@@ -12,6 +12,7 @@ import Link from "next/link";
 import { Button } from "./button";
 import { useLanguage } from "@/app/i18n/LanguageContext";
 import { getDictionary } from "@/app/i18n/dictionaries";
+import { BackgroundLines } from "./background-lines";
 
 export const HeroParallax = ({
   products,
@@ -111,20 +112,28 @@ export const Header = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col md:flex-row max-w-5xl relative mx-auto w-full items-center select-none justify-between pt-[8rem] md:pt-[4rem]"
+      className="flex flex-col md:flex-row max-w-6xl relative mx-auto w-full items-center select-none justify-between pt-[10rem] md:pt-[1rem] lg:pt-[4rem]"
     >
-      <div className="flex flex-col gap-4 max-w-4xl px-20 w-full mx-auto">
-        <p className="text-5xl md:text-7xl lg:text-8xl font-bold max-w-sm md:max-w-2xl lg:w-[38rem] min-w-[10rem]">
-          <strong className="text-primary w-full text-balance">
+      <BackgroundLines className="absolute z-[-10] bg-transparent dark:bg-transparent w-screen h-[100%] mt-20">
+        {" "}
+      </BackgroundLines>
+      <div className="flex flex-col gap-4 max-w-4xl px-10 w-full mx-auto">
+        <p className="text-5xl md:text-7xl lg:text-8xl font-bold max-w-sm md:max-w-2xl w-full lg:w-[40rem] min-w-[30rem] text-balance">
+          <strong className="w-full text-balance bg-clip-text text-transparent bg-gradient-to-br from-primary to-primary/80">
             {dictionary.hero.title}
           </strong>
         </p>
-        <p className="text-foreground text-2xl md:text-2xl dark:text-foreground text-balance max-w-md min-w-[16rem] pl-1">
-          {dictionary.hero.subtitle}
+        <p className="text-foreground text-xl md:text-xl lg:text-2xl dark:text-foreground text-balance max-w-sm md:max-w-2xl min-w-[20rem] pl-1">
+          <span
+            className="w-full text-balance"
+            dangerouslySetInnerHTML={{
+              __html: dictionary.hero.subtitle,
+            }}
+          />
         </p>
-        <div className="flex justify-start pl-2 mt-4">
+        <div className="flex justify-start pl-1 mt-4">
           <motion.div
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -133,7 +142,7 @@ export const Header = () => {
             <Button
               variant={"outline"}
               size={"lg"}
-              className="py-8 px-12 text-xl rounded-full bg-gradient-to-bl from-primary via-primary/80 to-secondary text-foreground items-center justify-center font-medium"
+              className="py-8 px-10 text-xl rounded-full bg-gradient-to-bl from-primary/60 via-primary/80 to-primary text-foreground items-center justify-center hover:bg-gradient-to-br hover:from-primary/80 hover:via-primary/90 hover:to-primary/80 transition-all duration-300"
               onClick={() => {
                 window.location.href = "mailto:contacto@3mangos.site";
               }}
@@ -143,13 +152,13 @@ export const Header = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-[400px] shrink-0 md:translate-x-[-15rem]">
+      <div className="shrink-0">
         <Image
           src="/mango-hero3.png"
           alt="Floating Mango"
-          width={400}
-          height={400}
-          className="rotate-[5deg] lg:rotate-[-20deg] hover:rotate-[-10deg] duration-1000 scale-75 md:scale-100 md:pt-60 -translate-y-10 md:-translate-y-0"
+          width={450}
+          height={450}
+          className="rotate-[5deg] lg:rotate-[-20deg] duration-1000 scale-75 md:scale-100 md:pt-60 -translate-y-20 translate-x-10 md:-translate-y-10 md:-translate-x-10 pointer-events-none"
         />
       </div>
     </section>

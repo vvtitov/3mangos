@@ -6,7 +6,10 @@ import { HeroParallax } from "./ui/hero-parallax";
 export default function Hero() {
   return (
     <>
-      <section id="hero" className="select-none w-full bg-background">
+      <section
+        id="hero"
+        className="select-none w-full bg-background animate-in fade-in-0 duration-300"
+      >
         <HeroParallax
           products={[
             {

@@ -10,16 +10,16 @@ export function generateStaticParams() {
   return [{ lang: "en" }, { lang: "es" }];
 }
 
-type PageParams = {
+export default async function Home({
+  params,
+}: {
   params: Promise<{ lang: string }>;
-};
-
-export default async function Home({ params }: PageParams) {
+}) {
   const { lang } = await params;
   return (
     <main
-      id="mainContainer"
-      className="bg-background dark:bg-background min-w-[400px] w-full h-full select-none"
+      id="main"
+      className="bg-background dark:bg-background min-w-[30rem] w-full h-full"
       dir={lang === "ar" ? "rtl" : "ltr"}
     >
       <Header />
@@ -27,10 +27,10 @@ export default async function Home({ params }: PageParams) {
       <About />
       <Image
         src="/arrow.svg"
-        alt="Arrow"
+        alt="Flecha para abajo"
         width={400}
         height={400}
-        className="mx-auto pointer-events-none pt-8"
+        className="mx-auto pointer-events-none pt-8 select-none"
         style={{
           filter: "drop-shadow(1px 10px 2px hsl(var(--primary)))",
         }}

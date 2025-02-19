@@ -4,20 +4,21 @@ export const es = {
         about: "Nosotros",
         services: "Servicios",
         contact: "Contacto",
-        language: "Idioma"
+        language: "Idioma",
+        offer: "Obtén un 15% de descuento en tu primer proyecto"
     },
     hero: {
-        title: "INVASIÓN DE MANGOS",
-        subtitle: "Somos un equipo de desarrolladores apasionados que estan enfocados en crear productos increíbles a la velocidad de la luz con las tecnologias y frameworks mas actuales.",
+        title: "INVASION DE MANGOS",
+        subtitle: "Somos un equipo de desarrolladores <em>apasionados por lo que hacemos</em> y fuertemente enfocados en crear <strong>productos increíbles</strong> a la <strong>velocidad de la luz</strong> con las últimas tecnologías y frameworks del mercado.",
         cta: "Hablemos →"
     },
     about: {
-        title: "Quienes somos",
-        text: "Un día, tres mangos cayeron frente a un desarrollador frustrado con su código. Al murmurar '¡Si tan solo estos mangos pudieran programar!', algo mágico ocurrió: los mangos comenzaron a brillar y el desarrollador empezó a crear código perfecto. Así nació THREE MANGOS, una empresa respaldada por un misterioso equipo de mangos programadores. Aunque parezca una historia graciosa, la calidad excepcional de nuestro software habla por sí misma. El secreto detrás de nuestro éxito? Solo tres sabios mangos lo saben."
+        title: "Sobre nosotros",
+        text: "Un día, tres mangos cayeron frente a un desarrollador frustrado que estaba luchando con código roto y obsoleto. Este deseó que pudieran programar, y de repente estos comenzaron a brillar. Después de un asombroso desliz cósmico, comenzó a escribir código de manera perfecta. Impactado e impulsado por su misterioso equipo de mangos programadores, fundó la agencia <strong>THREE MANGOS</strong>. Aunque los inversores se rieron al principio, nuestro software excepcional habla por sí mismo. <br/> ¿La verdad detrás de nuestro éxito?  <br/> Solo esos tres mangos lo saben 🤫"
     },
     services: {
         title: "Lo que",
-        words: ["hacemos", "amamos", "creamos", "disfrutamos"],
+        words: ["hacemos", "amamos", "creamos"],
         tabs: [
             {
                 title: "Análisis",

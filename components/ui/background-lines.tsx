@@ -31,7 +31,7 @@ const pathVariants = {
   initial: { strokeDashoffset: 800, strokeDasharray: "50 800" },
   animate: {
     strokeDashoffset: 0,
-    strokeDasharray: "20 800",
+    strokeDasharray: "10 800",
     opacity: [0, 1, 1, 0],
   },
 };
@@ -68,28 +68,16 @@ const SVG = ({
   ];
 
   const colors = [
-    "#FFC300",
-    "#000000",
-    "#FFC300",
-    "#FFC300",
-    "#FFFFFF",
-    "#FFC300",
-    "#FFC300",
-    "#FFC300",
-    "#FFC300",
-    "#000000",
-    "#FFFFFF",
-    "#FFC300",
-    "#FFC300",
-    "#FFC300",
-    "#FFC300",
-    "#000000",
-    "#FFFFFF",
-    "#000000",
-    "#FFC300",
-    "#FFC300",
-    "#FFC300",
-    "#FFFFFF",
+    "#FF9C3390",
+    "#FF9C3390",
+    "#FF9C3390",
+    "#FF9C3390",
+    "#FF9C3390",
+    "#FF9C3390",
+    "#FF9C3390",
+    "#FF9C3390",
+    "#FF9C3390",
+    "#FF9C3390",
   ];
   return (
     <motion.svg
@@ -105,7 +93,7 @@ const SVG = ({
         <motion.path
           d={path}
           stroke={colors[idx]}
-          strokeWidth="10"
+          strokeWidth="7"
           strokeLinecap="round"
           variants={pathVariants}
           initial="initial"
@@ -119,28 +107,6 @@ const SVG = ({
             repeatDelay: Math.floor(Math.random() * 10 + 2),
           }}
           key={`path-first-${idx}`}
-        />
-      ))}
-
-      {/* duplicate for more paths */}
-      {paths.map((path, idx) => (
-        <motion.path
-          d={path}
-          stroke={colors[idx]}
-          strokeWidth="6"
-          strokeLinecap="round"
-          variants={pathVariants}
-          initial="initial"
-          animate="animate"
-          transition={{
-            duration: svgOptions?.duration || 10,
-            ease: "linear",
-            repeat: Infinity,
-            repeatType: "loop",
-            delay: Math.floor(Math.random() * 10),
-            repeatDelay: Math.floor(Math.random() * 10 + 2),
-          }}
-          key={`path-second-${idx}`}
         />
       ))}
     </motion.svg>
