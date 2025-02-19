@@ -16,25 +16,25 @@ export default function NavMenu() {
   const { locale } = useLanguage();
   const dictionary = getDictionary(locale);
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div id="navmenu" className="w-full">
         <NavigationMenu>
           <NavigationMenuList className="flex justify-end">
             <NavigationMenuItem>
-              <Button variant="transparent" size="lg">
+              <Button
+                variant="transparent"
+                size="lg"
+                onClick={() => scrollToSection("#about")}
+              >
                 <NavigationMenuLink
-                  href="#hero"
-                  className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
-                >
-                  {dictionary.header.home}
-                </NavigationMenuLink>
-              </Button>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Button variant="transparent" size="lg">
-                <NavigationMenuLink
-                  href="#about"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
                   {dictionary.header.about}
@@ -42,9 +42,12 @@ export default function NavMenu() {
               </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button variant="transparent" size="lg">
+              <Button
+                variant="transparent"
+                size="lg"
+                onClick={() => scrollToSection("#services")}
+              >
                 <NavigationMenuLink
-                  href="#services"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
                   {dictionary.header.services}
@@ -52,9 +55,12 @@ export default function NavMenu() {
               </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button variant="transparent" size="lg">
+              <Button
+                variant="transparent"
+                size="lg"
+                onClick={() => scrollToSection("#contact")}
+              >
                 <NavigationMenuLink
-                  href="#contact"
                   className={`${navigationMenuTriggerStyle()} text-foreground dark:text-foreground`}
                 >
                   {dictionary.header.contact}

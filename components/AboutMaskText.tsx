@@ -17,7 +17,7 @@ export function AboutMaskText() {
         }
         className="h-[30rem] mb-[-5rem] lg:mt-[5rem]"
       >
-        {dictionary.about.text}
+        <span dangerouslySetInnerHTML={{ __html: dictionary.about.text }} />
       </MaskContainer>
     </div>
   );

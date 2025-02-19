@@ -16,21 +16,20 @@ export default function BurgerMenu() {
   };
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
 
   return (
-    <div id="burgerMenu" className="w-full h-full lg:hidden items-end">
+    <div
+      id="burgerMenu"
+      className="w-full h-full lg:hidden flex flex-col items-end"
+    >
       {/* Mobile Menu Button */}
       <button
-        className="dark:text-foreground text-foreground items-center justify-center pt-2 hover:scale-105 duration-300"
+        className="dark:text-foreground text-foreground flex items-center justify-center hover:scale-105 transition-transform duration-300"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
@@ -38,16 +37,16 @@ export default function BurgerMenu() {
       </button>
       {/* Mobile Menu */}
       <motion.div
-        initial={{ height: 0, opacity: 0 }}
+        initial={{ opacity: 0 }}
         animate={
           isOpen ? { height: "100vh", opacity: 1 } : { height: 0, opacity: 0 }
         }
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed flex flex-col justify-center top-0 right-0 w-full max-w-full max-h-full bg-background dark:bg-background z-[2]"
+        className="fixed top-0 left-0 w-full h-full bg-background z-[2] flex items-center justify-center overflow-hidden"
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
-        <div className="relative flex flex-col text-left mx-auto z-[-3] gap-5">
-          <div className="mb-20">
+        <div className="flex flex-col text-left w-1/3 space-y-5">
+          <div className="mb-10">
             <ModeSwitch />
           </div>
           {[
@@ -58,18 +57,18 @@ export default function BurgerMenu() {
           ].map((item) => (
             <Link href={item.link} key={item.name}>
               <p
-                className="justify-center items-center text-2xl text-foreground transition-colors hover:text-primary duration-300"
+                className="text-2xl text-foreground transition-colors hover:text-primary duration-300"
                 onClick={handleClose}
               >
                 {item.name}
               </p>
             </Link>
           ))}
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center pt-10">
             <button
-              className="text-foreground focus:outline-none hover:scale-105 align-middle border-2 border-foreground rounded-full p-2 mt-20 hover:text-foreground duration-300"
+              className="text-foreground focus:outline-none hover:scale-105 border-2 border-foreground rounded-full p-2"
               onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
+              aria-label="Close menu"
             >
               <X size={36} />
             </button>

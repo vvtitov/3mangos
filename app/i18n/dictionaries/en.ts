@@ -4,20 +4,21 @@ export const en = {
         about: "About",
         services: "Services",
         contact: "Contact",
-        language: "Language"
+        language: "Language",
+        offer: "Get a 25% discount on all our services till the end of the month"
     },
     hero: {
         title: "MANGOS EVERYWHERE",
-        subtitle: "We are a team of passionate developers and designers that are focused on building amazing products at lightspeed with the latest technologies and frameworks.",
+        subtitle: "We are a team of developers <strong>passionate about what we do</strong> and heavily focused on building <strong>amazing products</strong> at <em>lightspeed</em> with the latest technologies and frameworks of the market.",
         cta: "Let's talk →"
     },
     about: {
         title: "Who we are",
-        text: "One day, three mangos fell in front of a frustrated developer struggling with broken code. He wished they could program, and suddenly they began to glow. Through some cosmic glitch, he started writing perfect code. He founded THREE MANGOS, powered by his mysterious team of coding mangos. While investors laughed at first, our exceptional software speaks for itself. The truth? Only three wise mangos know."
+        text: "One day, three mangos fell in front of a frustrated developer struggling with broken code. He wished they could program, and suddenly they began to glow. Through some cosmic glitch, he started writing perfect code. Amazed and powered by his mysterious team of coding mangos, he founded <strong>THREE MANGOS</strong>. While investors laughed at first, our exceptional software speaks for itself. <br/> The truth behind our success? <br/>Only those three mangos know 🤫"
     },
     services: {
         title: "What we",
-        words: ["do", "love", "create", "enjoy"],
+        words: ["do", "love", "create"],
         tabs: [
             {
                 title: "Analysis",

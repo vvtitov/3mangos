@@ -20,7 +20,7 @@ export default function Services() {
   return (
     <section id="services" className="flex flex-col w-full mx-auto">
       <div className="flex flex-row justify-center items-center mx-auto mt-10">
-        <h1 className="text-5xl text-secondary-foreground mx-auto -rotate-2">
+        <h1 className="text-5xl text-secondary-foreground mx-auto hover:rotate-2 -rotate-3 transition-transform duration-500">
           {dictionary.services.title}
           <FlipWords
             words={words}
@@ -34,7 +34,7 @@ export default function Services() {
       </div>
 
       <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 pt-20">
-        <h1 className="text-4xl text-center mb-10">
+        <h1 className="text-4xl text-center mb-10 animate-fade-in">
           {dictionary.services.carouselTitle}
         </h1>
       </div>
