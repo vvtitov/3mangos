@@ -19,7 +19,7 @@ export default async function Home({
   return (
     <main
       id="main"
-      className="bg-background dark:bg-background min-w-[30rem] w-full h-full"
+      className="bg-background min-w-auto w-full h-full"
       dir={lang === "ar" ? "rtl" : "ltr"}
     >
       <Header />

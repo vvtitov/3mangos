@@ -5,7 +5,7 @@ import { ModeSwitch } from "./ui/dark-toggle-button";
 import NavMenu from "./NavMenu";
 import BurguerMenu from "./BurguerMenu";
 import Logo from "./Logo";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/app/i18n/LanguageContext";
 import { getDictionary } from "@/app/i18n/dictionaries";
 import { Button } from "./ui/button";
@@ -15,21 +15,11 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const { locale, setLocale } = useLanguage();
   const dictionary = getDictionary(locale);
-  const scrollToSection = (sectionClass: string) => {
-    const section = document.querySelector(`.${sectionClass}`);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsScrolled(true); // Hide header when scrolling down
-      } else {
-        setIsScrolled(false); // Show header when scrolling up
-      }
+      setIsScrolled(currentScrollY > lastScrollY && currentScrollY > 50);
       setLastScrollY(currentScrollY);
     };
 
@@ -43,23 +33,17 @@ export default function Header() {
     <>
       <header
         id="header"
-        className={`header fixed top-0 right-0 left-0 w-screen transition-transform duration-300 bg-background ${
+        className={`header fixed top-0 left-0 w-full transition-transform duration-300 bg-background ${
           isScrolled
             ? "-translate-y-full" // Hide header
             : "translate-y-0 border-b border-gray-500 fade-out-100" // Show header
-        } grid grid-cols-2 lg:grid max-w-8xl px-10 py-3 select-none items-center dark:border-gray-200 z-[10]`}
+        } flex justify-between items-center max-w-full px-4 py-3 select-none dark:border-gray-200 z-[10]`}
       >
-        <div
-          id="leftHeader"
-          className="block justify-center lg:justify-start items-center"
-        >
+        <div id="leftHeader" className="flex items-center">
           <Logo />
         </div>
 
-        <div
-          id="rightHeader"
-          className="flex w-full gap-2 items-center justify-end"
-        >
+        <div id="rightHeader" className="flex items-center gap-2">
           <div id="navMenu" className="hidden lg:block mr-10">
             <NavMenu />
           </div>
@@ -81,10 +65,7 @@ export default function Header() {
         </div>
       </header>
       {!isScrolled && (
-        <div
-          className="absolute mt-20 w-full align-middle text-center text-sm
-       h-10 bg-primary/70 text-foreground flex items-center justify-center rounded-lg right-0 left-0 mx-auto pt-1"
-        >
+        <div className="absolute mt-20 p-3 text-center text-sm w-full h-8 bg-primary/70 text-foreground flex items-center justify-center rounded-lg left-0 mx-auto">
           <span
             className="w-full text-balance font-medium"
             dangerouslySetInnerHTML={{

@@ -112,18 +112,18 @@ export const Header = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col md:flex-row max-w-6xl relative mx-auto w-full items-center select-none justify-between pt-[10rem] md:pt-[1rem] lg:pt-[4rem]"
+      className="flex flex-col md:flex-row max-w-6xl relative mx-auto w-full items-center select-none justify-between pt-[9rem] md:pt-[1rem] lg:pt-[3rem]"
     >
-      <BackgroundLines className="absolute z-[-10] bg-transparent dark:bg-transparent w-screen h-[100%] mt-20">
+      <BackgroundLines className="absolute z-[-10] bg-transparent dark:bg-transparent w-screen h-full mt-20">
         {" "}
       </BackgroundLines>
       <div className="flex flex-col gap-4 max-w-4xl px-10 w-full mx-auto">
-        <p className="text-5xl md:text-7xl lg:text-8xl font-bold max-w-sm md:max-w-2xl w-full lg:w-[40rem] min-w-[30rem] text-balance">
+        <p className="text-5xl md:text-7xl lg:text-8xl font-bold max-w-md md:max-w-3xl w-full lg:w-[40rem] text-balance">
           <strong className="w-full text-balance bg-clip-text text-transparent bg-gradient-to-br from-primary to-primary/80">
             {dictionary.hero.title}
           </strong>
         </p>
-        <p className="text-foreground text-xl md:text-xl lg:text-2xl dark:text-foreground text-balance max-w-sm md:max-w-2xl min-w-[20rem] pl-1">
+        <p className="text-foreground text-xl md:text-xl lg:text-2xl dark:text-foreground text-balance max-w-sm md:max-w-2xl pl-1">
           <span
             className="w-full text-balance"
             dangerouslySetInnerHTML={{
@@ -156,9 +156,9 @@ export const Header = () => {
         <Image
           src="/mango-hero3.png"
           alt="Floating Mango"
-          width={450}
-          height={450}
-          className="rotate-[5deg] lg:rotate-[-20deg] duration-1000 scale-75 md:scale-100 md:pt-60 -translate-y-20 translate-x-10 md:-translate-y-10 md:-translate-x-10 pointer-events-none"
+          width={400}
+          height={400}
+          className="rotate-[5deg] lg:rotate-[-20deg] duration-1000 scale-75 md:scale-100 md:pt-60 -translate-y-20 translate-x-2 md:-translate-y-10 md:-translate-x-10 pointer-events-none"
         />
       </div>
     </section>
