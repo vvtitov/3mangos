@@ -5,7 +5,7 @@ export const en = {
         services: "Services",
         contact: "Contact",
         language: "Language",
-        offer: "<em>15% off until the end of the month!⚡</em>"
+        offer: "<em>15% off until the end of March!⚡</em>"
     },
     hero: {
         title: "MANGOS EVERYWHERE",
@@ -14,7 +14,7 @@ export const en = {
     },
     about: {
         title: "Who we are",
-        text: "One day, three mangos fell in front of a frustrated developer struggling with broken code. He wished they could program, and suddenly they began to glow. Through some cosmic glitch, he started writing perfect code. Amazed and powered by his mysterious team of coding mangos, he founded <strong>THREE MANGOS</strong>. While investors laughed at first, our exceptional software speaks for itself. <br/> The truth behind our success? <br/>Only those three mangos know 🤫"
+        text: "One day, three mangos fell in front of a frustrated developer struggling with broken code. He wished they could program, and suddenly they began to glow. Through some cosmic glitch, he started writing perfect code. Amazed and powered by his mysterious team of fresh coding mangos, he founded our company <strong>THREE MANGOS</strong>. <br/> While investors laughed at first, our exceptional software speaks for itself. <br/> The truth behind our success? <br/>Only those three mangos know 🤫"
     },
     services: {
         title: "What we",
@@ -29,7 +29,7 @@ export const en = {
                 value: "design"
             },
             {
-                title: "Development",
+                title: "Develop",
                 value: "development"
             }
         ],

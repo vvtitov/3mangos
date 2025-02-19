@@ -17,12 +17,12 @@ export default function AboutUs() {
           <AboutMaskText />
         </div>
         <div className="flex flex-col lg:hidden bg-primary-foreground dark:bg-primary-foreground gap-10 mt-[3rem]">
-          <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-secondary">
+          <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-secondary">
             <span
               dangerouslySetInnerHTML={{ __html: dictionary.about.title }}
             />
           </h1>
-          <p className="text-xl max-w-2xl mx-auto px-10 text-left text-balanced">
+          <p className="text-lg max-w-2xl mx-auto px-10 text-left">
             <span dangerouslySetInnerHTML={{ __html: dictionary.about.text }} />
           </p>
         </div>

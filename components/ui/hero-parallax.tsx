@@ -118,12 +118,12 @@ export const Header = () => {
         {" "}
       </BackgroundLines>
       <div className="flex flex-col gap-4 max-w-4xl px-10 w-full mx-auto">
-        <p className="text-5xl md:text-7xl lg:text-8xl font-bold max-w-md md:max-w-3xl w-full lg:w-[40rem] text-balance">
+        <p className="text-5xl md:text-6xl lg:text-8xl font-bold max-w-md md:max-w-3xl w-[25rem] lg:w-[40rem] text-balance shrink-0">
           <strong className="w-full text-balance bg-clip-text text-transparent bg-gradient-to-br from-primary to-primary/80">
             {dictionary.hero.title}
           </strong>
         </p>
-        <p className="text-foreground text-xl md:text-xl lg:text-2xl dark:text-foreground text-balance max-w-sm md:max-w-2xl pl-1">
+        <p className="text-foreground text-xl md:text-xl lg:text-2xl dark:text-foreground text-balance max-w-sm md:max-w-2xl pl-1 shrink-0">
           <span
             className="w-full text-balance"
             dangerouslySetInnerHTML={{
@@ -158,7 +158,7 @@ export const Header = () => {
           alt="Floating Mango"
           width={400}
           height={400}
-          className="rotate-[5deg] lg:rotate-[-20deg] duration-1000 scale-75 md:scale-100 md:pt-60 -translate-y-20 translate-x-2 md:-translate-y-10 md:-translate-x-10 pointer-events-none"
+          className="rotate-[5deg] lg:rotate-[-20deg] duration-1000 scale-75 md:scale-100 md:pt-60 -translate-y-10 translate-x-10 md:-translate-y-10 md:-translate-x-10 pointer-events-none"
         />
       </div>
     </section>

@@ -45,7 +45,7 @@ export default function BurgerMenu() {
         className="fixed top-0 left-0 w-full h-full bg-background z-[2] flex items-center justify-center overflow-hidden"
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
-        <div className="flex flex-col text-left w-1/3 space-y-5">
+        <div className="flex flex-col text-center w-1/3 space-y-5">
           <div className="mb-10">
             <ModeSwitch />
           </div>
