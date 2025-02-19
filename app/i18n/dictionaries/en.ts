@@ -59,8 +59,8 @@ export const en = {
         ]
     },
     contact: {
-        title: "Contact Us",
-        description: "Get in touch with us to discuss your project",
+        title: "Want a fresh mango?",
+        description: "Send us a message and we will get back to you as soon as possible.",
         form: {
             name: "Name",
             email: "Email",
