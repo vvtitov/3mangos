@@ -137,7 +137,7 @@ const CarouselControl = ({
 }: CarouselControlProps) => {
   return (
     <Button
-      className={`w-10 h-10 flex items-center mx-2 justify-center bg-background border-5 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
+      className={`w-10 h-10 flex items-center mx-2 justify-center bg-background border-5 border-transparent rounded-full focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 hover:bg-secondary-background hover:shadow-2xl  ${
         type === "previous" ? "rotate-180" : ""
       }`}
       title={title}
@@ -211,7 +211,7 @@ export default function Carousel({ slides }: CarouselProps) {
 
   return (
     <div
-      className="relative w-[70vmin] h-[70vmin] mx-auto"
+      className="relative w-[70vmin] h-[70vmin] mx-auto select-none"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul

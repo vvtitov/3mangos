@@ -32,14 +32,14 @@ export default function Services() {
         <TabsServices />
       </div>
 
-      <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 pt-20">
-        <h1 className="text-4xl text-center mb-10 animate-fade-in">
+      <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 pt-40">
+        <h2 className="text-4xl text-center mb-10 animate-fade-in">
           {dictionary.services.carouselTitle}
-        </h1>
+        </h2>
       </div>
       <ServicesCarousel />
 
-      <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 py-20">
+      <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 py-40">
         <h1 className="text-4xl font-bold text-center mb-8">
           {dictionary.services.faqTitle}
         </h1>

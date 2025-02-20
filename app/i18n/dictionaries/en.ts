@@ -33,7 +33,7 @@ export const en = {
                 value: "development"
             }
         ],
-        carouselTitle: "Awesome personalized designs",
+        carouselTitle: "Awesome designs for your business",
         faqTitle: "FAQ's",
         faq: [
             {
