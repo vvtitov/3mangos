@@ -7,9 +7,13 @@ const nextConfig: NextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  output: "export",
+  output: "standalone",
   images: {
     unoptimized: true,
+  },
+  i18n: {
+    locales: ['en', 'es', 'ar'], // Asegúrate de incluir todos los idiomas que estás utilizando
+    defaultLocale: 'es',
   },
 };
 

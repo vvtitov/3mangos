@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "es" }];
+  return [{ lang: "en" }, { lang: "es" }, { lang: "ar" }];
 }
 
 export default async function Home({
