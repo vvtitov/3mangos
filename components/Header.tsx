@@ -65,7 +65,7 @@ export default function Header() {
         </div>
       </header>
       {!isScrolled && (
-        <div className="absolute mt-20 p-3 text-center text-sm w-2/3 h-8 bg-primary/90 text-foreground flex justify-center items-center rounded-lg mx-auto top-0 left-0 right-0 shadow-lg dark:shadow-primary/50 shadow-primary/50 animate-pulse transition-all duration-2000">
+        <div className="absolute mt-[5.1rem] p-3 text-center text-sm w-full h-auto bg-primary/90 text-foreground flex justify-center items-center mx-auto top-0 left-0 right-0 shadow-lg dark:shadow-primary/50 shadow-primary/50 animate-pulse transition-all duration-2000">
           <span
             className="w-full text-balance font-medium text-foreground dark:text-primary-foreground"
             dangerouslySetInnerHTML={{

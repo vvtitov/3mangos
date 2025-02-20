@@ -46,7 +46,7 @@ export default function BurgerMenu() {
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
         <div className="flex flex-col text-center w-1/3 space-y-5">
-          <div className="mb-10">
+          <div className="mb-20">
             <ModeSwitch />
           </div>
           {[
@@ -63,13 +63,13 @@ export default function BurgerMenu() {
               </p>
             </Link>
           ))}
-          <div className="flex justify-center items-center pt-10">
+          <div className="flex justify-center items-center pt-20">
             <button
               className="text-foreground focus:outline-none hover:scale-105 border-2 border-foreground rounded-full p-2"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Close menu"
             >
-              <X size={36} />
+              <X size={34} />
             </button>
           </div>
         </div>
