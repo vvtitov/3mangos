@@ -11,10 +11,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  i18n: {
-    locales: ['en', 'es', 'ar'], // Asegúrate de incluir todos los idiomas que estás utilizando
-    defaultLocale: 'es',
-  },
 };
 
 export default nextConfig;

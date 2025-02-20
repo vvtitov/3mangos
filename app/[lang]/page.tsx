@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "es" }, { lang: "ar" }];
+  return [{ lang: "en" }, { lang: "es" }];
 }
 
 export default async function Home({
@@ -17,11 +17,7 @@ export default async function Home({
 }) {
   const { lang } = await params;
   return (
-    <main
-      id="main"
-      className="bg-background min-w-auto w-full h-full"
-      dir={lang === "ar" ? "rtl" : "ltr"}
-    >
+    <main id="main" className="bg-background min-w-auto w-full h-full">
       <Header />
       <Hero />
       <About />
