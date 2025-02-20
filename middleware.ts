@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 const locales = ['en', 'es']
-const defaultLocale = 'en'
+const defaultLocale = 'es'
 
 function getLocale(request: NextRequest) {
     const pathname = request.nextUrl.pathname

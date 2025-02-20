@@ -17,11 +17,7 @@ export default async function Home({
 }) {
   const { lang } = await params;
   return (
-    <main
-      id="main"
-      className="bg-background min-w-auto w-full h-full"
-      dir={lang === "ar" ? "rtl" : "ltr"}
-    >
+    <main id="main" className="bg-background min-w-auto w-full h-full">
       <Header />
       <Hero />
       <About />
