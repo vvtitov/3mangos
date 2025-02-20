@@ -14,7 +14,7 @@ export const es = {
     },
     about: {
         title: "Sobre nosotros",
-        text: "Un día, tres mangos cayeron frente a un desarrollador frustrado que estaba luchando con código roto y obsoleto. Este deseó que pudieran programar, y de repente estos comenzaron a brillar. Después de un asombroso desliz cósmico, comenzó a escribir código de manera perfecta. Impactado e impulsado por su misterioso equipo de mangos programadores, fundó la agencia <strong>THREE MANGOS</strong>. Aunque los inversores se rieron al principio, nuestro software excepcional habla por sí mismo. <br/> ¿La verdad detrás de nuestro éxito?  <br/> Solo esos tres mangos lo saben 🤫"
+        text: "Un día, tres jugosos mangos cayeron frente a un desarrollador frustrado con su codigo. Suspirando profundo este deseó poder escribir codigo lindo y fresco como esos mangos; cuando de repente comenzaron a brillar! <br/> <br/> Después de un loco y raro desliz cósmico, el codigo comenzo a fluir como si nada. Impactado e impulsado por su misterioso equipo de mangos programadores, fundó la agencia <strong>THREE MANGOS</strong>.<br/> <br/>  Aunque los inversores se rieron al principio, nuestro software excepcional habla por sí mismo. <br/> <br/> ¿La verdad detrás de nuestro éxito?  <br/> Solo esos tres mangos lo saben 🤫"
     },
     services: {
         title: "Lo que",
