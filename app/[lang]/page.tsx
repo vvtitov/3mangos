@@ -32,7 +32,7 @@ export default async function Home({
         height={400}
         className="mx-auto pointer-events-none pt-8 select-none"
         style={{
-          filter: "drop-shadow(1px 10px 2px hsl(var(--primary)))",
+          filter: "drop-shadow(3px 10px 2px hsl(var(--primary)))",
         }}
       />
       <Services />

@@ -19,13 +19,13 @@ export default function Services() {
 
   return (
     <section id="services" className="flex flex-col w-full mx-auto">
-      <div className="flex flex-row justify-center items-center align-middle mx-auto  overflow-hidden p-10">
+      <div className="flex flex-col justify-center items-center align-middle mx-auto  overflow-hidden p-10">
         <h1 className="text-4xl md:text-5xl text-secondary-foreground flex justify-center items-center hover:rotate-2 -rotate-3 transition-transform duration-500 gap-1">
-          {dictionary.services.title}
+          {dictionary.services.title}{" "}
           <FlipWords
             words={words}
             className="text-primary dark:text-primary text-4xl md:text-5xl overflow-hidden font-medium"
-          />
+          />{" "}
         </h1>
       </div>
       <div className="flex flex-col h-full items-center justify-center p-10 my-6">

@@ -5,7 +5,7 @@ export const es = {
         services: "Servicios",
         contact: "Contacto",
         language: "Idioma",
-        offer: "<em>15% de descuento hasta el 31 de Marzo!⚡</em>"
+        offer: "<em>15% de descuento con el codigo <strong>'FRESH'</strong> hasta el 31 de Marzo!</em>"
     },
     hero: {
         title: "INVASION DE MANGOS",
