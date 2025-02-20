@@ -33,7 +33,7 @@ export const es = {
                 value: "development"
             }
         ],
-        carouselTitle: "Increibles diseños personalizados",
+        carouselTitle: "Diseños increíbles para tu negocio",
         faqTitle: "Preguntas frecuentes",
         faq: [
             {
