@@ -16,7 +16,7 @@ export default function Header() {
   const { locale, setLocale } = useLanguage();
   const dictionary = getDictionary(locale);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
-  const languageMenuRef = useRef(null);
+  const languageMenuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
