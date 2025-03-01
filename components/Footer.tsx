@@ -82,7 +82,7 @@ export default function Footer() {
         <div className="flex justify-center mb-5 w-full h-full items-center text-center">
           <p className="text-sm text-muted-foreground">
             {dictionary.footer.msg} <br /> &copy; {new Date().getFullYear()} -{" "}
-            {dictionary.footer.company} - {dictionary.footer.rights}
+            {dictionary.footer.company}
           </p>
         </div>
       </div>
