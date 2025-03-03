@@ -22,16 +22,28 @@ export const es = {
     words: ["hacemos", "amamos", "creamos"],
     tabs: [
       {
-        title: "Análisis",
-        value: "analysis",
+        title: "Desarrollo Web",
+        value: "web-development",
       },
       {
-        title: "Diseño",
-        value: "design",
+        title: "E-commerce",
+        value: "e-commerce",
       },
       {
-        title: "Desarrollo",
-        value: "development",
+        title: "UX/UI",
+        value: "ui-ux",
+      },
+      {
+        title: "Branding y diseño",
+        value: "branding-and-design",
+      },
+      {
+        title: "SEO",
+        value: "seo",
+      },
+      {
+        title: "Social Media",
+        value: "social-media",
       },
     ],
     carouselTitle: "Diseños increíbles para tu negocio",

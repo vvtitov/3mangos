@@ -6,6 +6,7 @@ import { ModeSwitch } from "./ui/dark-toggle-button";
 import { useLanguage } from "@/app/i18n/LanguageContext";
 import { getDictionary } from "@/app/i18n/dictionaries";
 
+
 export default function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const { locale } = useLanguage();
@@ -29,11 +30,20 @@ export default function BurgerMenu() {
     >
       {/* Mobile Menu Button */}
       <button
-        className="dark:text-foreground text-foreground flex items-center justify-center hover:scale-105 transition-transform duration-300"
+        className="dark:text-foreground text-foreground flex items-center justify-center hover:scale-105 transition-transform duration-300 z-3"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
-        <Menu size={36} />
+        <img
+          src="/burguer-menu-light.svg"
+          alt="Burger Menu"
+          className="dark:hidden"
+        />
+        <img
+          src="/burguer-menu-dark.svg"
+          alt="Burger Menu"
+          className="hidden dark:block"
+        />
       </button>
       {/* Mobile Menu */}
       <motion.div
@@ -65,11 +75,11 @@ export default function BurgerMenu() {
           ))}
           <div className="flex justify-center items-center pt-20">
             <button
-              className="text-foreground focus:outline-none hover:scale-105 border-2 border-foreground rounded-full p-2"
+              className="text-secondary-foreground/80 focus:outline-none hover:scale-105 border border-primary/60 rounded-full p-3 bg-primary"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Close menu"
             >
-              <X size={34} />
+              <X size={28} />
             </button>
           </div>
         </div>

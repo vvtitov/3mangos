@@ -22,16 +22,28 @@ export const en = {
     words: ["do", "love", "create"],
     tabs: [
       {
-        title: "Analysis",
-        value: "analysis",
+        title: "Web development",
+        value: "web-development",
       },
       {
-        title: "Design",
-        value: "design",
+        title: "E-commerce",
+        value: "e-commerce",
       },
       {
-        title: "Develop",
-        value: "development",
+        title: "UI/UX",
+        value: "ui-ux",
+      },
+      {
+        title: "Branding and design",
+        value: "branding-and-design",
+      },
+      {
+        title: "SEO",
+        value: "seo",
+      },
+      {
+        title: "Social media",
+        value: "social-media",
       },
     ],
     carouselTitle: "Awesome designs for your business",

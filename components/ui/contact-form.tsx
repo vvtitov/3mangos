@@ -76,8 +76,8 @@ export default function ContactFormPreview() {
     <div className="flex min-h-[60vh] h-full w-full items-center justify-center px-2">
       <Card className="mx-auto max-w-md border-none">
         <CardHeader>
-          <CardTitle className="text-3xl text-primary">
-            <h1 className="text-3xl text-primary">
+          <CardTitle>
+            <h1 className="text-3xl text-secondary-foreground">
               {dictionary.contact.title}
             </h1>
           </CardTitle>

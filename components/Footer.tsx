@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { useLanguage } from "@/app/i18n/LanguageContext";
 import { getDictionary } from "@/app/i18n/dictionaries";
 
@@ -78,8 +77,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <Separator className="mt-20 mb-5 bg-secondary-foreground" />
-        <div className="flex justify-center mb-5 w-full h-full items-center text-center">
+        <div className="flex justify-center mb-8 mt-20 w-full h-full items-center text-center">
           <p className="text-sm text-muted-foreground">
             {dictionary.footer.msg} <br /> &copy; {new Date().getFullYear()} -{" "}
             {dictionary.footer.company}

@@ -18,17 +18,17 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="flex flex-col w-full mx-auto">
+    <section id="services" className="flex flex-col w-full">
       <div className="flex flex-col justify-center items-center align-middle mx-auto  overflow-hidden p-10">
-        <h1 className="text-4xl md:text-5xl text-secondary-foreground flex justify-center items-center hover:rotate-2 -rotate-3 transition-transform duration-500 gap-1">
+        <h1 className="uppercase font-semibold text-3xl md:text-5xl text-secondary-foreground flex justify-center items-center hover:rotate-2 -rotate-3 transition-transform duration-500 gap-1">
           {dictionary.services.title}{" "}
           <FlipWords
             words={words}
-            className="text-primary dark:text-primary text-4xl md:text-5xl overflow-hidden font-medium"
+            className="text-primary dark:text-primary text-3xl md:text-5xl overflow-hidden uppercase font-semibold"
           />{" "}
         </h1>
       </div>
-      <div className="flex flex-col h-full items-center justify-center p-10 my-6">
+      <div className="flex flex-col h-full items-center justify-center p-10 my-2">
         <TabsServices />
       </div>
 
@@ -40,7 +40,7 @@ export default function Services() {
       <ServicesCarousel />
 
       <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 py-40">
-        <h1 className="text-4xl font-bold text-center mb-8">
+        <h1 className="text-4xl font-semibold text-left mb-8 w-full">
           {dictionary.services.faqTitle}
         </h1>
         <AcordionServices />
