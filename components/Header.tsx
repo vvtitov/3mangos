@@ -53,7 +53,7 @@ export default function Header() {
         className={`header fixed top-0 left-0 w-full transition-transform duration-300 bg-background ${
           isScrolled
             ? "-translate-y-full"
-            : "translate-y-0 border-b border-gray-500 fade-out-100"
+            : "translate-y-0 fade-out-100"
         } flex justify-between items-center max-w-full px-4 py-3 select-none dark:border-gray-200 z-[10]`}
       >
         <div id="leftHeader" className="flex items-center">
@@ -85,14 +85,14 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="absolute top-full -left-4 z-10 w-auto bg-background rounded-b-2xl border border-primary border-t-0 px-2 py-2"
+                className="absolute top-full -left-[1.3rem] z-10 w-auto bg-background rounded-b-2xl border border-foreground border-t-0 px-3 py-3"
               >
                 <div
                   onClick={() => {
                     setLocale("en");
                     setIsLanguageMenuOpen(false);
                   }}
-                  className="flex flex-row items-center text-foreground font-semibold hover:bg-primary/90 px-4 cursor-pointer rounded-full py-2 transition-all duration-300 mb-1"
+                  className="flex flex-row items-center text-foreground font-light hover:bg-primary/90 px-4 cursor-pointer py-2 transition-all duration-300"
                 >
                   EN
                 </div>
@@ -101,7 +101,7 @@ export default function Header() {
                     setLocale("es");
                     setIsLanguageMenuOpen(false);
                   }}
-                  className="flex flex-row items-center text-foreground font-semibold hover:bg-primary/90 px-4 cursor-pointer rounded-full py-2"
+                  className="flex flex-row items-center text-foreground font-light hover:bg-primary/90 px-4 cursor-pointer rounded-b-xl py-2"
                 >
                   ES
                 </div>

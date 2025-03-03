@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Nevis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -14,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nevis", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 @layer base {

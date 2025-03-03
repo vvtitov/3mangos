@@ -32,7 +32,7 @@ export const HeroParallax = ({
     offset: ["start start", "end start"],
   });
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  const springConfig = { stiffness: 300, damping: 50, bounce: 80 };
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
@@ -61,7 +61,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-full overflow-hidden antialiased relative flex flex-col self-auto [perspective:1600px] [transform-style:preserve-3d] z-[1]"
+      className="h-[110rem] lg:h-[93rem] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1600px] [transform-style:preserve-3d] z-[1]"
     >
       <Header />
       <motion.div
@@ -118,7 +118,7 @@ export const Header = () => {
         {" "}
       </BackgroundLines>
       <div className="flex flex-col gap-4 max-w-4xl px-10 w-full mx-auto">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold max-w-md md:max-w-3xl w-[25rem] lg:w-[40rem] text-balance min-w-[30rem]">
+        <h1 className="text-5xl md:text-6xl lg:text-6xl font-medium max-w-md md:max-w-3xl w-[25rem] lg:w-[40rem] text-balance min-w-[30rem]">
           <strong className="text-balance bg-clip-text text-transparent bg-gradient-to-br from-primary to-primary/80">
             {dictionary.hero.title}
           </strong>
@@ -201,7 +201,6 @@ export const ProductCard = ({
       </Link>
       <div className="absolute inset-0 h-full w-full rotate-12">
         <p className="text-foreground text-xl md:text-xl lg:text-2xl dark:text-foreground text-balance max-w-sm md:max-w-xl pl-1">
-          <strong>FRESH</strong> and <strong>PROFESSIONAL</strong>
         </p>
       </div>
     </motion.div>
