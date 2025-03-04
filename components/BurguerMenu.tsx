@@ -66,7 +66,7 @@ export default function BurgerMenu() {
           ].map((item) => (
             <Link href={item.link} key={item.name}>
               <p
-                className="text-2xl text-foreground transition-colors hover:text-primary duration-300"
+                className="text-2xl text-foreground transition-colors hover:text-primary duration-300 cursor-pointer uppercase"
                 onClick={handleClose}
               >
                 {item.name}
@@ -75,11 +75,11 @@ export default function BurgerMenu() {
           ))}
           <div className="flex justify-center items-center pt-20">
             <button
-              className="text-secondary-foreground/80 focus:outline-none hover:scale-105 border border-primary/60 rounded-full p-3 bg-primary"
+              className="text-primary-foreground focus:outline-none hover:scale-105 border border-primary/60 rounded-full p-3 bg-primary hover:-z-2  transition-transform duration-700 justify-center items-center text-center"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Close menu"
             >
-              <X size={28} />
+              <X size={28} className="mx-auto"/>
             </button>
           </div>
         </div>

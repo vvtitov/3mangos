@@ -77,8 +77,9 @@ export const es = {
     ],
   },
   contact: {
-    title: "Contáctanos",
-    description: "Ponte en contacto con nosotros para discutir tu proyecto",
+    title: "Quieres un mango fresco?",
+    description:
+      "Mandanos un mensaje resumiendo tu idea y estaremos en contacto lo antes posible.",
     form: {
       name: "Nombre",
       email: "Correo electrónico",

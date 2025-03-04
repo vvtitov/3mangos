@@ -103,7 +103,7 @@ export function TabsServices() {
   ];
 
   return (
-    <div className="h-[35rem] md:h-[40rem] [perspective:1000px] relative flex flex-col max-w-5xl w-full text-md self-center justify-center">
+    <div className="h-[35rem] md:h-[40rem] [perspective:1000px] relative flex flex-col max-w-5xl w-full text-xl text-center">
       <Tabs tabs={tabs} />
     </div>
   );

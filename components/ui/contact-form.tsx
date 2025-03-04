@@ -77,7 +77,7 @@ export default function ContactFormPreview() {
       <Card className="mx-auto max-w-md border-none">
         <CardHeader>
           <CardTitle>
-            <h1 className="text-3xl text-secondary-foreground">
+            <h1 className="text-3xl text-secondary-foreground uppercase">
               {dictionary.contact.title}
             </h1>
           </CardTitle>

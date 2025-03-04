@@ -112,13 +112,13 @@ export const Header = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col md:flex-row max-w-6xl relative mx-auto w-full items-center select-none justify-between pt-[12rem] md:pt-[3rem] lg:pt-[6rem]"
+      className="flex flex-col md:flex-row max-w-6xl relative mx-auto w-full items-center select-none justify-between pt-[10rem] md:pt-[3rem] lg:pt-[6rem]"
     >
       <BackgroundLines className="absolute z-[-10] bg-transparent dark:bg-transparent w-screen h-full mt-20">
         {" "}
       </BackgroundLines>
       <div className="flex flex-col gap-4 max-w-4xl px-10 w-full mx-auto">
-        <h1 className="text-5xl md:text-6xl lg:text-6xl font-medium max-w-md md:max-w-3xl w-[25rem] lg:w-[40rem] text-balance min-w-[30rem]">
+        <h1 className="text-5xl md:text-6xl lg:text-6xl font-medium max-w-md md:max-w-3xl w-[25rem] lg:w-[40rem] text-balance min-w-[10rem] md:min-w-[34rem]">
           <strong className="text-balance bg-clip-text text-transparent bg-gradient-to-br from-primary to-primary/80">
             {dictionary.hero.title}
           </strong>

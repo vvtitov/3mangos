@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { AboutMaskText } from "./AboutMaskText";
 import { AnimatedTooltipPreview } from "./AnimatedTooltipAbout";
 import { useLanguage } from "@/app/i18n/LanguageContext";
 import { getDictionary } from "@/app/i18n/dictionaries";
