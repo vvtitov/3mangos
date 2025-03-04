@@ -5,12 +5,13 @@ export const es = {
     services: "Servicios",
     contact: "Contacto",
     language: "Idioma",
-    offer: "<em>100% de reviews positivas ⚡</em>",
+    offer:
+      "<em><strong>Contamos con 100% de reviews positivas ⚡</strong></em>",
   },
   hero: {
-    title: "La web de tus sueños al mejor precio!",
+    title: "Una web bien fresca al mejor precio!",
     subtitle:
-      "Somos un equipo de desarrolladores <em>apasionados por lo que hacemos</em> y fuertemente enfocados en crear <strong>productos increíbles</strong> a la <strong>velocidad de la luz</strong> con las últimas tecnologías y frameworks del mercado.",
+      "Somos un equipo de desarrolladores <em>apasionados por lo que hacemos</em> y fuertemente enfocados en crear <strong>productos increíbles</strong> a la <strong>velocidad de la luz</strong> con las última tecnologías y frameworks del mercado.",
     cta: "Hablemos →",
   },
   about: {
@@ -34,8 +35,8 @@ export const es = {
         value: "ui-ux",
       },
       {
-        title: "Branding y diseño",
-        value: "branding-and-design",
+        title: "Branding",
+        value: "branding",
       },
       {
         title: "SEO",

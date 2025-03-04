@@ -33,7 +33,7 @@ export default function Services() {
       </div>
 
       <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 pt-40">
-        <h2 className="text-4xl text-center mb-10 animate-fade-in">
+        <h2 className="text-3xl lg:text-4xl text-center mb-10 animate-fade-in">
           {dictionary.services.carouselTitle}
         </h2>
       </div>
