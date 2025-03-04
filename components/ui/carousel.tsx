@@ -1,8 +1,9 @@
 "use client";
-import { IconArrowNarrowRight } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconArrowsRightDown } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "./button";
+import { ArrowRight } from "lucide-react";
 
 interface SlideData {
   title: string;
@@ -238,8 +239,8 @@ export default function Carousel({ slides }: CarouselProps) {
         ))}
       </ul>
 
-      <div className="absolute flex justify-center w-full top-[calc(100%-5rem)]">
-        <CarouselControl
+      <div className="absolute justify-start w-1/3 top-[calc(100%-12rem)] left-6">
+        {/* <CarouselControl
           type="previous"
           title="Go to previous slide"
           handleClick={handlePreviousClick}
@@ -249,7 +250,10 @@ export default function Carousel({ slides }: CarouselProps) {
           type="next"
           title="Go to next slide"
           handleClick={handleNextClick}
-        />
+        /> */}
+        <p className="md:text-4xl text-xl font-bold text-background/70 underline underline-offset-4">DRAG TO MOVE 
+        <ArrowRight size={40} className="text-background animate-ping transition-all duration-[4000ms] justify-center w-full mt-5" />
+        </p>
       </div>
     </div>
   );

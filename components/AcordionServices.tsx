@@ -18,7 +18,7 @@ export default function AcordionServices() {
           <AccordionTrigger className="text-foreground font-light text-2xl lg:text-2xl">
             {dictionary.services.faq[0].question}
           </AccordionTrigger>
-          <AccordionContent className="text-md md:text-lg font-medium pl-2 pr-10">
+          <AccordionContent className="text-lg text-balance md:text-lg font-medium pl-2 pr-10">
             {dictionary.services.faq[0].answer}
           </AccordionContent>
         </AccordionItem>
@@ -26,7 +26,7 @@ export default function AcordionServices() {
           <AccordionTrigger className="text-foreground font-light text-2xl lg:text-2xl">
             {dictionary.services.faq[1].question}
           </AccordionTrigger>
-          <AccordionContent className="text-md md:text-lg font-medium pl-2 pr-10">
+          <AccordionContent className="text-lg text-balance md:text-lg font-medium pl-2 pr-10">
             {dictionary.services.faq[1].answer}
           </AccordionContent>
         </AccordionItem>
@@ -34,7 +34,7 @@ export default function AcordionServices() {
           <AccordionTrigger className="text-foreground font-light text-2xl lg:text-2xl">
             {dictionary.services.faq[2].question}
           </AccordionTrigger>
-          <AccordionContent className="text-md md:text-lg font-medium pl-2 pr-10">
+          <AccordionContent className="text-lg text-balance md:text-lg font-medium pl-2 pr-10">
             {dictionary.services.faq[2].answer}
           </AccordionContent>
         </AccordionItem>
@@ -42,7 +42,7 @@ export default function AcordionServices() {
           <AccordionTrigger className="text-foreground font-light text-2xl lg:text-2xl">
             {dictionary.services.faq[3].question}
           </AccordionTrigger>
-          <AccordionContent className="text-md md:text-lg font-medium pl-2 pr-10">
+          <AccordionContent className="text-lg text-balance md:text-lg font-medium pl-2 pr-10">
             {dictionary.services.faq[3].answer}
           </AccordionContent>
         </AccordionItem>
@@ -50,7 +50,7 @@ export default function AcordionServices() {
           <AccordionTrigger className="text-foreground font-light text-2xl lg:text-2xl">
             {dictionary.services.faq[4].question}
           </AccordionTrigger>
-          <AccordionContent className="text-md md:text-lg font-medium pl-2 pr-10">
+          <AccordionContent className="text-lg text-balance md:text-lg font-medium pl-2 pr-10">
             {dictionary.services.faq[4].answer}
           </AccordionContent>
         </AccordionItem>

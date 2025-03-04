@@ -40,7 +40,7 @@ export default function Services() {
       <ServicesCarousel />
 
       <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 py-40">
-        <h1 className="text-4xl font-semibold text-left mb-8 w-full">
+        <h1 className="text-3xl lg:text-5xl font-semibold text-left mb-8 w-full uppercase">
           {dictionary.services.faqTitle}
         </h1>
         <AcordionServices />
