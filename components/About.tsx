@@ -12,7 +12,7 @@ export default function AboutUs() {
   return (
     <section id="about" className="w-full h-full max-w-5xl mx-auto lg:mt-10">
       <div className="flex flex-col text-center">
-        <div className="flex flex-col bg-primary-foreground gap-10 mt-[2rem] px-10 lg:px-0">
+        <div className="flex flex-col bg-primary-foreground gap-10 mt-[4rem] px-10 lg:px-0">
           <h1 className="text-3xl lg:text-5xl font-bold text-start uppercase">
             <span
               dangerouslySetInnerHTML={{ __html: dictionary.about.title }}

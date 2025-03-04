@@ -4,6 +4,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { useState } from "react";
 
 import {
   Form,
@@ -40,6 +41,7 @@ const formSchema = z.object({
 export default function ContactFormPreview() {
   const { locale } = useLanguage();
   const dictionary = getDictionary(locale);
+  const [loading, setLoading] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -51,6 +53,7 @@ export default function ContactFormPreview() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true);
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -64,11 +67,19 @@ export default function ContactFormPreview() {
         throw new Error("Failed to send message");
       }
 
-      toast.success("¡Tu mensaje ha sido enviado exitosamente!");
+      toast("¡Tu mensaje ha sido enviado exitosamente!", {
+        duration: 4000,
+        description: "Tu mensaje ha sido recibido y será respondido pronto.",
+      });
       form.reset();
     } catch (error) {
       console.error("Error al enviar el formulario", error);
-      toast.error("No se pudo enviar tu mensaje. Por favor intenta de nuevo.");
+      toast.error("No se pudo enviar tu mensaje. Por favor intenta de nuevo.", {
+        duration: 4000,
+        style: { backgroundColor: "#f44336", color: "#fff" },
+      });
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -104,7 +115,7 @@ export default function ContactFormPreview() {
                           placeholder={dictionary.contact.form.placeholder.name}
                           type="text"
                           autoComplete="name"
-                          className="border-secondary-foreground"
+                          className="border-secondary-foreground/50 active:bg-white"
                           {...field}
                         />
                       </FormControl>
@@ -130,7 +141,7 @@ export default function ContactFormPreview() {
                           }
                           type="email"
                           autoComplete="email"
-                          className="border-secondary-foreground"
+                          className="border-secondary-foreground/50"
                           {...field}
                         />
                       </FormControl>
@@ -155,7 +166,7 @@ export default function ContactFormPreview() {
                             dictionary.contact.form.placeholder.message
                           }
                           autoComplete="off"
-                          className="max-h-[150px] border-secondary-foreground"
+                          className="max-h-[150px] border-secondary-foreground/50"
                           {...field}
                         />
                       </FormControl>
@@ -167,7 +178,7 @@ export default function ContactFormPreview() {
                 <Button
                   type="submit"
                   variant="outline"
-                  className="w-[10rem] bg-primary-foreground/60 text-primary hover:text-primary-foreground rounded-full m-auto"
+                  className="w-[10rem] bg-primary text-foreground rounded-full m-auto hover:bg-primary/80"
                 >
                   {dictionary.contact.form.send}
                 </Button>

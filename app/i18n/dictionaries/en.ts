@@ -5,7 +5,7 @@ export const en = {
     services: "Services",
     contact: "Contact",
     language: "Language",
-    offer: "<em><strong>We have 100% positive reviews ⚡</strong></em>",
+    offer: "<strong>We have 100% positive reviews 🏆</strong>",
   },
   hero: {
     title: "Your fresh website at the best price!",
@@ -62,7 +62,7 @@ export const en = {
       {
         question: "I don't have a design",
         answer:
-          "We can help you design your website or app. We have a team of designers who can help you create a beautiful and functional design. Also we have beautiful pre-made designs to offer.",
+          "Don't worry, we have designs ready to offer or we can help you create a beautiful and functional design for your project.",
       },
       {
         question: "How long does it take?",

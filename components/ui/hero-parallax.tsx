@@ -61,7 +61,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[110rem] lg:h-[93rem] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1600px] [transform-style:preserve-3d] z-[1]"
+      className="h-[110rem] lg:h-[93rem] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1600px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -109,6 +109,11 @@ export const Header = () => {
   const { locale } = useLanguage();
   const dictionary = getDictionary(locale);
 
+  const handleClick = () => {
+    const url = "https://wa.me/5491160463521";
+    window.open(url, "_blank");
+  };
+
   return (
     <section
       id="hero"
@@ -132,24 +137,14 @@ export const Header = () => {
           />
         </p>
         <div className="flex justify-start pl-1 mt-4">
-          <motion.div
-            whileHover={{ scale: 1 }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <Button
+            variant="default"
+            size="lg"
+            className="py-8 px-10 text-2xl capitalize rounded-full bg-gradient-to-bl from-primary/60 via-primary/80 to-primary text-foreground items-center justify-center hover:bg-gradient-to-br hover:from-primary/80 hover:via-primary/90 hover:to-primary/80 transition-all duration-300"
+            onClick={handleClick}
           >
-            <Button
-              variant={"outline"}
-              size={"lg"}
-              className="py-8 px-10 text-2xl capitalize rounded-full bg-gradient-to-bl from-primary/60 via-primary/80 to-primary text-foreground items-center justify-center hover:bg-gradient-to-br hover:from-primary/80 hover:via-primary/90 hover:to-primary/80 transition-all duration-300"
-              onClick={() => {
-                window.location.href = "mailto:contacto@3mangos.site";
-              }}
-            >
-              {dictionary.hero.cta}
-            </Button>
-          </motion.div>
+            {dictionary.hero.cta}
+          </Button>
         </div>
       </div>
       <div className="shrink-0">
@@ -200,8 +195,7 @@ export const ProductCard = ({
         />
       </Link>
       <div className="absolute inset-0 h-full w-full rotate-12">
-        <p className="text-foreground text-xl md:text-xl lg:text-2xl dark:text-foreground text-balance max-w-sm md:max-w-xl pl-1">
-        </p>
+        <p className="text-foreground text-xl md:text-xl lg:text-2xl dark:text-foreground text-balance max-w-sm md:max-w-xl pl-1"></p>
       </div>
     </motion.div>
   );

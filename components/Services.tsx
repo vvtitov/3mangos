@@ -5,6 +5,7 @@ import ServicesCarousel from "./ServicesCarrousel";
 import { FlipWords } from "./ui/flip-words";
 import { useLanguage } from "@/app/i18n/LanguageContext";
 import { getDictionary } from "@/app/i18n/dictionaries";
+import { Separator } from "@radix-ui/react-separator";
 
 export default function Services() {
   const { locale } = useLanguage();
@@ -28,18 +29,20 @@ export default function Services() {
           />{" "}
         </h1>
       </div>
-      <div className="flex flex-col h-full items-center justify-center p-10 my-2">
+      <div className="flex flex-col h-full items-center justify-center p-10 my-4">
         <TabsServices />
       </div>
 
-      <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 pt-40">
+      <Separator className="h-px bg-foreground/50 mt-20 mx-auto w-2/4" />
+      <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 pt-20">
         <h2 className="text-3xl lg:text-4xl text-center mb-10 animate-fade-in">
           {dictionary.services.carouselTitle}
         </h2>
       </div>
       <ServicesCarousel />
+      <Separator className="h-px bg-foreground/50 mt-20 mx-auto w-2/4" />
 
-      <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 py-40">
+      <div className="flex flex-col items-center max-w-5xl w-full mx-auto px-10 py-20">
         <h1 className="text-3xl lg:text-5xl font-semibold text-left mb-8 w-full uppercase">
           {dictionary.services.faqTitle}
         </h1>

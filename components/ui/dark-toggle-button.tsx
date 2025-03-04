@@ -9,18 +9,28 @@ export function ModeSwitch() {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
 
+  // Set the default checked state based on the current theme
+  const [checked, setChecked] = React.useState(isDark);
+
+  React.useEffect(() => {
+    setChecked(isDark);
+  }, [isDark]);
+
   return (
     <div className="w-full h-full flex space-x-2 items-center justify-center text-primary">
       <Sun
-        className={`h-4 w-4 ${isDark ? "text-foreground" : "text-primary"}`}
+        className={`h-4 w-4 ${checked ? "text-foreground" : "text-primary"}`}
       />
       <Switch
-        checked={isDark}
-        onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+        checked={checked}
+        onCheckedChange={(checked) => {
+          setChecked(checked);
+          setTheme(checked ? "dark" : "light");
+        }}
         className="flex items-center"
       ></Switch>
       <Moon
-        className={`h-4 w-4 ${isDark ? "text-primary" : "text-foreground"}`}
+        className={`h-4 w-4 ${checked ? "text-primary" : "text-foreground"}`}
       />
     </div>
   );
