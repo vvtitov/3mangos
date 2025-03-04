@@ -14,7 +14,7 @@ export function TabsServices() {
       title: dictionary.services.tabs[0].title,
       value: dictionary.services.tabs[0].value,
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-3xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-3xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
           <Image
             src="/mango.png"
             alt="dummy image"
@@ -59,7 +59,7 @@ export function TabsServices() {
       title: dictionary.services.tabs[3].title,
       value: dictionary.services.tabs[3].value,
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
           <Image
             src="/mango.png"
             alt="dummy image"
@@ -74,7 +74,7 @@ export function TabsServices() {
       title: dictionary.services.tabs[4].title,
       value: dictionary.services.tabs[4].value,
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
           <Image
             src="/mango.png"
             alt="dummy image"
@@ -89,7 +89,7 @@ export function TabsServices() {
       title: dictionary.services.tabs[5].title,
       value: dictionary.services.tabs[5].value,
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
           <Image
             src="/mango.png"
             alt="dummy image"

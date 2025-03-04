@@ -142,7 +142,7 @@ export const Header = () => {
             <Button
               variant={"outline"}
               size={"lg"}
-              className="py-8 px-10 text-xl rounded-full bg-gradient-to-bl from-primary/60 via-primary/80 to-primary text-foreground items-center justify-center hover:bg-gradient-to-br hover:from-primary/80 hover:via-primary/90 hover:to-primary/80 transition-all duration-300"
+              className="py-8 px-10 text-2xl capitalize rounded-full bg-gradient-to-bl from-primary/60 via-primary/80 to-primary text-foreground items-center justify-center hover:bg-gradient-to-br hover:from-primary/80 hover:via-primary/90 hover:to-primary/80 transition-all duration-300"
               onClick={() => {
                 window.location.href = "mailto:contacto@3mangos.site";
               }}

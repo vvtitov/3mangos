@@ -5,7 +5,7 @@ export const en = {
     services: "Services",
     contact: "Contact",
     language: "Language",
-    offer: "<em>100% positive reviews ⚡</em>",
+    offer: "<em><strong>We have 100% positive reviews ⚡</strong></em>",
   },
   hero: {
     title: "Your fresh website at the best price!",
@@ -34,8 +34,8 @@ export const en = {
         value: "ui-ux",
       },
       {
-        title: "Branding and design",
-        value: "branding-and-design",
+        title: "Branding",
+        value: "branding",
       },
       {
         title: "SEO",

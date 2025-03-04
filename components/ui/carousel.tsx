@@ -3,7 +3,7 @@ import { IconArrowNarrowRight, IconArrowsRightDown } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "./button";
-import { ArrowRight } from "lucide-react";
+import { ArrowDownRight, ArrowRight } from "lucide-react";
 
 interface SlideData {
   title: string;
@@ -239,7 +239,7 @@ export default function Carousel({ slides }: CarouselProps) {
         ))}
       </ul>
 
-      <div className="absolute justify-start w-1/3 top-[calc(100%-12rem)] left-6">
+      <div className="absolute justify-start w-1/3 top-[calc(5%)] left-6">
         {/* <CarouselControl
           type="previous"
           title="Go to previous slide"
@@ -251,8 +251,8 @@ export default function Carousel({ slides }: CarouselProps) {
           title="Go to next slide"
           handleClick={handleNextClick}
         /> */}
-        <p className="md:text-4xl text-xl font-bold text-background/70 underline underline-offset-4">DRAG TO MOVE 
-        <ArrowRight size={40} className="text-background animate-ping transition-all duration-[4000ms] justify-center w-full mt-5" />
+        <p className="md:text-4xl text-xl font-bold text-background/70">DRAG TO MOVE
+        <ArrowDownRight className="text-background/70" size={40} />
         </p>
       </div>
     </div>
