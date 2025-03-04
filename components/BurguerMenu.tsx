@@ -30,19 +30,19 @@ export default function BurgerMenu() {
     >
       {/* Mobile Menu Button */}
       <button
-        className="dark:text-foreground text-foreground flex items-center justify-center hover:scale-105 transition-transform duration-300 z-3"
+        className="dark:text-foreground text-foreground flex items-center justify-center"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
         <img
           src="/burguer-menu-light.svg"
           alt="Burger Menu"
-          className="dark:hidden"
+          className="dark:hidden w-18"
         />
         <img
           src="/burguer-menu-dark.svg"
           alt="Burger Menu"
-          className="hidden dark:block"
+          className="hidden dark:block w-18"
         />
       </button>
       {/* Mobile Menu */}
