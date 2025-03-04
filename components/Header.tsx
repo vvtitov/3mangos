@@ -51,9 +51,7 @@ export default function Header() {
       <header
         id="header"
         className={`header fixed top-0 left-0 w-full transition-transform duration-300 bg-background ${
-          isScrolled
-            ? "-translate-y-full"
-            : "translate-y-0 fade-out-100"
+          isScrolled ? "-translate-y-full" : "translate-y-0 fade-out-100"
         } flex justify-between items-center max-w-full px-4 py-3 select-none dark:border-gray-200 z-[10]`}
       >
         <div id="leftHeader" className="flex items-center">
@@ -117,9 +115,9 @@ export default function Header() {
         </div>
       </header>
       {!isScrolled && (
-        <div className="absolute mt-[5.1rem] p-3 text-center text-sm w-full h-auto bg-primary/90 text-foreground flex justify-center items-center mx-auto top-0 left-0 right-0 shadow-lg dark:shadow-primary/50 shadow-primary/50 animate-pulse transition-all duration-2000">
+        <div className="absolute mt-[5.1rem] p-3 text-center text-sm w-full h-auto bg-primary/70 flex justify-center items-center mx-auto top-0 left-0 right-0 shadow-lg shadow-primary/30">
           <span
-            className="w-full text-balance font-medium text-foreground dark:text-primary-foreground"
+            className="w-full text-balance font-medium text-foreground"
             dangerouslySetInnerHTML={{
               __html: dictionary.header.offer,
             }}

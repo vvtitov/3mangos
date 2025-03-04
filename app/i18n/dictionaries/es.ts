@@ -6,12 +6,12 @@ export const es = {
     contact: "Contacto",
     language: "Idioma",
     offer:
-      "<em><strong>Contamos con 100% de reviews positivas ⚡</strong></em>",
+      "<strong>Contamos con 100% de reviews positivas 🏆</strong>",
   },
   hero: {
-    title: "Una web bien fresca al mejor precio!",
+    title: "Una web fresca al mejor precio!",
     subtitle:
-      "Somos un equipo de desarrolladores <em>apasionados por lo que hacemos</em> y fuertemente enfocados en crear <strong>productos increíbles</strong> a la <strong>velocidad de la luz</strong> con las última tecnologías y frameworks del mercado.",
+      "Somos un equipo de desarrolladores <em>apasionados por lo que hacemos</em> y fuertemente enfocados en crear <strong>productos increíbles</strong> a la <strong>velocidad de la luz</strong> con las últimas tecnologías y frameworks del mercado.",
     cta: "Hablemos →",
   },
   about: {
@@ -53,17 +53,17 @@ export const es = {
       {
         question: "¿Crean sitios web, verdad?",
         answer:
-          "Sí, pero no solo, somos desarrolladores full stack con una pasión por crear software hermoso y funcional. Desde aplicaciones de empresa hasta herramientas especializadas, podemos ayudarte a llevar tus ideas a la vida con código limpio, eficiente y escalable.",
+          "Sí, pero no solo, somos desarrolladores full stack con pasión por crear software hermoso y funcional. Nos encargamos de revisar los requerimientos y escalar tu negocio de manera eficiente. Desde aplicaciones de empresa hasta herramientas especializadas, podemos ayudarte a llevar tus ideas a la vida con código limpio y escalable.",
       },
       {
         question: "¿Qué hay sobre apps de celular?",
         answer:
-          "Sí, también desarrollamos apps móviles. Nos especializamos en crear soluciones de software personalizadas para tus necesidades específicas.",
+          "Sí, también desarrollamos apps móviles con React Native. Nos especializamos en crear soluciones de software personalizadas para tus necesidades específicas.",
       },
       {
         question: "No tengo un diseño",
         answer:
-          "No te preocupes, podemos ayudarte a crear un diseño hermoso y funcional para tu proyecto. También tenemos diseños hermosos listos para ofrecerte.",
+          "No te preocupes, tenemos diseños listos para ofrecerte o podemos ayudarte a crear un diseño hermoso y funcional para tu proyecto.",
       },
       {
         question: "¿Cuánto tiempo toma?",

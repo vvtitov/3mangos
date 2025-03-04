@@ -25,7 +25,10 @@ export default function Footer() {
                 asChild
                 className="hover:scale-125 transition-all duration-300"
               >
-                <Link href="https://www.facebook.com/profile.php?id=61572837291325">
+                <Link
+                  href="https://www.facebook.com/profile.php?id=61572837291325"
+                  target="_blank"
+                >
                   <Facebook className="h-4 w-4" />
                 </Link>
               </Button>
@@ -35,7 +38,10 @@ export default function Footer() {
                 asChild
                 className="hover:scale-125 transition-all duration-300"
               >
-                <Link href="https://www.instagram.com/3mangos.agency/">
+                <Link
+                  href="https://www.instagram.com/3mangos.agency/"
+                  target="_blank"
+                >
                   <Instagram className="h-4 w-4" />
                 </Link>
               </Button>

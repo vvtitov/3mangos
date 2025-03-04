@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "./i18n/LanguageContext";
 import { ReactNode } from "react";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "3MANGOS",
@@ -28,6 +29,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
         <LanguageProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {children}
+            <Toaster />
           </ThemeProvider>
         </LanguageProvider>
       </body>
