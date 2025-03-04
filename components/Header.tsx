@@ -108,7 +108,7 @@ export default function Header() {
               </motion.div>
             )}
           </div>
-          <div className="flex items-center justify-end mr-2">
+          <div className="flex items-center justify-end mr-3">
             <BurguerMenu />
           </div>
           <div className="relative hidden lg:flex">
