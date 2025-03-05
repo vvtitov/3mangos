@@ -27,7 +27,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
     <html lang={lang} suppressHydrationWarning>
       <body>
         <LanguageProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             {children}
             <Toaster />
           </ThemeProvider>

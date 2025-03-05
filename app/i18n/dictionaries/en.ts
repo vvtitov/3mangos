@@ -46,23 +46,23 @@ export const en = {
         value: "social-media",
       },
     ],
-    carouselTitle: "Awesome designs for your business",
+    carouselTitle: "Fresh and professional designs for your projects",
     faqTitle: "FAQ's",
     faq: [
       {
         question: "You make websites, right?",
         answer:
-          "Yes, but not only, we are full stack developers with a passion for creating beautiful and functional software. From enterprise applications to specialized tools, we can help bring your ideas to life with clean, efficient, and scalable code.",
+          "But not only that, we are full stack developers with a passion for creating beautiful and functional software. We take care of reviewing requirements and scaling your business efficiently. From enterprise applications to specialized tools, we can help you bring your ideas to life with clean and scalable code.",
       },
       {
-        question: "What about mobile apps?",
+        question: "Why a website?",
         answer:
-          "Yes, we also develop mobile apps. We specialize in building custom software solutions tailored to your specific needs.",
+          "A website gives your brand 24/7 visibility, builds credibility, expands your reach, and boosts sales. It's a cost-effective way to showcase your work, attract customers, and grow your business online.",
       },
       {
         question: "I don't have a design",
         answer:
-          "Don't worry, we have designs ready to offer or we can help you create a beautiful and functional design for your project.",
+          "Don't worry, we can help you create a beautiful and functional design for your project and personalized as you want.",
       },
       {
         question: "How long does it take?",
@@ -72,14 +72,14 @@ export const en = {
       {
         question: "Do you offer maintenance?",
         answer:
-          "Yes, we offer maintenance for all our projects. We will keep your project up to date and we will fix any issues that may arise.",
+          "Yes, we offer maintenance for all our projects if it's needed. We will keep your project up to date and we will fix any issues that may arise.",
       },
     ],
   },
   contact: {
     title: "Want a fresh mango?",
     description:
-      "Send us a message and we will get back to you as soon as possible.",
+      "Send us a message resuming your idea and we will get back to you as soon as possible.",
     form: {
       name: "Name",
       email: "Email",
