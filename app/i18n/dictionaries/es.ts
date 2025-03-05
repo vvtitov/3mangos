@@ -47,40 +47,40 @@ export const es = {
         value: "social-media",
       },
     ],
-    carouselTitle: "Diseños increíbles para tu negocio",
+    carouselTitle: "Diseños frescos y profesionales para tu proyecto",
     faqTitle: "Preguntas frecuentes",
     faq: [
       {
-        question: "¿Crean sitios web, verdad?",
+        question: "Crean sitios web verdad?",
         answer:
-          "Sí, pero no solo, somos desarrolladores full stack con pasión por crear software hermoso y funcional. Nos encargamos de revisar los requerimientos y escalar tu negocio de manera eficiente. Desde aplicaciones de empresa hasta herramientas especializadas, podemos ayudarte a llevar tus ideas a la vida con código limpio y escalable.",
+          "Sí claro! Pero no solo eso, somos desarrolladores full stack con pasión por crear software hermoso y funcional. Nos encargamos de revisar los requerimientos y escalar tu negocio de manera eficiente. Desde aplicaciones de empresa hasta herramientas especializadas, podemos ayudarte a llevar tus ideas a la vida con código limpio y escalable.",
       },
       {
-        question: "¿Qué hay sobre apps de celular?",
+        question: "Por que una web?",
         answer:
-          "Sí, también desarrollamos apps móviles con React Native. Nos especializamos en crear soluciones de software personalizadas para tus necesidades específicas.",
+          "Un sitio web da visibilidad a su marca 24 horas al día, 7 días a la semana, crea credibilidad, amplía su alcance e impulsa las ventas. Es una forma rentable de mostrar su trabajo, atraer clientes y hacer crecer su negocio en Internet.",
       },
       {
         question: "No tengo un diseño",
         answer:
-          "No te preocupes, tenemos diseños listos para ofrecerte o podemos ayudarte a crear un diseño hermoso y funcional para tu proyecto.",
+          "No se preocupe, podemos ayudarle a crear un diseño bonito y funcional para su proyecto y personalizado a su gusto.",
       },
       {
-        question: "¿Cuánto tiempo toma?",
+        question: "Cuánto tiempo toma?",
         answer:
           "Depende de la complejidad del proyecto. Estimaremos el tiempo que tomará completar el proyecto y te mantendremos informado sobre el progreso.",
       },
       {
-        question: "¿Ofrecen mantenimiento?",
+        question: "Ofrecen mantenimiento?",
         answer:
           "Sí, ofrecemos capacitación, seguimiento y mantenimiento para todos nuestros proyectos. Mantendremos tu proyecto actualizado y arreglaremos cualquier problema que pueda surgir.",
       },
     ],
   },
   contact: {
-    title: "Quieres un mango fresco?",
+    title: "Quieres un mango?",
     description:
-      "Mandanos un mensaje resumiendo tu idea y estaremos en contacto lo antes posible.",
+      "Mandanos un mensaje resumiendo brevemente tu idea y estaremos en contacto lo antes posible.",
     form: {
       name: "Nombre",
       email: "Correo electrónico",
