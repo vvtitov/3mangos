@@ -5,8 +5,7 @@ export const es = {
     services: "Servicios",
     contact: "Contacto",
     language: "Idioma",
-    offer:
-      "<strong>Contamos con 100% de reviews positivas 🏆</strong>",
+    offer: "<strong>Contamos con 100% de reviews positivas 🏆</strong>",
   },
   hero: {
     title: "Una web fresca al mejor precio!",
@@ -41,10 +40,6 @@ export const es = {
       {
         title: "SEO",
         value: "seo",
-      },
-      {
-        title: "Social Media",
-        value: "social-media",
       },
     ],
     carouselTitle: "Diseños frescos y profesionales para tu proyecto",

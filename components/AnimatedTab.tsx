@@ -84,22 +84,7 @@ export function TabsServices() {
           />
         </div>
       ),
-    },
-    {
-      title: dictionary.services.tabs[5].title,
-      value: dictionary.services.tabs[5].value,
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-primary to-secondary dark:bg-primary">
-          <Image
-            src="/mango.png"
-            alt="dummy image"
-            width="600"
-            height="600"
-            className="object-cover object-center-center relative w-full rounded-xl mx-auto"
-          />
-        </div>
-      ),
-    },
+    }
   ];
 
   return (

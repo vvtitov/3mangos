@@ -41,10 +41,6 @@ export const en = {
         title: "SEO",
         value: "seo",
       },
-      {
-        title: "Social media",
-        value: "social-media",
-      },
     ],
     carouselTitle: "Fresh and professional designs for your projects",
     faqTitle: "FAQ's",
