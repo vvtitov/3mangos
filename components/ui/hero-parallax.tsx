@@ -123,7 +123,7 @@ export const Header = () => {
         {" "}
       </BackgroundLines>
       <div className="flex flex-col gap-4 max-w-4xl px-10 w-full mx-auto">
-        <h1 className="text-5xl md:text-6xl lg:text-6xl font-medium max-w-md md:max-w-3xl w-[25rem] lg:w-[40rem] text-balance min-w-[10rem] md:min-w-[34rem]">
+        <h1 className="text-4xl md:text-6xl lg:text-6xl font-medium max-w-md md:max-w-3xl w-[25rem] lg:w-[40rem] text-balance min-w-[10rem] md:min-w-[34rem]">
           <strong className="text-balance bg-clip-text text-transparent bg-gradient-to-br from-primary to-primary/80">
             {dictionary.hero.title}
           </strong>
