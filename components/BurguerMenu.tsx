@@ -1,7 +1,10 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { ModeSwitch } from "./ui/dark-toggle-button";
 import { useLanguage } from "@/app/i18n/LanguageContext";
 import { getDictionary } from "@/app/i18n/dictionaries";
@@ -34,15 +37,19 @@ export default function BurgerMenu() {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
-        <img
+        <Image
           src="/burguer-menu-light.svg"
           alt="Burger Menu"
-          className="dark:hidden w-18"
+          width={18}
+          height={18}
+          className="dark:hidden"
         />
-        <img
+        <Image
           src="/burguer-menu-dark.svg"
           alt="Burger Menu"
-          className="hidden dark:block w-18"
+          width={18}
+          height={18}
+          className="hidden dark:block"
         />
       </button>
       {/* Mobile Menu */}

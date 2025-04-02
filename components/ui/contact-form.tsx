@@ -1,10 +1,14 @@
 "use client";
 
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "@/app/i18n/LanguageContext";
+import { getDictionary } from "@/app/i18n/dictionaries";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 import { toast } from "sonner";
-import { useState } from "react";
 
 import {
   Form,
@@ -14,7 +18,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -22,10 +25,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useLanguage } from "@/app/i18n/LanguageContext";
-import { getDictionary } from "@/app/i18n/dictionaries";
 
 // Schema for contact form validation
 const formSchema = z.object({
@@ -41,7 +40,6 @@ const formSchema = z.object({
 export default function ContactFormPreview() {
   const { locale } = useLanguage();
   const dictionary = getDictionary(locale);
-  const [loading, setLoading] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -53,7 +51,6 @@ export default function ContactFormPreview() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    setLoading(true);
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -78,8 +75,6 @@ export default function ContactFormPreview() {
         duration: 4000,
         style: { backgroundColor: "#f44336", color: "#fff" },
       });
-    } finally {
-      setLoading(false);
     }
   }
 

@@ -1,6 +1,5 @@
 "use client";
 
-import { useLanguage } from "@/app/i18n/LanguageContext";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
 
@@ -8,16 +7,22 @@ interface SEOProps {
   title?: string;
   description?: string;
   image?: string;
-  article?: boolean;
+  structuredData?: boolean;
+  articleStructuredData?: boolean;
+  canonical?: string;
+  type?: string;
+  url?: string;
 }
 
 export default function SEO({
   title,
   description,
   image = "/og-image.jpg",
-  article = false,
+  articleStructuredData = false,
+  canonical = "https://3mangos.site",
+  type = "website",
+  url = "https://3mangos.site",
 }: SEOProps) {
-  const { locale } = useLanguage();
   const pathname = usePathname();
   
   const defaultTitle = "THREE MANGOS | Development Agency";
@@ -28,65 +33,16 @@ export default function SEO({
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `https://3mangos.site${image}`,
-    url: `https://3mangos.site${pathname}`,
+    url: `${url}${pathname}`,
+    canonical: canonical,
+    type: type
   };
-
-  // Generate dynamic OG image URL if using the API route
-  const dynamicOgImage = `https://3mangos.site/api/og?title=${encodeURIComponent(
-    seo.title.split("|")[0].trim()
-  )}&description=${encodeURIComponent(
-    seo.description.substring(0, 100)
-  )}`;
 
   return (
     <>
-      {/* Structured data for organization */}
-      <Script
-        id="organization-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "THREE MANGOS",
-            url: "https://3mangos.site",
-            logo: "https://3mangos.site/logo.svg",
-            sameAs: [
-              "https://twitter.com/3mangos",
-              "https://www.instagram.com/3mangos",
-              "https://www.linkedin.com/company/3mangos",
-            ],
-            contactPoint: {
-              "@type": "ContactPoint",
-              email: "info@3mangos.site",
-              contactType: "customer service",
-            },
-          }),
-        }}
-      />
-
-      {/* Structured data for WebSite */}
-      <Script
-        id="website-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            url: "https://3mangos.site",
-            name: "THREE MANGOS",
-            description: defaultDescription,
-            potentialAction: {
-              "@type": "SearchAction",
-              target: "https://3mangos.site/search?q={search_term_string}",
-              "query-input": "required name=search_term_string",
-            },
-          }),
-        }}
-      />
-
-      {/* Add structured data for article if this is a blog post */}
-      {article && (
+      {/* Solo mostramos los datos estructurados de artículos, ya que los datos de organización y sitio web
+          ya están incluidos en el componente JsonLd en layout.tsx */}
+      {articleStructuredData && (
         <Script
           id="article-schema"
           type="application/ld+json"
