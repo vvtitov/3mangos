@@ -14,7 +14,16 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { locale, setLocale } = useLanguage();
-  const dictionary = getDictionary(locale);
+  const [dictionary, setDictionary] = useState({
+    header: {
+      home: "Home",
+      about: "About",
+      services: "Services",
+      contact: "Contact",
+      language: "Language",
+      offer: "<strong>We have 100% positive reviews 🏆</strong>",
+    }
+  });
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const languageMenuRef = useRef<HTMLDivElement | null>(null);
 
@@ -30,6 +39,7 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -45,6 +55,17 @@ export default function Header() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    if (locale) {
+      try {
+        const dict = getDictionary(locale);
+        setDictionary(dict);
+      } catch (error) {
+        console.error("Error loading dictionary:", error);
+      }
+    }
+  }, [locale]);
 
   return (
     <>
@@ -83,14 +104,14 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="absolute top-full -left-[1.3rem] z-10 w-auto bg-background rounded-b-2xl border border-foreground border-t-0 px-3 py-3"
+                className="absolute top-full -left-[1.3rem] z-10 w-auto bg-primary/70 rounded-b-lg rounded-t-lg mx-3 py-3"
               >
                 <div
                   onClick={() => {
                     setLocale("en");
                     setIsLanguageMenuOpen(false);
                   }}
-                  className="flex flex-row items-center text-foreground font-light hover:bg-primary/90 px-4 cursor-pointer py-2 transition-all duration-300"
+                  className="flex flex-row items-center text-foreground font-light hover:bg-primary/90 px-4 cursor-pointer rounded-t-xl py-3 transition-all duration-300"
                 >
                   EN
                 </div>
@@ -99,7 +120,7 @@ export default function Header() {
                     setLocale("es");
                     setIsLanguageMenuOpen(false);
                   }}
-                  className="flex flex-row items-center text-foreground font-light hover:bg-primary/90 px-4 cursor-pointer rounded-b-xl py-2"
+                  className="flex flex-row items-center text-foreground font-light hover:bg-primary/90 px-4 cursor-pointer rounded-b-xl py-3"
                 >
                   ES
                 </div>

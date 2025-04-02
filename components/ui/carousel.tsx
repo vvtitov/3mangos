@@ -94,8 +94,8 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           }}
         >
           <Image
-            width={20}
-            height={20}
+            width={800}
+            height={800}
             className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
@@ -104,6 +104,8 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             src={src}
             onLoad={imageLoaded}
             loading="eager"
+            quality={90}
+            sizes="(max-width: 768px) 100vw, 70vmin"
             decoding="sync"
           />
           {current === index && (
