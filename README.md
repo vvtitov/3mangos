@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# THREE MANGOS - Web Development Agency 🥭🥭🥭
 
-## Getting Started
+A modern, multilingual website for Three Mangos, a web development agency focused on creating beautiful, functional, and high-performance websites and applications.
 
-First, run the development server:
+![Three Mangos](/public/mango-hero3.png)
 
+## 🚀 Features
+
+- **Modern Tech Stack**: Built with Next.js 15, React 19, and TypeScript
+- **Responsive Design**: Beautiful UI that works on all devices
+- **Multilingual Support**: Available in English and Spanish
+- **Dark/Light Mode**: Theme switching with next-themes
+- **Interactive UI Components**: Using Radix UI and Framer Motion
+- **Particle Effects**: Engaging visual elements with tsparticles
+- **Form Handling**: Contact form with React Hook Form and Zod validation
+- **Email Integration**: Connected with Resend for email functionality
+- **Optimized Performance**: Fast loading and rendering
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI
+- **Animations**: Framer Motion
+- **Internationalization**: i18next
+- **Form Validation**: React Hook Form & Zod
+- **Email Service**: Resend
+- **Deployment**: Vercel
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+- Node.js 18.0 or later
+- pnpm (recommended)
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/3mangos-site.git
+cd 3mangos-site
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env.local` file with necessary environment variables:
+```
+RESEND_API_KEY=your_resend_api_key
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+```bash
+pnpm dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) to view the site in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/app` - Next.js app router pages and layouts
+- `/app/[lang]` - Language-specific routes
+- `/app/i18n` - Internationalization setup and dictionaries
+- `/components` - Reusable UI components
+- `/public` - Static assets
+- `/lib` - Utility functions and shared code
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📱 Main Sections
 
-## Deploy on Vercel
+- **Header**: Navigation and language switcher
+- **Hero**: Main landing section with call to action
+- **About**: Team information with animated tooltips
+- **Services**: Tabbed services showcase with carousel and FAQ
+- **Contact**: Contact form with validation
+- **Footer**: Social links and company information
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site is optimized for deployment on Vercel:
+
+```bash
+pnpm build
+```
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📄 License
+
+This project is licensed under the terms of the MIT license.
+
+## 👥 Team
+
+THREE MANGOS S.A. - A team of passionate developers creating amazing products at lightspeed with the latest technologies.
+
+#WEARE3MANGOS 🥭🥭🥭
