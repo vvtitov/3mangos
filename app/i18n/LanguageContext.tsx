@@ -15,12 +15,12 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
-  const currentLocale = pathname.split("/")[1] as "en" | "es";
+  const currentLocale = pathname?.split("/")[1] as "en" | "es" || "en";
   const [locale, setLocaleState] = useState<"en" | "es">(currentLocale);
 
   const setLocale = (newLocale: "en" | "es") => {
     setLocaleState(newLocale);
-    const newPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
+    const newPathname = pathname?.replace(`/${locale}`, `/${newLocale}`) || `/${newLocale}`;
     router.push(newPathname);
   };
 
