@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Carousel } from "./ui/carousel";
+import Carousel from "./ui/carousel";
 
 export default function ServicesCarousel() {
   return (

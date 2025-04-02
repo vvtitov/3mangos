@@ -15,6 +15,7 @@ type CarouselProps = {
   interval?: number;
 };
 
+// Exportación con nombre para los componentes que la importan con { Carousel }
 export const Carousel = ({
   items,
   loop = true,
@@ -178,3 +179,6 @@ const Slide = ({ item }: { item: { title: string; image: string } }) => {
     </div>
   );
 };
+
+// Exportación predeterminada para compatibilidad con los componentes existentes
+export default Carousel;
