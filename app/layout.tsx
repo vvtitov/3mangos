@@ -71,13 +71,13 @@ export const metadata = {
   category: "technology",
 };
 
-export default function RootLayout({ children, params }: {
+export default function RootLayout({
+  children,
+}: {
   children: ReactNode;
-  params: { lang: string };
 }) {
-  const { lang } = params;
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/icons/favicon.ico" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
